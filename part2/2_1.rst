@@ -1,0 +1,89 @@
+Introduction to Geospatial Web Services
+=======================================
+
+A possible way for enriching a GIS project is by using Geospatial Web Services and data that are stored on servers connected by means of the internet.
+
+The general concept can be summarised as a distributed GIS and is represented in :numref:`2.1.1`. We have geospatial data of every type (maps; aerial, drone, satellite imagery; geolocalized temporal series) stored on distributed servers, we have users who can 
+be equipped with different tools (desktops, laptops, tablets, smartphones, etc). In order to find data we need geospatial catalogues and, if we want also to process data, we may need processing tools, which again stay on distributed servers. The glue of this distributed GIS, which is also called the Geospatial Web, is the internet.
+
+.. _2.1.1:
+.. figure:: /img/2/2.1.1.png
+   
+   -- The Geospatial Web
+
+Such a kind of system is based on the concept of Web Service, which is a software system designed to support interoperable machine to machine interaction over a network. As we are dealing with geospatial data, we are interested specifically in Geospatial Web Services, which allow geospatial data and functions to be interoperable.
+
+`Interoperability <https://www.isko.org/cyclo/interoperability.htm#1>`_ is the capability to communicate, execute programs or transfer data among various systems with different hardware and software platforms, data structures and interfaces in a manner that requires the user to have little or no knowledge of the characteristics of those units and allow the usage of the exchanged information and data without special effort by either system, or without any special manipulation.
+
+In order to obtain interoperability, standards are needed. A distinction can be made between “de facto standards”, which are technical instructions used by a noteworthy number of people and/or organizations and “de jure standards”, which are technical instructions set by national and/or international standardization organizations. In the case of the Geospatial Information, we refer to `ISO TC 211 <https://www.iso.org/committee/54904.html>`_ Standards and `OGC <https://www.ogc.org/>`_ (Open Geospatial Consortium) Standards.
+
+OGC Web Services expose geographical functionalities to web users through standard web protocols. The use of the `XML <https://en.wikipedia.org/wiki/XML>`_ (eXtensible Markup Language) allows the encoding of data, rules and functions in a format that is both human-readable and machine-readable.
+
+The functioning of OWS (OGC Web Services) can be summarised in four steps:
+
+- the client contacts the server and queries it about its functionalities;
+
+- the server sends back to the client an XML document containing the functionalities of the supported service;
+
+- the client asks the server for data;
+
+- the server provides the data as requested.
+
+The most important geospatial web services about data are:
+
+`WMS <https://www.ogc.org/standards/wms>`_/`WMTS <https://www.ogc.org/standards/wmts>`_: Web Map Service/Web Map Tile Service, which serve map images the map in a `bitmap <https://en.wikipedia.org/wiki/Bitmap>`_ format (e.g. PNG, GIF, JPEG, etc.) and sometimes also in `vector graphics <https://en.wikipedia.org/wiki/Vector_graphics>`_ (points, lines, curves and text, which can be expressed in formats like `SVG <https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>`_). The WMTS is an extension of the WMS which alleviates the CPU intensive on-the-fly rendering problem when transferring massive amounts of data by using pre-rendered map tiles.
+
+The WMS service is composed by three basic operations (beside some others optional):
+
+- GetCapabilities: provides an XML description of the available data and the parameters related to the requests accepted by the service;
+
+- GetMap: supplies the requested data;
+
+- GetFeatureInfo: retrieves the underlying data, including geometry and attribute values, for a pixel location on a map (optional).
+
+The first two operations are shown in :numref:`2.1.2`.
+
+.. _2.1.2:
+.. figure:: /img/2/2.1.2.png
+   
+   -- GetCapabilities and GetMap operations
+
+As an example of GetCapabilities, https://www.efas.eu/api/wms/?request=getcapabilities , where https://www.efas.eu/api/wms/ are the `EFAS <https://www.efas.eu/>`_ (European Flood Awareness System) WMS Services, returns an XML file which describes the characteristics of the WMS Services (:numref:`2.1.3`).
+
+.. _2.1.3:
+.. figure:: /img/2/2.1.3.png
+   
+   -- The XML file returning after the GetCapabilities request: first rows
+
+Browsing the file, we find the description of the “Landslide Susceptibility” layer (:numref:`2.1.4`) which we will see more in detail in the next session.
+
+.. _2.1.4:
+.. figure:: /img/2/2.1.4.png
+   
+   -- The XML file returning after the GetCapabilities request: Landslide Susceptibility layer
+
+More information about WMS can be found in the `WMS Reference of Geoserver <https://docs.geoserver.org/stable/en/user/services/wms/reference.html>`_.
+
+`WFS <https://www.ogc.org/standards/wfs>`_: Web Feature Service, which offers direct access to vector geographic information at the feature and feature property level, where a feature represents a physical entity, e.g. a building, a street, etc.  Data is generally transferred in an XML-based `GML <https://en.wikipedia.org/wiki/Geography_Markup_Language>`_ format, but other formats like shapefiles can also serve for transport.
+
+The WFS service is composed by the basic operations (beside some others optional):
+
+- GetCapabilities: provides an XML description of the available data and the parameters related to the requests accepted by the service;
+
+- DescribeFeatureType: requests a list of features and attributes for the given feature type, or list the feature types available;
+
+- GetFeature: request a selection of features from the data source.
+
+More information about WFS can be found in the `WFS Reference of Geoserver <https://docs.geoserver.org/stable/en/user/services/wfs/index.html>`_.
+
+`WCS <https://www.ogc.org/standards/wcs>`_ - Web Coverage Service, which supports requests for coverage data (gridded and raster data). While a WMS returns only an image, the results of a WCS can be used for modeling and analysis. WCS also allows more complex querying, for instance only the extraction of a portion of the data.
+
+The WCS service is composed by the basic operations (beside some others optional):
+
+- GetCapabilities: provides an XML description of the available data and the parameters related to the requests accepted by the service;
+
+- DescribeCoverage: requests information about the coverage. It returns information such as the coordinate reference system, the metadata, the domain, the range and the available formats;
+
+- GetCoverage: requests the extraction of a subset (based on height, time and range) from the coverage, encodes it in different data formats, and returns the resulting file in different ways.
+
+More information about WCS can be found in the `WCS Reference of Geoserver <https://docs.geoserver.org/stable/en/user/services/wcs/index.html>`_.

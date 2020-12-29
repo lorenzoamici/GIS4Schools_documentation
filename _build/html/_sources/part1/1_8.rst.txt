@@ -1,0 +1,2 @@
+QGIS visualization for rasters
+==============================
