@@ -44,6 +44,9 @@ numfig = True
 
 numfig_secnum_depth = 3
 
+# numfig_format specifies the caption to use when citing figures
+# numfig_format={'figure': 'Figure %s'}
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -75,6 +78,7 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# code for making links open in a new tab
 from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 from docutils.nodes import Element

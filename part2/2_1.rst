@@ -64,7 +64,7 @@ Browsing the file, we find the description of the “Landslide Susceptibility”
 
 More information about WMS can be found in the `WMS Reference of Geoserver <https://docs.geoserver.org/stable/en/user/services/wms/reference.html>`_.
 
-`WFS <https://www.ogc.org/standards/wfs>`_: Web Feature Service, which offers direct access to vector geographic information at the feature and feature property level, where a feature represents a physical entity, e.g. a building, a street, etc.  Data is generally transferred in an XML-based `GML <https://en.wikipedia.org/wiki/Geography_Markup_Language>`_ format, but other formats like shapefiles can also serve for transport.
+`WFS <https://www.ogc.org/standards/wfs>`_: Web Feature Service, which offers direct access to vector geographic information at the feature and feature property level, where a feature represents a physical entity, e.g. a building, a street, etc. Data is generally transferred in an XML-based `GML <https://en.wikipedia.org/wiki/Geography_Markup_Language>`_ format, but other formats like shapefiles can also serve for transport.
 
 The WFS service is composed by the basic operations (beside some others optional):
 
