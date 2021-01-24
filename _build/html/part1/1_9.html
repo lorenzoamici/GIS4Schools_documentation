@@ -202,6 +202,68 @@
             
   <div class="section" id="printing-maps-with-qgis">
 <h1><span class="section-number">1.9. </span>Printing maps with QGIS<a class="headerlink" href="#printing-maps-with-qgis" title="Permalink to this headline">¶</a></h1>
+<p>Styling is important not only for the single layers: to make an understandable and effective map, also the entire map layout should be studied and carefully composed. The following exercise will focus on creating an effective map layout, with the basic elements that a map should contain as the legend, the title, the scalebar, etc.</p>
+<p>The map to be composed, representing the water surface temperature distribution on Northern Italian insubric lakes, will contain the following data:</p>
+<ul>
+<li><p class="first">Raster data:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Temperature_distribution</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Vector data:</p>
+<blockquote>
+<div><ul class="simple">
+<li>River_network</li>
+<li>Municipalities_OSM</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>These listed layers need to be present and activated (ticked) in your Layers Panel before to start. Be careful also to respect this order of listing to see <em>Temperature_distribution</em> layer on the top of the other ones.</p>
+<p>To create a map layout follow the steps on <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 1.9.1</span></a>: go to <strong>Project menu&gt;New Print Layout (1)</strong> or press <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">P</kbd></kbd> on your keyboard. It will open a tab where you can type the title of the print layout you want to create <strong>(2)</strong>, then by clicking on <strong>OK (3)</strong>, a map layout project will be opened: you can simply work there to compose your map with all the needed items.</p>
+<p>Looking at <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.9.2</span></a>, representing the New Print Layout Window, it is possible to see there are different icons on the very left of the window: we will use some of them to add the different basic map elements: the map itself, the legend, the map title, the north arrow and the scalebar.</p>
+<ol class="arabic simple">
+<li><strong>Add map.</strong> Click on the <strong>Add Map</strong> icon <strong>(2)</strong> and then click on the position on the blank page where you want your map to be attached: by simply clicking <strong>OK</strong> for the New item Properties, in your page it will appear what it is shown in your QGIS <strong>Map panel</strong>. Check if the layers into are adequately centered or zoomed, if not you can adjust them back in QGIS Map panel and they will be automatically updated in your Print Layout. In the New Print Layout window you can use also the <strong>Select/Move item (1)</strong> icon to move or resize the Map (or also the other map elements).</li>
+</ol>
+<div class="figure align-default" id="id5">
+<span id="id1"></span><img alt="../_images/1.9.1.png" src="../_images/1.9.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.9.1 </span><span class="caption-text">– Creation of a New Print Layout.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id6">
+<span id="id2"></span><img alt="../_images/1.9.2.png" src="../_images/1.9.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.9.2 </span><span class="caption-text">– New Print Layout Window, icons and panels.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic" start="2">
+<li><p class="first"><strong>Add title.</strong> Title is very important to understand at first sight what a map represents, it should summarize with a few words map purpose, place and time.  To add the title to the map click on <strong>Add label</strong> button <strong>(3)</strong>, decide the position where to place it and click <strong>OK</strong> to confirm its properties. Title position usually should be located on the top of the page, with a huger font with respect to other map items. After having selected the <em>Title</em> item in the <strong>Items Panel (7)</strong> <em>on the right</em>, Insert the title text (e.g. here it could be “Water Surface Temperature Distribution in the insubric lakes on 14/04/2020”) and set its font in the <strong>Item Properties Panel (8)</strong>.</p>
+</li>
+<li><p class="first"><strong>Add legend.</strong> Click on <strong>Add legend</strong> button <strong>(4)</strong>, decide its position and accept the default item properties. You will visualize the legend on your map, however, you still need to do some work to make it clearer. It is possible to edit the legend, after it has been created, by going on its <strong>Item Properties (8)</strong>, just check, before, to have the Legend item selected in the <strong>Items Panel (7)</strong>. In the <strong>Main Properties</strong> box you can name the item (here <em>Legend</em>, see <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.9.3</span></a> <strong>(1)</strong>). Then you can focus on legend items: when you add a legend to the map, its different items are represented by default, in the same way they are represented in your QGIS Layers Panel. Therefore, before printing the map, it is usual to change some names, labels or order to make them more understandable. Here, there are two ways: one can make edits directly from QGIS Layer Panels, by modifying the style of layers, or one can also choose to modify them just on the Map Print Layout, leaving the Layers style as it is on QGIS. To apply the second option, it is necessary to uncheck the <strong>Auto update</strong> box (see <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.9.3</span></a> <strong>(2)</strong>) into the <strong>Item Properties</strong> <em>Panel</em>. In the <strong>Legend items</strong> box now it is possible to:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Reposition the single layers into the Legend, by clicking on the two arrows (see <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.9.3</span></a> <strong>(3)</strong>) below the box.</li>
+<li>Add or remove layers, that are not visible on the map, from the legend (by clicking on + or – , see  <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.9.3</span></a> <strong>(4)</strong>)</li>
+<li>Change one layer’s name, by double-clicking on the layer’s name, typing a new name and clicking on OK. Here, for example, try to change <em>Temperature_distribution</em> into a clearer ‘Water Temperature Distribution’ (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.9.3</span></a> <strong>(5)</strong>) as well as <em>Municipalities_OSM</em> into ‘Municipalities borders’.</li>
+<li>Change the number of decimal digits of temperature values. To do so, click on each numerical label (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.9.3</span></a> <strong>(6)</strong>) in the Legend items box and then remove the unnecessary digits, clicking then on OK.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Finally, from Fonts and Text Formatting box (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.9.3</span></a> <strong>(7)</strong>), try to change also the font used for the different items in the legend: remember it should be visible but not too huge.</p>
+<div class="figure align-default" id="id7">
+<span id="id3"></span><img alt="../_images/1.9.3.png" src="../_images/1.9.3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.9.3 </span><span class="caption-text">– Legend Properties editing.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="4">
+<li><strong>Add scalebar.</strong> The map scale allows a map user to properly understand the objects sizes and the distances on the map. To add a scalebar click on <strong>Add Scalebar</strong> (see <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.9.2</span></a> <strong>(5)</strong>), click on the position where to place it and click <strong>OK</strong>. Under the Item properties you can change <strong>Style</strong> or <strong>Scale bar units</strong>, <strong>Label for units</strong>, etc. Try to style your scalebar in a way it can be clearly legible as well as useful, by choosing the adequate size and unit of measure. It is possible to replace scalebar by lexical scale (eg. 1:60000) by changing scalebar <strong>Style</strong> to <strong>Numeric</strong>. However, use of lexical scale should be limited to those cases where the map is to be printed on paper, otherwise, on a digital document, the scalebar is more appropriate.</li>
+<li><strong>Add north arrow.</strong> Another basic element in a map is the North arrow that helps the viewer with orientation. It can be added on map by clicking on the <strong>Add North arrow</strong> icon (see <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.9.2</span></a> <strong>(6)</strong>), clicking on the position where to place it, and clicking on <strong>OK</strong> then.</li>
+</ol>
+<p>Remember you can always rearrange positions or sizes of the different elements by using the <strong>Select/Move item (1)</strong> command. Try to create a well-balanced map, clear and effective, but also attractive, and try to size and locate each element according to its importance (so the map body usually should be huge and at center, the title above with huge font, while legend and scalebar in a smaller size as also the North arrow).</p>
+<p>When in the end you are satisfied with the map layout, you can export it as PDF, image or SVG File. In every case, just click on one of the <strong>Export as…</strong> buttons (see <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.9.2</span></a> <strong>(9)</strong>), choose the folder where you want to save the map, give it a name, or just leave the one you gave at the beginning (<em>‘Distribution of temperatures in insubric lakes’</em>). Click on Save to open the <strong>Export Options window</strong> where it will be possible to define <strong>Export resolution</strong>, <strong>Page width or height</strong> and also <strong>Crop page to content</strong> if some parts of it are empty <strong>(5)</strong>. You can keep all the default settings and you can click on <strong>Save</strong>: the map will be finally complete and saved on your PC. <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 1.9.4</span></a> shows an example of possible final print layout.</p>
+<div class="figure align-default" id="id8">
+<span id="id4"></span><img alt="../_images/1.9.4.png" src="../_images/1.9.4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.9.4 </span><span class="caption-text">– The final print out map.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 
 

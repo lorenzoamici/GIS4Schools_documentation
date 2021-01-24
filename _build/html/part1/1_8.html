@@ -202,6 +202,59 @@
             
   <div class="section" id="qgis-visualization-for-rasters">
 <h1><span class="section-number">1.8. </span>QGIS visualization for rasters<a class="headerlink" href="#qgis-visualization-for-rasters" title="Permalink to this headline">¶</a></h1>
+<p>Styling your geospatial data, you can effectively convey geospatial information to an intended public, allowing them to understand at first glance the phenomena represented through your map. In this exercise, we will see some basic styling on different types of raster data, starting by our examples:</p>
+<ul class="simple">
+<li><strong>Land_cover</strong>: retrieved and adapted, for the extent, to the scope of the exercise, from Copernicus Land Monitoring Service-Corine Land Cover 2018 official website, it is a land cover map with 40 land cover classes (defined with different values), in a 100m spatial resolution.</li>
+<li><strong>Temperature_distribution</strong>: it reports water surface temperature for Como, Lugano and Maggiore lakes on the 14th April 2020 (Source: CNR-IREA, from Landsat-8 image processing), 30m spatial resolution.</li>
+</ul>
+<p>Raster styling depends on the type of information to disseminate; particularly, if the information is of qualitative type (e.g. land cover classes) or quantitative (e.g. temperature map) the symbolization to be used will be different. Moreover, some types of symbolization can be more suitable for raster data with wide range of values, while some others for raster with small range of values.
+To start, let’s load on QGIS the two raster layers from the Geopackage you were provided to your <strong>Layers panel</strong>. You will get the following view of QGIS interface (see <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 1.8.1</span></a>). You can also rearrange the layers by selecting one of them and dragging and dropping it to the preferred position to make it appear at the top or at the bottom with respect to the other one.</p>
+<div class="figure align-default" id="id5">
+<span id="id1"></span><img alt="../_images/1.8.1.png" src="../_images/1.8.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.1 </span><span class="caption-text">– The first visualization of Temperature_distribution and Land_Cover raster data, when loaded on QGIS.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>As you see by the screen, these layers need some styling to further understand them, where styling, here, simply refers to change their visual properties. This can be done, separately, for both raster data (see Fig 1.8.2), by right-clicking on them, in the Layers Panel, and selecting <strong>Properties</strong>, as it was done for vector data. There, from <strong>Symbology</strong> tab (as in Figure) you can select the <strong>Render Type (1)</strong> (<em>Multiband colour</em>, <em>paletted/unique values</em>, <em>singleband gray</em>, <em>singleband pseudocolor</em>, <em>hillshade</em>) with its settings (as it is here the <em>color gradient</em> and <em>contrast enhancement</em>), you can eventually choose the <strong>Colour Rendering</strong> as well as the <strong>Resampling options</strong>.</p>
+<div class="figure align-default" id="id6">
+<span id="id2"></span><img alt="../_images/1.8.2.png" src="../_images/1.8.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.2 </span><span class="caption-text">– The choice for Raster Data Symbology Properties. The default Singleband gray Render Type.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here, the following basic render types are described and applied on the previously mentioned raster data:</p>
+<ul>
+<li><p class="first"><strong>Singleband gray</strong>. It is the Default view of both raster data when they are loaded on QGIS. it consists in representing them with just one color gradient that goes from black, for lower values, to white, for higher ones. This Render type is useful when showing quantitative information, with a wide range of values to be represented within the raster (e.g. heights in a DEM or, as in this case, the temperature values of <strong>Temperature_distribution</strong> raster layer).</p>
+<blockquote>
+<div><ul class="simple">
+<li>See <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.8.2</span></a>. Try to invert <strong>Temperature_distribution</strong> raster Singleband gray <strong>Color gradient (2)</strong> and look at changes. Also, try to enhance differences, within the temperature values of the raster, by choosing the most suitable <strong>Contrast Enhancement (3)</strong> as well as by changing <strong>Min/Max Value Settings</strong> (where Min/Max values are used to define the extent to which the gradient is stretched and/or clipped).</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Singleband-Pseudocolor.</strong> This Render Type, as the Singleband-gray, is suitable for showing quantitative information. It allows to choose a color ramp and also (choosing for <em>Mode: Equal Interval</em> or <em>Quantile</em>) a number of classes there to categorize the different intervals of values to be represented. Choosing for <em>Mode:Continuous</em> the number of classes cannot be manually set.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Refer to <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.8.3</span></a> steps and result. From <strong>Temperature_distribution</strong> layer <strong>Properties&gt;Symbology</strong>, select <strong>Render Type: Singleband-Pseudocolor (1)</strong>, choose a meaningful <strong>Color ramp (2)</strong> (here e.g. <em>Reds</em>), select <strong>Mode: Equal Interval (3)</strong> and insert 10 as number of <strong>Classes (4)</strong>, click on <strong>Classify</strong> and the temperature values will be divided in 10 equal intervals from their minimum to their maximum. Click on <strong>Apply</strong> and look at final layer visualization.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="figure align-default" id="id7">
+<span id="id3"></span><img alt="../_images/1.8.3.png" src="../_images/1.8.3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.3 </span><span class="caption-text">– The Singleband-Pseudocolor Render Type, application on Temperature_distribution raster data.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<ul>
+<li><p class="first"><strong>Paletted/unique values</strong>. This Render Type is suitable for representing qualitative information as well as raster data with a small range of values. It consists in representing each different value within the raster with a different color. This is the most suitable choice to display the qualitative land cover classes of <strong>Land_cover</strong> raster. Let us apply Paletted/unique values Render type on Land_cover layer by following the instructions in <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 1.8.4</span></a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Random colors</strong>. From layer <strong>Properties&gt;Symbology</strong>, select** Render Type: Paletted/unique values (1)** and leave <strong>Color ramp</strong> to <em>Random colors</em> <strong>(2)</strong>: click on <strong>Classify (3)</strong> and then on <strong>Apply</strong> to see each land cover class be colored with a different color, linked to its pixel value, from 0 to 41. Try to manually change some of these randomly assigned colors by going on <strong>Properties&gt;Symbology</strong>, right-click on a color assigned to a specific value and then click on <strong>Change color… (4)</strong>. It is possible also to change the label for each value.</li>
+<li><strong>Predefined Land_Cover_style.</strong> From layer <strong>Properties&gt;Symbology</strong> click on <strong>Style (5)&gt;Load Style…</strong> to load the <em>Land_Cover_style</em> that is in your exercise folder. See it is a Paletted/unique values render type. It is a style provided by the Copernicus Land Monitoring Service, to show Corine Land Cover 2018 data: it links all the possible values that can be found in Corine Land Cover data to the labels and colors of the classes they refer to. It is for this reason that it stores symbols and labels for more classes than the ones that are really present in the area under study (e.g. value 44, representing <em>Sea and Ocean</em>). Try to remove these empty classes with the <strong>minus</strong> button, next to <em>Classify</em>. To understand which classes are empty you can compare this style to the previous <em>Random colors</em> visualization to see the missing classes there (e.g. values from 42 to 48).</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="figure align-default" id="id8">
+<span id="id4"></span><img alt="../_images/1.8.4.png" src="../_images/1.8.4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.4 </span><span class="caption-text">– The Paletted/Unique Values Render Type, application on Land_Cover raster data, with Random colors or Land_Cover_style.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>The exercise folder also contains the <em>Temperature_distribution_style</em> to be loaded on <em>Temperature_distribution</em> raster layer. Check it should be very similar to your <em>Singleband-Pseudocolor</em> visualization of the raster. There is also the possibility of saving the styles that you make in a way to easily recall them in a second moment, or also on other similar raster data.</p>
+<p>These raster visualization modes are just a few basic examples that can be done. Styling depends on the type of data you have (e.g. Multiband render type is commonly used with satellite imagery) and by the type of information you want to provide.</p>
 </div>
 
 
