@@ -1,0 +1,13 @@
+Clip raster with a mask, clip raster by extent
+==============================================
+
+Sometimes raster data cover a wider area than the one under study, thus, data can be much heavy and processing is slowed down. In this case, it is always advisable to reduce the raster extent by clipping out the area that is not under study. There are more ways to do it, in this exercise we will focus on **clipping with a mask** (using another layer as reference) and on **clipping by extent** (taking as reference a manually drawn area).
+
+Consider the *temperatures_distribution* layer. Suppose you want to study only the Maggiore lake area: it is possible to clip the *temperature_distribution* layer by a manually rectangular drawn region that would exclude the other two lakes. Refer to :numref:`2.5.5` to follow on with the instructions. Go to **Raster** Menu **→Extraction→Clip Raster by Extent…**. It will open a window where to input the layer to be clipped **(1)** (*Temperature_distribution*) and the *clipping extent*: click on **…**  button **(2)** and then on **Select Extent on Canvas (3)** to manually draw on your project the clipping area, a red rectangle on Maggiore lake (4). Then, for this exercise, just save as *temporary File*, *Run* and the result will be the layer of temperatures cropped just on the Maggiore lake.
+
+.. _2.5.5:
+.. figure:: /img/2/2.5.5.png
+   
+    -- Clip Raster by extent, steps and result.
+
+Now, on the other hand, let us see how to clip a raster with a mask. Again, apply clipping on the *temperatures_distribution* layer, and use the *TemperaturesLow_notLow* polygon layer, resulting from the previous Vectorization. When clipping with a vector mask it is possible also to decide which categories of the polygon vector to be used to mask the raster data. Suppose here we want to mask the *temperature_distribution* layer for where its temperatures are the lowest, thus where the *TemperaturesLow_notLow* polygons have value 1. Click on **Select Features by value** and set *low_notLow* field *equal* to value *1*. Once the polygons meaning for the lowest temperatures are selected, it is time to clip by mask. Go to **Raster** Menu **→Extraction→Clip Raster by Mask Layer…**., *input layer: Temperature_distribution*, to be masked by *TemperaturesLow_notLow* vector layer, check the **Selected Features only** box (to mask the raster with just the selected polygons of the mask layer) assign 0 as *NoData Value* and **Save to a temporary File**. In the end, the new added layer should cover with temperature values, only the areas of low water surface temperature.

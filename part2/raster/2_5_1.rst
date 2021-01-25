@@ -1,0 +1,17 @@
+Reprojection
+============
+
+When you load raster data on QGIS, before starting any processing, you should look at their properties, that need to be adequate for the steps you are going to take and for the output you want to create. Here, reprojection tool can be very fundamental. Indeed, raster data, as well as generally your QGIS Project, can refer to a certain **map projection** and, more specifically to a Coordinate Reference System (**CRS**) that links map locations to real places on Earth. It can happen that your raster data are referred to different CRS, and, in that case, you would not be able to compare or combine them without reprojecting them to a common CRS. Also, it can happen that the processing output needs to be referred to a certain CRS so that again reprojection tool must be used.
+
+A good rule is to check at the beginning raster data **CRS**. It can be checked under CRS voice by going to each layer **Properties→ information**. In this exercise, you can check all data are referred to *“CRS: EPSG:32632 - WGS 84 / UTM zone 32N – Projected”*. Therefore, we would not need to do any reprojection.
+
+However, to learn how to reproject data, let us apply reprojection to *Land_cover*. Look at :numref:`2.5.1` to follow with numbers in brackets the different steps that here will be mentioned.
+
+To start, go to **Raster Menu** on QGIS **→Projections (1)→Warp (Reproject) (2)**: it will open the *Warp (Reproject)* window. There, you need to set the **input layer** (*Land_Cover*) **(3)**, with its **input CRS** (*Project CRS: EPSG:32632 - WGS 84 / UTM zone 32N*) **(4)** and the final desired CRS, the **target CRS** (here choose *EPSG: 2056-CH1903+/LV95*) **(5)**. Leave the rest as it is and click on **Run** to reproject the raster in a new CRS. To choose the target CRS, by clicking on the icon **(5)**, after having unchecked **No CRS box (6)** in the new window, you can search for the wanted target CRS **(7)**: as in :numref:`2.5.1` **(7)** search for *EPSG: 2056* and then select the option for the *swiss Obl. Mercator projected CS* **(8)**.
+
+.. _2.5.1:
+.. figure:: /img/2/2.5.1.png
+   
+    -- Raster data Reprojection steps.
+
+The new added raster, called **reprojected** is a temporary File, you can save it if you prefer it. This reprojected File still perfectly overlaps with the original one, even though the two layers have different CRS. This is because QGIS_3 automatically applies “on the fly” CRS transformation for both raster and vector data. This means that, for visualization, layers with different CRS are transformed into the project’s CRS (here the *EPSG:32632 - WGS 84 / UTM zone 32N*) provided that the input layers CRS is stored in their metadata and that it is correct. Thus, to see the CRS change you can go to *reprojected* layer **Properties→Source** and change its *source CRS*: in this way, you won’t see anymore the reprojected File together with the original one, and, to visualize it, you will have to *Zoom to its extent*. That is because now QGIS has no more reprojected it ‘on the fly’ and you can see therefore the effects of referring to a different CRS.

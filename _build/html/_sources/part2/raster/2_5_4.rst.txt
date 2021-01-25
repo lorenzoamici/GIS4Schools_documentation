@@ -1,0 +1,11 @@
+Vectorization
+=============
+
+The following exercise will be performed on the *lowest_temperatures* layer, the raster resulting from the previous Raster Calculator exercise. Vectorization is the operation to convert a raster layer into a vector one, particularly here into a polygon one.
+
+See :numref:`2.5.4` to follow with the instructions. Go to **Raster** Menu **→Conversion→Polygonize (Raster to Vector)**.  In *Polygonize (Raster to Vector) Window* enter the *Input layer* **(1)** (*lowest_temperatures*), the name of the attribute field related to the raster values **(2)** (*Low-notLow*) and finally where to save the vectorized File (here named as *TemperaturesLow_notLow*) **(3)**. Finally, the result will be a polygon layer. As you have already learnt in the exercise of *Vector Visualization* **TODO INTERNAL LINK**, change the polygon style into a *categorized* symbolisation, hide polygon with NoData value (it could be a huge negative value) and the polygon symbol for ‘other values’: you will get the layer visualization that you can see at the end in :numref:`2.5.4`.
+
+.. _2.5.4:
+.. figure:: /img/2/2.5.4.png
+   
+    -- Vectorization steps and result.

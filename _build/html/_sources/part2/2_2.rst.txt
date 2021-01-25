@@ -9,7 +9,7 @@ Open QGIS and, in order to have some contextualisation data, upload the geopacka
    
    -- Visualisation of the GIS4Schools Geopackage
 
-To import a layer using OGC services, click on menu Layer → Add Layer and then select the specific layer you are interested in.
+To import a layer using OGC services, click on menu Layer→Add Layer and then select the specific layer you are interested in.
 The following options are available:
 
 - Add WMS/WMTS
@@ -21,7 +21,7 @@ In the following we will see how to connect to these services.
 WMS/WMTS
 --------
 
-To add an OGC WMS layer, click on menu Layer → Add Layer → Add WMS/WMTS Layer (:numref:`2.2.1.1`).
+To add an OGC WMS layer, click on menu Layer→Add Layer→Add WMS/WMTS Layer (:numref:`2.2.1.1`).
 
 .. _2.2.1.1:
 .. figure:: /img/2/2.2.1.1.png
@@ -99,7 +99,7 @@ As the last step of the WMS section, let us examine where we find the pieces of 
 WFS
 ---
 
-To add an OGC WFS layer, click on menu Layer → Add Layer → Add WFS Layer (:numref:`2.2.2.1`).
+To add an OGC WFS layer, click on menu Layer→Add Layer→Add WFS Layer (:numref:`2.2.2.1`).
 
 .. _2.2.2.1:
 .. figure:: /img/2/2.2.2.1.png
@@ -183,7 +183,7 @@ Export the WFS Watersheds layer and save it in a local folder of your computer (
 WCS
 ---
 
-To add an OGC WCS layer, click on menu Layer → Add Layer → Add WCS Layer. 
+To add an OGC WCS layer, click on menu Layer→Add Layer→Add WCS Layer. 
 
 We upload data from the Network Services OGC of the `Italian National Geoportal <http://www.pcn.minambiente.it/mattm/en/network-services-ogc/>`_. 
 Browsing the Geoportal we find the available `WCS Services <http://www.pcn.minambiente.it/mattm/en/wcs-services/>`_ and we select Modello digitale del terreno - 75 metri. The URL of the service is http://wms.pcn.minambiente.it/wcs/dtm_75m and we can explore the capabilities of the service (XML file) by clicking on the `Capability link <http://wms.pcn.minambiente.it/wcs/dtm_75m?service=wcs&request=getCapabilities>`__.

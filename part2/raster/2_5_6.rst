@@ -1,0 +1,15 @@
+Overlay statistics
+==================
+
+Raster data allow to easily compare and combine different data referred to the same territory. In this way, they allow also to easily compute overlay statistics that can be a powerful tool to investigate some areas. **Zonal statistics** algorithm is an example of the overlay statistics that can be computed from the combination of a raster and a vector layer. This tool, from raster data, calculates statistics (e.g. mean, max, min…) for each feature of the overlapping vector layer.
+
+To better understand it, suppose that we want to know the municipalities with the coldest or hottest surface water temperatures. By overlapping the vector layer *Municipalities_OSM* to the *Temperature_distribution* raster, lakes areas are subdivided in smaller portions according to the municipalities they are part of. Therefore, it could be possible to derive some statistics for each of these portions of lakes.
+
+Go to the **Processing Toolbox→Raster Analysis→Zonal statistics** insert as **input raster** layer the *Temperature_distribution* layer **(1)** and as **vector layer containing zones** the *Municipalities_OSM* vector **(2)**. Then name the **Output column prefix** *LakeTemp* **(3)** and select the **statistics to be calculated** (here *mean*, *max* and *min*), by clicking on **…** button **(4)**. The algorithm will add to *Municipalities_OSM* attribute table three new columns, each column for each calculated statistics. To check results, click on *LakeTempmean* column to sort features from the highest to the lowest value: you should find that it is *Melide* municipality the one with the highest mean lake surface temperature (22°) while *Valmadrera* is the one with the lowest lake surface temperature (11,7°) on the same day.
+
+.. _2.5.6:
+.. figure:: /img/2/2.5.6.png
+   
+    -- Zonal Statistics algorithm, steps and result.
+
+Try to do it also on the single Maggiore lake temperature distribution layer that you have cut in the previous exercise (clip by extent) to get the municipalities with the highest or lowest mean temperature for just that lake area.
