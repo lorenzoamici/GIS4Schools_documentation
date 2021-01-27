@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'GIS4Schools'
-copyright = '2020, Lorenzo Amici'
-author = 'Lorenzo Amici'
+copyright = '2020, Maria A. Brovelli, Daniele Oxoli, Carlo Biraghi, Gorica Bratic, Chiara Gerosa, Alberto Vavassori'
+author = 'Maria A. Brovelli, Daniele Oxoli, Carlo Biraghi, Gorica Bratic, Chiara Gerosa, Alberto Vavassori'
 
 
 # -- General configuration ---------------------------------------------------

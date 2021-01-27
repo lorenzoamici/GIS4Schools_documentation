@@ -1,2 +1,2 @@
-QGIS visualization for vectors
-==============================
+Mangage GeoPackages
+===================

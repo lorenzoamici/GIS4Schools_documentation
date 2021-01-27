@@ -1,2 +1,11 @@
-Field calculator
-================
+Geoprocessing tools for vector data: intersection
+=================================================
+
+The tool intersection extracts the overlapping portion of features belonging to two different layers. Features in the output layer are assigned the attributes of the overlapping features from both input layers. In this exercise we are going to extract the portions of rivers that are within the lakes’ boundaries. Indeed, the point of intersection between rivers and lakes are particularly delicate and important from an environmental point of view.
+
+Select **Vector → Geoprocessing Tools → Intersection**. Select as **Input layer** River_network and as **Overlay layer** Lakes. Then, save the new shapefile (**Intersection**), with the name River_lakes_intersect.shp in the usual folder. Finally, click **Run**. :numref:`2.4.5.1` shows the configuration interface and the result: the overlapping segments of the river network are displayed in yellow. The attribute table of the output layer preserves the fields of both input layers (River_network and Lakes).
+
+.. _2.4.5.1:
+.. figure:: /img/2/2.4.5.1.PNG
+   
+    -- Intersection configuration interface. The result of the intersection operation is shown: Rivers_lakes_intersect (yellow lines).

@@ -1,65 +1,53 @@
-Printing maps with QGIS
-=======================
+QGIS visualization for rasters
+==============================
 
-Styling is important not only for the single layers: to make an understandable and effective map, also the entire map layout should be studied and carefully composed. The following exercise will focus on creating an effective map layout, with the basic elements that a map should contain as the legend, the title, the scalebar, etc.
+Styling your geospatial data, you can effectively convey geospatial information to an intended public, allowing them to understand at first glance the phenomena represented through your map. In this exercise, we will see some basic styling on different types of raster data, starting by our examples:
 
-The map to be composed, representing the water surface temperature distribution on Northern Italian insubric lakes, will contain the following data:
+- **Land_cover**: retrieved and adapted, for the extent, to the scope of the exercise, from Copernicus Land Monitoring Service-Corine Land Cover 2018 official website, it is a land cover map with 40 land cover classes (defined with different values), in a 100m spatial resolution.
 
-- Raster data:
+- **Temperature_distribution**: it reports water surface temperature for Como, Lugano and Maggiore lakes on the 14th April 2020 (Source: CNR-IREA, from Landsat-8 image processing), 30m spatial resolution.
 
-    - Temperature_distribution
-
-- Vector data:
-
-    - River_network
-    - Municipalities_OSM
-
-These listed layers need to be present and activated (ticked) in your Layers Panel before to start. Be careful also to respect this order of listing to see *Temperature_distribution* layer on the top of the other ones.
-
-To create a map layout follow the steps on :numref:`1.9.1`: go to **Project menu→New Print Layout (1)** or press :kbd:`Ctrl+P` on your keyboard. It will open a tab where you can type the title of the print layout you want to create **(2)**, then by clicking on **OK (3)**, a map layout project will be opened: you can simply work there to compose your map with all the needed items.
-
-Looking at :numref:`1.9.2`, representing the New Print Layout Window, it is possible to see there are different icons on the very left of the window: we will use some of them to add the different basic map elements: the map itself, the legend, the map title, the north arrow and the scalebar.
-
-1. **Add map.** Click on the **Add Map** icon **(2)** and then click on the position on the blank page where you want your map to be attached: by simply clicking **OK** for the New item Properties, in your page it will appear what it is shown in your QGIS **Map panel**. Check if the layers into are adequately centered or zoomed, if not you can adjust them back in QGIS Map panel and they will be automatically updated in your Print Layout. In the New Print Layout window you can use also the **Select/Move item (1)** icon to move or resize the Map (or also the other map elements).
+Raster styling depends on the type of information to disseminate; particularly, if the information is of qualitative type (e.g. land cover classes) or quantitative (e.g. temperature map) the symbolization to be used will be different. Moreover, some types of symbolization can be more suitable for raster data with wide range of values, while some others for raster with small range of values.
+To start, let’s load on QGIS the two raster layers from the Geopackage you were provided to your **Layers panel**. You will get the following view of QGIS interface (see :numref:`1.9.1`). You can also rearrange the layers by selecting one of them and dragging and dropping it to the preferred position to make it appear at the top or at the bottom with respect to the other one.
 
 .. _1.9.1:
 .. figure:: /img/1/1.9.1.png
    
-    -- Creation of a New Print Layout.
+    -- The first visualization of Temperature_distribution and Land_Cover raster data, when loaded on QGIS.
+
+As you see by the screen, these layers need some styling to further understand them, where styling, here, simply refers to change their visual properties. This can be done, separately, for both raster data (see :numref:`1.9.2`), by right-clicking on them, in the Layers Panel, and selecting **Properties**, as it was done for vector data. There, from **Symbology** tab (as in Figure) you can select the **Render Type (1)** (*Multiband colour*, *paletted/unique values*, *singleband gray*, *singleband pseudocolor*, *hillshade*) with its settings (as it is here the *color gradient* and *contrast enhancement*), you can eventually choose the **Colour Rendering** as well as the **Resampling options**.
 
 .. _1.9.2:
 .. figure:: /img/1/1.9.2.png
    
-    -- New Print Layout Window, icons and panels.
+    -- The choice for Raster Data Symbology Properties. The default Singleband gray Render Type.
 
-2. **Add title.** Title is very important to understand at first sight what a map represents, it should summarize with a few words map purpose, place and time.  To add the title to the map click on **Add label** button **(3)**, decide the position where to place it and click **OK** to confirm its properties. Title position usually should be located on the top of the page, with a huger font with respect to other map items. After having selected the *Title* item in the **Items Panel (7)** *on the right*, Insert the title text (e.g. here it could be “Water Surface Temperature Distribution in the insubric lakes on 14/04/2020”) and set its font in the **Item Properties Panel (8)**.
+Here, the following basic render types are described and applied on the previously mentioned raster data:
 
-3. **Add legend.** Click on **Add legend** button **(4)**, decide its position and accept the default item properties. You will visualize the legend on your map, however, you still need to do some work to make it clearer. It is possible to edit the legend, after it has been created, by going on its **Item Properties (8)**, just check, before, to have the Legend item selected in the **Items Panel (7)**. In the **Main Properties** box you can name the item (here *Legend*, see :numref:`1.9.3` **(1)**). Then you can focus on legend items: when you add a legend to the map, its different items are represented by default, in the same way they are represented in your QGIS Layers Panel. Therefore, before printing the map, it is usual to change some names, labels or order to make them more understandable. Here, there are two ways: one can make edits directly from QGIS Layer Panels, by modifying the style of layers, or one can also choose to modify them just on the Map Print Layout, leaving the Layers style as it is on QGIS. To apply the second option, it is necessary to uncheck the **Auto update** box (see :numref:`1.9.3` **(2)**) into the **Item Properties** *Panel*. In the **Legend items** box now it is possible to:
+- **Singleband gray**. It is the Default view of both raster data when they are loaded on QGIS. it consists in representing them with just one color gradient that goes from black, for lower values, to white, for higher ones. This Render type is useful when showing quantitative information, with a wide range of values to be represented within the raster (e.g. heights in a DEM or, as in this case, the temperature values of **Temperature_distribution** raster layer).
 
-    - Reposition the single layers into the Legend, by clicking on the two arrows (see :numref:`1.9.3` **(3)**) below the box.
+    - See :numref:`1.9.2`. Try to invert **Temperature_distribution** raster Singleband gray **Color gradient (2)** and look at changes. Also, try to enhance differences, within the temperature values of the raster, by choosing the most suitable **Contrast Enhancement (3)** as well as by changing **Min/Max Value Settings** (where Min/Max values are used to define the extent to which the gradient is stretched and/or clipped).
 
-    - Add or remove layers, that are not visible on the map, from the legend (by clicking on + or – , see  :numref:`1.9.3` **(4)**)
+- **Singleband-Pseudocolor.** This Render Type, as the Singleband-gray, is suitable for showing quantitative information. It allows to choose a color ramp and also (choosing for *Mode: Equal Interval* or *Quantile*) a number of classes there to categorize the different intervals of values to be represented. Choosing for *Mode:Continuous* the number of classes cannot be manually set.
 
-    - Change one layer’s name, by double-clicking on the layer’s name, typing a new name and clicking on OK. Here, for example, try to change *Temperature_distribution* into a clearer ‘Water Temperature Distribution’ (:numref:`1.9.3` **(5)**) as well as *Municipalities_OSM* into ‘Municipalities borders’.
-
-    - Change the number of decimal digits of temperature values. To do so, click on each numerical label (:numref:`1.9.3` **(6)**) in the Legend items box and then remove the unnecessary digits, clicking then on OK.
-
-Finally, from Fonts and Text Formatting box (:numref:`1.9.3` **(7)**), try to change also the font used for the different items in the legend: remember it should be visible but not too huge.
+    - Refer to :numref:`1.9.3` steps and result. From **Temperature_distribution** layer **Properties→Symbology**, select **Render Type: Singleband-Pseudocolor (1)**, choose a meaningful **Color ramp (2)** (here e.g. *Reds*), select **Mode: Equal Interval (3)** and insert 10 as number of **Classes (4)**, click on **Classify** and the temperature values will be divided in 10 equal intervals from their minimum to their maximum. Click on **Apply** and look at final layer visualization.
 
 .. _1.9.3:
 .. figure:: /img/1/1.9.3.png
    
-    -- Legend Properties editing.
+    -- The Singleband-Pseudocolor Render Type, application on Temperature_distribution raster data.
 
-4. **Add scalebar.** The map scale allows a map user to properly understand the objects sizes and the distances on the map. To add a scalebar click on **Add Scalebar** (see :numref:`1.9.2` **(5)**), click on the position where to place it and click **OK**. Under the Item properties you can change **Style** or **Scale bar units**, **Label for units**, etc. Try to style your scalebar in a way it can be clearly legible as well as useful, by choosing the adequate size and unit of measure. It is possible to replace scalebar by lexical scale (eg. 1:60000) by changing scalebar **Style** to **Numeric**. However, use of lexical scale should be limited to those cases where the map is to be printed on paper, otherwise, on a digital document, the scalebar is more appropriate.
+- **Paletted/unique values**. This Render Type is suitable for representing qualitative information as well as raster data with a small range of values. It consists in representing each different value within the raster with a different color. This is the most suitable choice to display the qualitative land cover classes of **Land_cover** raster. Let us apply Paletted/unique values Render type on Land_cover layer by following the instructions in :numref:`1.9.4`.
 
-5. **Add north arrow.** Another basic element in a map is the North arrow that helps the viewer with orientation. It can be added on map by clicking on the **Add North arrow** icon (see :numref:`1.9.2` **(6)**), clicking on the position where to place it, and clicking on **OK** then.
+    - **Random colors**. From layer **Properties→Symbology**, select** Render Type: Paletted/unique values (1)** and leave **Color ramp** to *Random colors* **(2)**: click on **Classify (3)** and then on **Apply** to see each land cover class be colored with a different color, linked to its pixel value, from 0 to 41. Try to manually change some of these randomly assigned colors by going on **Properties→Symbology**, right-click on a color assigned to a specific value and then click on **Change color… (4)**. It is possible also to change the label for each value.
 
-Remember you can always rearrange positions or sizes of the different elements by using the **Select/Move item (1)** command. Try to create a well-balanced map, clear and effective, but also attractive, and try to size and locate each element according to its importance (so the map body usually should be huge and at center, the title above with huge font, while legend and scalebar in a smaller size as also the North arrow).
-
-When in the end you are satisfied with the map layout, you can export it as PDF, image or SVG File. In every case, just click on one of the **Export as…** buttons (see :numref:`1.9.2` **(9)**), choose the folder where you want to save the map, give it a name, or just leave the one you gave at the beginning (*'Distribution of temperatures in insubric lakes'*). Click on Save to open the **Export Options window** where it will be possible to define **Export resolution**, **Page width or height** and also **Crop page to content** if some parts of it are empty **(5)**. You can keep all the default settings and you can click on **Save**: the map will be finally complete and saved on your PC. :numref:`1.9.4` shows an example of possible final print layout.
+    - **Predefined Land_Cover_style.** From layer **Properties→Symbology** click on **Style (5)→Load Style…** to load the *Land_Cover_style* that is in your exercise folder. See it is a Paletted/unique values render type. It is a style provided by the Copernicus Land Monitoring Service, to show Corine Land Cover 2018 data: it links all the possible values that can be found in Corine Land Cover data to the labels and colors of the classes they refer to. It is for this reason that it stores symbols and labels for more classes than the ones that are really present in the area under study (e.g. value 44, representing *Sea and Ocean*). Try to remove these empty classes with the **minus** button, next to *Classify*. To understand which classes are empty you can compare this style to the previous *Random colors* visualization to see the missing classes there (e.g. values from 42 to 48).
 
 .. _1.9.4:
 .. figure:: /img/1/1.9.4.png
    
-    -- The final print out map.
+    -- The Paletted/Unique Values Render Type, application on Land_Cover raster data, with Random colors or Land_Cover_style.
+
+The exercise folder also contains the *Temperature_distribution_style* to be loaded on *Temperature_distribution* raster layer. Check it should be very similar to your *Singleband-Pseudocolor* visualization of the raster. There is also the possibility of saving the styles that you make in a way to easily recall them in a second moment, or also on other similar raster data.
+
+These raster visualization modes are just a few basic examples that can be done. Styling depends on the type of data you have (e.g. Multiband render type is commonly used with satellite imagery) and by the type of information you want to provide.

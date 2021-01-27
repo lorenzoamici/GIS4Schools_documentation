@@ -1,2 +1,2 @@
-Open layers from GeoPackage/ Remove layers from Geopackage
-==========================================================
+QGIS interface
+==============

@@ -1,2 +1,50 @@
-Select by attributes, editing tables
-====================================
+Attribute table: selection, editing and field calculator
+========================================================
+
+In this section we are going to look at the attribute table of some vector data. We are going to describe how to select the features constituting the vector layer, how to edit them and how to use the field calculator. For this purpose, let us open the shapefiles Municipalitis_OSM.shp and Temperature.shp with the same procedure described in the previous paragraph. 
+It is possible to identify a feature belonging to a single layer by selecting that layer in the Table Of Contents and using the tool **Identify Features** in the top menu. In this way, if we click, for instance, on lake Maggiore, a window on the right opens and the attributes of that feature are displayed (:numref:`2.4.2.1`). The information provided are those contained in the attribute table. As shown in :numref:`2.4.2.1`, the selected feature is displayed in purple.
+
+.. _2.4.2.1:
+.. figure:: /img/2/2.4.2.1.PNG
+   
+    -- Feature identification (Lake Maggiore).
+
+Let us now look more in detail at the attribute table of the layer Lakes. To open the attribute table, right-click on the layer and click **Open Attribute Table**. The attribute table is organized in columns and every column corresponds to a field (in this case, the layer has two textual fields, namely “name” and “source”). Every geometric feature (row) is associated with semantic information called attributes. :numref:`2.4.2.2` shows the attribute table of the layer Lakes.
+
+.. _2.4.2.2:
+.. figure:: /img/2/2.4.2.2.PNG
+   
+    -- Attribute table of the layer Lakes.
+
+Suppose that we want to add a new field that indicates the area covered by every feature. First, we need to start an editing session (right click on the layer Lakes → **Toggle Editing** or, if the layer attribute table is open, directly click on **Toggle Editing** on the top menu of the table). Afterwards, click the tool **New field** in the table top bar and provide the field name and type: in this case, let us call the field “area” and assign the type “decimal number (real)”. 
+In order to calculate the area, we have to use the **Field Calculator** that is available in the main menu of the attribute table (look at :numref:`2.4.2.3`). Check the option **Update existing field** and select the field “area”. In the **Expression** tab, expand the section **Geometry** and double click **$area**. Clicking on **OK**, the area (in square meters) of every geometric feature is calculated and reported in the corresponding line of the attribute table under the field “area”. :numref:`2.4.2.3` shows the procedure just described.
+
+.. _2.4.2.3:
+.. figure:: /img/2/2.4.2.3.PNG
+   
+    -- Computation of polygon features area through the Field Calculator.
+
+It is also possible to modify a single attribute simply by clicking the cell that has to be updated and typing the new attribute. Furthermore, it is possible to update the attributes of a specific set of features. In this case it is necessary to select these features (clicking the corresponding line number in the attribute table) and use the field calculator, as previously explained: only the attributes of the selected features will be modified.
+Once again, it is necessary to save and stop the editing session with the usual procedure.
+
+Now we are going to see different ways to select geometric features. In particular, we will describe the following possibilities: selection by geometry, selection by expression and selection by location. For this purpose, it is quite helpful the **Selection Toolbar**, that can be enabled by right-clicking on the grey area of the QGIS main menu. The procedures that are going to be described are synthesized in :numref:`2.4.2.4` and :numref:`2.4.2.5`.
+
+- Selection by geometry (:numref:`2.4.2.4`, red section): the simplest way to select a feature is to select it directly in the map. This type of selection can be performed through the tools **Select Feature** (or **Select Features by Polygon**, **by Freehand** and **by Radius**). In this case, it is necessary to select the layer of interest in the Table of Contents. When the feature is selected, it turns to yellow in the map.
+
+- Selection by expression (:numref:`2.4.2.4`, green section): it is possible to select feature elements with an appropriate expression. All the features that meet the conditions written in such expression are selected. For instance, we can select all the features of the layer Lakes having an area greater than 10\ :sup:`7`\  m\ :sup:`2`\ and coming from the Lombardy Geoportal. Similarly, we can select features by value: a guided interface allows us to specify the value of the layer fields. It is also possible to select all the features of this layer (**Select All Features**) and to invert the current selection (**Invert Feature Selection**). Furthermore, it is possible to deselect all features belonging to all layers (**Deselect Features from All Layers**) or to deselect all features belonging to the currently active layer (**Deselect Features from the Current Active Layer**), as shown in :numref:`2.4.2.4` (blue section).
+
+.. image:: /img/2/2.4.2.4_(a).PNG
+
+.. _2.4.2.4:
+.. figure:: /img/2/2.4.2.4_(b).PNG
+   
+    -- Features selection through the Selection Toolbar.
+
+- Selection by location (:numref:`2.4.2.5`): this selection possibility allows to select the features that respect certain spatial characteristics. For example, we can select all the municipalities that intersect the lakes. Click **Vector → Research Tools → Select by Location** and specify the following parameters: **select features from** Municipalities_OSM, **where the features** intersect, **by comparing to the features from** Lakes.
+
+.. _2.4.2.5:
+.. figure:: /img/2/2.4.2.5.PNG
+   
+    -- Selection by location.
+
+Once the selection has been performed, we can export the selected elements and save them in another layer. For example, let us extract the municipalities that intersect the lakes (i.e. the last selection that we have performed) in another shapefile. It is necessary to right-click on the layer Municipalities_OSM and select **Export → Save Selected Features As**. We have to specify the format ESRI Shapefile, the file name (for example, “Municipalities_on_lakes”) and click **OK**. The new layer will be automatically uploaded in the QGIS project and displayed in the map.

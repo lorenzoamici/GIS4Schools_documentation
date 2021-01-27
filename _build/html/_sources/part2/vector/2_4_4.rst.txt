@@ -1,2 +1,15 @@
-Dissolve
-========
+Geoprocessing tools for vector data: dissolve
+=============================================
+
+In this part of the lecture we are going to explore some useful geoprocessing tools that are available in QGIS. All the geoprocessing tools for vector files can be found in the main menu, under **Vector → Geoprocessing Tools**. The same tools are available in the Processing Toolbox (main menu **→ Processing → Toolbox**). In this lecture we will describe three important tools: dissolve, intersect and buffer.
+
+The dissolve tool allows the user to combine different elements of the same layer based on the value of a certain field. The elements (features) that have the same value for that field are merged. Suppose that we want to apply this tool to the layer Municipalities_on_lakes_pop, in order to merge the municipalities belonging to the same province.
+
+First of all, let us remove the features coming from the shapefile Municipalities_on_lakes.shp that did not have any correspondence with the rows of the table Population.csv. Let us open the attribute table of the layer Municipalities_on_lakes_pop and start an editing session (**Toggle editing mode** on Municipalities_lakes_pop). Click on **Select features using an expression** and type the expression “Population is null”. Click **OK**. Then, click **Delete selected features**. Save and stop the editing session.
+
+Now, click on **Vector → Geoprocessing Tools → Dissolve**. Select as **Input layer**: Municipalities_on_lakes_pop. Select **Dissolve field**: Population (after clicking on the ellipses symbol). Save the **Dissolved** layer, namely Municipalities_on_lakes_diss.shp, in the usual layer. Finally, click **Run**. Figure 2.4.4.1 summarizes the procedure and shows the result.
+
+.. _2.4.4.1:
+.. figure:: /img/2/2.4.4.1.PNG
+   
+    -- Dissolve configuration interface: procedure to follow. The result of the dissolve operation is shown: Municipalities_on_lakes_diss (brown polygons).

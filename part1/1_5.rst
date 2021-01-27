@@ -1,2 +1,2 @@
-QGIS interface
-==============
+Introduction to QGIS
+====================

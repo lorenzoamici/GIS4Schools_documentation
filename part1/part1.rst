@@ -15,3 +15,4 @@ Data visualization with QGIS
     ./1_8
     ./1_9
     ./1_10
+    ./1_11

@@ -1,5 +1,5 @@
-Accessing OGC services with QGIS (3000)
-=======================================
+Accessing OGC services with QGIS
+================================
 
 QGIS allows the connection to servers offering geospatial data in compliant with the OGC service standards.
 Open QGIS and, in order to have some contextualisation data, upload the geopackage that was used for the previous course, zooming to the extension of the layer. **Link al corso del giorno precedente**
