@@ -1,5 +1,5 @@
-GIS & Analysis tools
-====================
+Data analysis with QGIS
+=======================
 
 .. toctree::
    :maxdepth: 2
