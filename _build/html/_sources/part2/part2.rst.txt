@@ -10,4 +10,4 @@ Data analysis with QGIS
    2_3
    vector/vector
    raster/raster
-   2_18
+   2_6
