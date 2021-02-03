@@ -98,7 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. GIS &amp; Analysis tools</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. Data analysis with QGIS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -115,10 +115,10 @@
 <li class="toctree-l3"><a class="reference internal" href="vector/2_4_1.html">2.4.1. Map digitizing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector/2_4_2.html">2.4.2. Attribute table: selection, editing and field calculator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector/2_4_3.html">2.4.3. Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vector/2_4_4.html">2.4.4. Dissolve</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vector/2_4_5.html">2.4.5. Field calculator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vector/2_4_6.html">2.4.6. Rasterization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vector/2_4_7.html">2.4.7. Geoprocessing tools – Intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/2_4_4.html">2.4.4. Geoprocessing tools for vector data: dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/2_4_5.html">2.4.5. Geoprocessing tools for vector data: intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/2_4_6.html">2.4.6. Geoprocessing tools for vector data: buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/2_4_7.html">2.4.7. Rasterization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vector/2_4_8.html">2.4.8. Geoprocessing tools – Buffer</a></li>
 </ul>
 </li>
@@ -131,7 +131,7 @@
 <li class="toctree-l3"><a class="reference internal" href="raster/2_5_6.html">2.5.6. Overlay statistics</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="2_18.html">2.6. Graphic modeler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_6.html">2.6. Graphic modeler</a></li>
 </ul>
 </li>
 </ul>
@@ -180,7 +180,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="part2.html"><span class="section-number">2. </span>GIS &amp; Analysis tools</a> &raquo;</li>
+          <li><a href="part2.html"><span class="section-number">2. </span>Data analysis with QGIS</a> &raquo;</li>
         
       <li><span class="section-number">2.3. </span>Extending QGIS functionalities</li>
     
@@ -207,17 +207,17 @@
 <h2><span class="section-number">2.3.1. </span><a class="reference external" href="https://docs.qgis.org/3.16/en/docs/user_manual/processing/toolbox.html" rel="noopener noreferrer" target="_blank">Processing toolbox</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Software functionalities can be integrated by activating the Processing Toolbox (from the main menu Processing→Toolbox).
 The toolbox contains all the available algorithms, divided into predefined groups, which are called Providers. It includes also additional user created algorithms, allowing users to define their own workflows and processing tasks. At the top of the list of algorithms are displayed the most recent used tools, in such a way to make easier to reexecute them, if needed (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.3.1.1</span></a>). In the uppest part of the toolbox dialog, there are functionalities for managing models (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 2.3.1.2</span></a>) and python scripts (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.3.1.3</span></a>). Referring to models, the graphical modeler <strong>link alla lezione di Carlo</strong> will be presented in a next lesson; on the opposite, scripts are not included in this basic training.</p>
-<div class="figure align-default" id="id22">
+<div class="figure align-default" id="id15">
 <span id="id2"></span><img alt="../_images/2.3.1.1.png" src="../_images/2.3.1.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.1.1 </span><span class="caption-text">– The Processing Toolbox</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.1.1 </span><span class="caption-text">– The Processing Toolbox</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id23">
+<div class="figure align-default" id="id16">
 <span id="id3"></span><img alt="../_images/2.3.1.2.png" src="../_images/2.3.1.2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.1.2 </span><span class="caption-text">– Managing models in the Processing Toolbox</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.1.2 </span><span class="caption-text">– Managing models in the Processing Toolbox</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id24">
+<div class="figure align-default" id="id17">
 <span id="id4"></span><img alt="../_images/2.3.1.3.png" src="../_images/2.3.1.3.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.1.3 </span><span class="caption-text">– Managing scripts in the Processing Toolbox</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.1.3 </span><span class="caption-text">– Managing scripts in the Processing Toolbox</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id5">
@@ -243,27 +243,27 @@ Each plugin has some metadata, which are displayed in the right panel (see an ex
 <p>If you want you can also directly install plugins in a zipped format, e.g. plugins downloaded directly from some author’s repository.
 The better way to know which plugins are available is to browse the list and check by yourself what can be of interest with you.
 We will see together two examples of very used plugins: QuickMapServices and QuickOSM.</p>
-<div class="figure align-default" id="id25">
+<div class="figure align-default" id="id18">
 <span id="id6"></span><img alt="../_images/2.3.2.1.png" src="../_images/2.3.2.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.1 </span><span class="caption-text">– The Plugins Menu</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.1 </span><span class="caption-text">– The Plugins Menu</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference external" href="https://github.com/nextgis/quickmapservices" rel="noopener noreferrer" target="_blank">QuickMapServices</a> allows you to easily add various map services as baselayers. For its installation, select from the Plugins list QuickMapServices and click on Install Plugin (<a class="reference internal" href="#id7"><span class="std std-numref">Fig. 2.3.2.2</span></a>).</p>
-<div class="figure align-default" id="id26">
+<div class="figure align-default" id="id19">
 <span id="id7"></span><img alt="../_images/2.3.2.2.png" src="../_images/2.3.2.2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.2 </span><span class="caption-text">– Installing QuickMapServices Plugin</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.2 </span><span class="caption-text">– Installing QuickMapServices Plugin</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
 <p>Once it is installed, you find it under the Web in the Main Menu. There are a huge number of possible maps. Let us suppose that we are interested in OSM Standard. By selecting it (<a class="reference internal" href="#id8"><span class="std std-numref">Fig. 2.3.2.3</span></a> and <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 2.3.2.4</span></a>) the OSM Standard map is added as a background of our project <a class="reference internal" href="#id10"><span class="std std-numref">Fig. 2.3.2.5</span></a>). This is simply an image and therefore it is not queryable but very often it is useful to give a quick contextualisation to our data.</p>
-<div class="figure align-default" id="id27">
+<div class="figure align-default" id="id20">
 <span id="id8"></span><img alt="../_images/2.3.2.3.png" src="../_images/2.3.2.3.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.3 </span><span class="caption-text">– The list of the available services</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.3 </span><span class="caption-text">– The list of the available services</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id28">
+<div class="figure align-default" id="id21">
 <span id="id9"></span><img alt="../_images/2.3.2.4.png" src="../_images/2.3.2.4.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.4 </span><span class="caption-text">– The list of the available OSM services</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.4 </span><span class="caption-text">– The list of the available OSM services</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id29">
+<div class="figure align-default" id="id22">
 <span id="id10"></span><img alt="../_images/2.3.2.5.png" src="../_images/2.3.2.5.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.5 </span><span class="caption-text">– OSM Standard as the background of our project</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.5 </span><span class="caption-text">– OSM Standard as the background of our project</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you want to be sure to connect to the whole dataset of contributed services, from the QuickMapServices menu select Settings→More Services→Get contributed pack.</p>
 <p>A second interesting plugin helps us download selected data from the OpenStreetMap (OSM) database. OSM is an editable vector map of the whole world built by volunteers. It is the largest, most diverse, most complete and most up-to-date geospatial database. OSM is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).
@@ -283,53 +283,22 @@ Map Features are agreed tags within the OSM Communities and a <a class="referenc
 <li>building = school is the tag used for any generic school buildings. But, amenity=school is used for the perimeter of the school grounds.</li>
 </ul>
 <p>With the <a class="reference external" href="https://github.com/3liz/QuickOSM" rel="noopener noreferrer" target="_blank">QuickOSM</a> plugin, we can download the features we are interested in. After installing it, we find it under the Vector Menu or as an icon (see <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 2.3.2.6</span></a>). In the following we will download generic buildings in the area covered by the GIS4Schools geopackage. For doing so we have to zoom to that layer and then to select the key building and the value yes in the Quick query dialog (<a class="reference internal" href="#id12"><span class="std std-numref">Fig. 2.3.2.7</span></a>) . As we have already zoomed to the interested area, we choose the canvas extent as the are where to extract the buildings.</p>
-<div class="figure align-default" id="id30">
+<div class="figure align-default" id="id23">
 <span id="id11"></span><img alt="../_images/2.3.2.6.png" src="../_images/2.3.2.6.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.6 </span><span class="caption-text">– The QuickOSM plugin interface</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.6 </span><span class="caption-text">– The QuickOSM plugin interface</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id31">
+<div class="figure align-default" id="id24">
 <span id="id12"></span><img alt="../_images/2.3.2.7.png" src="../_images/2.3.2.7.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.7 </span><span class="caption-text">– The Quick query dialog window</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.7 </span><span class="caption-text">– The Quick query dialog window</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </div>
 <p>The global result is shown in <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 2.3.2.8</span></a> while in <a class="reference internal" href="#id14"><span class="std std-numref">Fig. 2.3.2.9</span></a> we can see a small detail.</p>
-<div class="figure align-default" id="id32">
+<div class="figure align-default" id="id25">
 <span id="id13"></span><img alt="../_images/2.3.2.8.png" src="../_images/2.3.2.8.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.8 </span><span class="caption-text">– Global result of the QuickOSM</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.8 </span><span class="caption-text">– Global result of the QuickOSM</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id33">
+<div class="figure align-default" id="id26">
 <span id="id14"></span><img alt="../_images/2.3.2.9.png" src="../_images/2.3.2.9.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.9 </span><span class="caption-text">– Detail of the result of the QuickOSM</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
-</div>
-<p>The uploaded layer is a vector one and we can apply the tools suitable for vector files. As an example, after having selected some buildings in the rectangular box, compute a buffer around every building. The CRS of the layer is <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span> <span class="pre">-</span> <span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">-</span> <span class="pre">Geographic</span></code> and therefore we need before to reproject the layer to a metric CRS, for instance to the <code class="docutils literal notranslate"><span class="pre">EPSG:</span> <span class="pre">32632</span></code>, in which the geopackage and the project are defined (<a class="reference internal" href="#id15"><span class="std std-numref">Fig. 2.3.2.10</span></a> and <a class="reference internal" href="#id16"><span class="std std-numref">Fig. 2.3.2.11</span></a>). The result is a temporary file named Reprojected and we can check, by right clicking on the file and selecting Source in the dialog window, that its CRS is the <code class="docutils literal notranslate"><span class="pre">EPSG:</span> <span class="pre">32632</span></code> (<a class="reference internal" href="#id17"><span class="std std-numref">Fig. 2.3.2.12</span></a>).</p>
-<div class="figure align-default" id="id34">
-<span id="id15"></span><img alt="../_images/2.3.2.10.png" src="../_images/2.3.2.10.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.10 </span><span class="caption-text">– Reprojecting the vector layer</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id35">
-<span id="id16"></span><img alt="../_images/2.3.2.11.png" src="../_images/2.3.2.11.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.11 </span><span class="caption-text">– Choosing the parameters for the reprojection</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id36">
-<span id="id17"></span><img alt="../_images/2.3.2.12.png" src="../_images/2.3.2.12.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.12 </span><span class="caption-text">– Checking the Coordinate Reference System of the Reprojected layer</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
-</div>
-<p>Now, with Vector→Geoprocessing Tools→Buffer (<a class="reference internal" href="#id18"><span class="std std-numref">Fig. 2.3.2.13</span></a>) we compute the buffer around the buildings. The parameters are selected in the dialog box (<a class="reference internal" href="#id19"><span class="std std-numref">Fig. 2.3.2.14</span></a>) of the Buffer function: we want to have a buffer of 5 meters around the buildings; to use 5 line segments to approximate a quarter circle when rounded offsets are created; to use a square end cap style and a miter join style with a miter limit parameter of 1 meter. Finally we want to dissolve the resulting buffer borders.</p>
-<div class="figure align-default" id="id37">
-<span id="id18"></span><img alt="../_images/2.3.2.13.png" src="../_images/2.3.2.13.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.13 </span><span class="caption-text">– Computing the buffer of the features of the Reprojected layer</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id38">
-<span id="id19"></span><img alt="../_images/2.3.2.14.png" src="../_images/2.3.2.14.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.14 </span><span class="caption-text">– Choosing the parameters for the buffer</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
-</div>
-<p>The resulting Buffered layer is shown in <a class="reference internal" href="#id20"><span class="std std-numref">Fig. 2.3.2.15</span></a> while in <a class="reference internal" href="#id21"><span class="std std-numref">Fig. 2.3.2.16</span></a> a detail of the layer is visualised. All the layers, starting from that downloaded from OSM are temporary. If you want to make them permanent, remember to save them.</p>
-<div class="figure align-default" id="id39">
-<span id="id20"></span><img alt="../_images/2.3.2.15.png" src="../_images/2.3.2.15.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.15 </span><span class="caption-text">– Global result after the buffer creation</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id40">
-<span id="id21"></span><img alt="../_images/2.3.2.16.png" src="../_images/2.3.2.16.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.16 </span><span class="caption-text">– A detail of the map after the buffer creation</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.2.9 </span><span class="caption-text">– Detail of the result of the QuickOSM</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>

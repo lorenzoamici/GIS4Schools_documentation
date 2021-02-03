@@ -58,8 +58,7 @@ Proceed in the lower part of the canvas making an Intersection between *Lakes* a
 
 Connect the last box to a new **Field Calculator** (:numref:`2.6.6`, **1**) that will divide the river segments in two categories according to their length. Call this new field *50km* **(2)** and select *Integer* as **Type (3)** and *2* as **Length (4)**. In the **Formula** field **(5)** type:
 
-.. math::
-    :label: [1]
+::
 
     if("Length" > 50000, 50, 20)
 

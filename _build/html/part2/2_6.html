@@ -30,7 +30,6 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -241,8 +240,9 @@
 </div>
 <p>Proceed in the lower part of the canvas making an Intersection between <em>Lakes</em> and <em>Rivers</em> inputs without specifying additional parameters. Connect then the result of the Intersection, a set of river segments, to a <em>Field Calculator</em> to add a new field called <em>Length</em> (type: float; length: 12; precision: 2; Formula: $length). In the <em>Description</em>, add a 2 after <em>Field Calculator</em> to distinguish it from the one previously used.</p>
 <p>Connect the last box to a new <strong>Field Calculator</strong> (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 2.6.6</span></a>, <strong>1</strong>) that will divide the river segments in two categories according to their length. Call this new field <em>50km</em> <strong>(2)</strong> and select <em>Integer</em> as <strong>Type (3)</strong> and <em>2</em> as <strong>Length (4)</strong>. In the <strong>Formula</strong> field <strong>(5)</strong> type:</p>
-<div class="math notranslate nohighlight" id="equation-1">
-<span class="eqno">(2.6.1)<a class="headerlink" href="#equation-1" title="Permalink to this equation">¶</a></span>\[if(&quot;Length&quot; &gt; 50000, 50, 20)\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="s2">&quot;Length&quot;</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The meaning of this expression is to assign a value of <em>50</em> to the river segments longer than <em>50000m</em> (50km) and a value of <em>20</em> to those that are shorter. Click <strong>OK (6)</strong> to visualise the box on the canvas <strong>(7)</strong>. Notice that the progressive numbers (manually set) beside <em>Field Calculators</em> have been highlighted to show their importance to distinguish the different homonym operations within a model. We can use the <strong>Formula</strong> field <strong>(5)</strong> to show different options with respect to the manual input. A demonstrative <em>Formula</em> window <strong>(8)</strong> shows how the same expression could be written in order to give a growing level of control to the user when running the model. The first one leaves no editing possibility as everything is predefined, but all its elements could be replaced by a model input. In the second one, e.g., the value of <em>50000</em> has been replaced by a <strong>Number</strong> parameter called <em>threshold</em>. In the third one, also the field <em>“length”</em> has been replaced with an homonym <strong>Vector Field</strong> parameter. The two can be distinguished by syntax and colour in the expression. Fields are in orange and in quotes (“…”) while input parameters, no matter their type, are in light blue and preceded by a &#64; symbol. The last expression directly refers to an <strong>Expression</strong> parameter, allowing the user to write the whole expression from scratch at every model run. The elements in the expression space and the corresponding input boxes and windows have been underlined with the same colour to help understanding the figure. Parameters appear in the menu below the search bar in bold characters and can be added to the expression space double clicking on them.</p>
 <div class="figure align-default" id="id15">
 <span id="id6"></span><img alt="../_images/2.6.6.jpg" src="../_images/2.6.6.jpg" />
