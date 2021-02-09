@@ -1,0 +1,43 @@
+Map digitizing
+==============
+
+One of the most common activities that a GIS user has to carry out is map digitizing, that consists in converting raster data (such as digital maps) in vector data that can be used for different analyses. Assume that the aim is to digitize a lake and a water course in the area of interest, therefore to add two different features to the existing layers Lakes and River_network. Let us consider Standard OpenStreetMap as a basemap for digitizing the two feature elements. In this case, in the main menu of QGIS, let us select **Web → QuickMapServices → OSM → OSM Standard** [1]_ and zoom to the area of interest (North Italy and Switzerland, among lakes Maggiore, Como and Lugano). Then, let us open the two layers that have to be updated. In the top menu select **Layer → Add Layer → Add Vector Layer** (this is the general way to open a vector file in QGIS). Select the shapefile Lakes.shp and River_network.shp in the folder that contains all the data (specifying as file format ESRI Shapefiles) and then click **Add**. For a better visualization of these elements, let us change the symbology of lakes and rivers by assigning them the same color, for example light blue.
+
+Now, let us zoom to the area around Lecco: the aim is to digitize Lake Garlate and Lake Olginate, which can be easily identified through OpenStreetMap (they are south of Lecco). For this purpose, let us open the Digitizing Toolbar by right-clicking on the grey area that contains all the tools provided by QGIS and checking both **Digitizing Toolbar** and **Advanced Digitizing Toolbar**. In order to enable all the digitizing tools, let us start an editing session: right-click on the layer Lakes and click **Toggle Editing**. The Digitizing Toolbar is now enabled (:numref:`2.4.1.1`). Click **Add Polygon Feature** on the Digitizing Toolbar and draw manually lake Garlate and lake Olginate simply by adding every vertex of the polygon (with a left click of the mouse). When a polygon is complete, that is, all the vertices have been added, right-click the last vertex; then, adequately fill the layer fields (for example, for lake Garlate write “Lago di Garlate” in the field “Name” and “OpenStreetMap basemap” in the field “Source”) and click **OK** (:numref:`2.4.1.2`). Continue to digitize in the same manner every part of the lake.
+
+.. _2.4.1.1:
+.. figure:: /img/2/2.4.1.1.PNG
+   
+    -- Digitizing Toolbar and Advanced Digitizing Toolbar.
+
+.. _2.4.1.2:
+.. figure:: /img/2/2.4.1.2.PNG
+   
+    -- Polygon feature digitizing.
+
+In order to digitize an island, we can use the **Add Ring** function of the Advanced Digitizing Toolbar after selecting the feature that contains the island (:numref:`2.4.1.3`). This function allows the creation of a hole in a polygon feature (for example, lake Garlate contains an island called Isola Viscontea, as shown in :numref:`2.4.1.3`).
+
+.. _2.4.1.3:
+.. figure:: /img/2/2.4.1.3.PNG
+   
+    -- Ring digitizing to create a “hole” within a polygon feature.
+
+As lake Garlate and lake Olginate are divided by a dam, we could digitize a single polygon that contains both lakes and then split the feature into two parts using the **Split Features** tool (available in the Advanced Digitizing Toolbox). For this purpose, we have to select the feature that has to be divided and then digitize the line of separation with the tool Split Features (as always, right-clicking when the line is complete). Similarly, we can merge two parts of the same feature by selecting the two parts and using the tool **Merge Selected Features**.
+
+Imagine that we have made a mistake in the digitizing procedure and we want to reshape a feature. In this case, we have to select the feature that has to be modified and use the **Reshape Features** tool. It is simply necessary to redefine the feature boundary where the error is present (:numref:`2.4.1.4`). Alternatively, we can redefine the boundary with the tool **Split Features**, selecting the part that has to be deleted and using the tool **Delete Part**. Another possibility consists in changing directly the position of the vertices, with the **Vertex Tool** (current layer): it is simply necessary to click on the vertex that has to be moved and click again on the right position.
+
+.. _2.4.1.4:
+.. figure:: /img/2/2.4.1.4.PNG
+   
+    -- Reshape feature tool.
+
+Once the features have been correctly digitized, we need to save (clicking on **Save Layer Edits**) and stop the editing session (clicking on **Toggle Editing** again).
+
+A similar procedure applies to linear features. Let us consider the layer of rivers (River_network). In this case we are going to digitize a short tributary of lake Como. Let us zoom in the area of Como (and in particular the area of Germanello) with the help of the basemap. The aim is to digitize the water stream called Torrente Caraello. Toggle editing on the River_network layer and click **Add Line Features**. The line can be created by clicking the position of every vertex and then right-clicking when the line is complete. As seen with polygon features, the user has to fill the attributes that characterize this feature (:numref:`2.4.1.5`) and then click **OK**. The same tools introduced for polygon features can be used for linear features as well (**Split Features**, **Reshape Features**, **Merge Selected Features** and **Vertex Tool**). Once again, when the feature has been created, we have to save and stop the editing session.
+
+.. _2.4.1.5:
+.. figure:: /img/2/2.4.1.5.PNG
+   
+    -- Polyline feature digitizing.
+
+.. [1] If the QuickMapServices plugin is not installed, select from the top menu Plugins → Manage and Install Plugins, search for QuickMapsService and select Install Plugin.

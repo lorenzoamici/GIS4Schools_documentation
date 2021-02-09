@@ -43,9 +43,9 @@ Each plugin has some metadata, which are displayed in the right panel (see an ex
 - author(s),
 - version.
 
-If you want you can also directly install plugins in a zipped format, e.g. plugins downloaded directly from some author’s repository.
+If you want you, can also directly install plugins in a zipped format, e.g. plugins downloaded directly from some author’s repository.
 The better way to know which plugins are available is to browse the list and check by yourself what can be of interest with you.
-We will see together two examples of very used plugins: QuickMapServices and QuickOSM.
+Here we will see two examples of very used plugins: QuickMapServices and QuickOSM.
 
 .. _2.3.2.1:
 .. figure:: /img/2/2.3.2.1.png
@@ -80,7 +80,7 @@ If you want to be sure to connect to the whole dataset of contributed services, 
 
 A second interesting plugin helps us download selected data from the OpenStreetMap (OSM) database. OSM is an editable vector map of the whole world built by volunteers. It is the largest, most diverse, most complete and most up-to-date geospatial database. OSM is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). 
 You are free to copy, distribute, transmit and adapt OSM data, as long as you credit OpenStreetMap and its contributors (using the credit: “© OpenStreetMap contributors”). If you alter or build upon OSM data, you may distribute the result only under the same licence. 
-In OSM a geographic feature (object) is represented by its geometry (node, way, or relation) and tags that describe the attributes of the feature. 
+In OSM, a geographic feature (object) is represented by its geometry (node, way, or relation) and tags that describe the attributes of the feature. 
 There are three `geometries <https://wiki.openstreetmap.org/wiki/Element>`_:
 
 - node, which represents a point in space,
@@ -88,14 +88,14 @@ There are three `geometries <https://wiki.openstreetmap.org/wiki/Element>`_:
 - relation, which is an ordered list of nodes, ways, and other relations.
 
 `Tags <https://wiki.openstreetmap.org/wiki/Tags>`_ are the object attributes that are composed of a key and a value (key=value). An object must have at least one tag, and it can have any number of tags.
-Map Features are agreed tags within the OSM Communities and a `list <https://wiki.openstreetmap.org/wiki/Map_features>`_ is available where they are grouped by key meaning.
+Map Features are agreed tags within the OSM Communities and a `list <https://wiki.openstreetmap.org/wiki/Map_features>`_ where they are grouped by key meaning is available.
 
 Examples:
 
 - building = yes is the tag used for a building when it is not possible to determine a more specific value.
 - building = school is the tag used for any generic school buildings. But, amenity=school is used for the perimeter of the school grounds.
 
-With the `QuickOSM <https://github.com/3liz/QuickOSM>`_ plugin, we can download the features we are interested in. After installing it, we find it under the Vector Menu or as an icon (see :numref:`2.3.2.6`). In the following we will download generic buildings in the area covered by the GIS4Schools geopackage. For doing so we have to zoom to that layer and then to select the key building and the value yes in the Quick query dialog (:numref:`2.3.2.7`) . As we have already zoomed to the interested area, we choose the canvas extent as the are where to extract the buildings.
+With the `QuickOSM <https://github.com/3liz/QuickOSM>`_ plugin, we can download the features we are interested in. After installing it, we find it under the Vector Menu or as an icon (see :numref:`2.3.2.6`). In the following we will download generic buildings in the area covered by the GIS4Schools geopackage. For doing so, we have to zoom to that layer and then to select the key building and the value yes in the Quick query dialog (:numref:`2.3.2.7`) . As we have already zoomed to the interested area, we choose the canvas extent as the area where to extract the buildings.
 
 .. _2.3.2.6:
 .. figure:: /img/2/2.3.2.6.png

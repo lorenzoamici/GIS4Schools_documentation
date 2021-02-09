@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.5.5. Clip raster with a mask, clip raster by extent &mdash; GIS4Schools  documentation</title>
+  <title>2.4.5. Clip raster with a mask, clip raster by extent &mdash; GIS4Schools  documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.5.6. Overlay statistics" href="2_5_6.html" />
-    <link rel="prev" title="2.5.4. Vectorization" href="2_5_4.html" /> 
+    <link rel="next" title="2.4.6. Overlay statistics" href="2_5_6.html" />
+    <link rel="prev" title="2.4.4. Vectorization" href="2_5_4.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,14 +91,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../../part1/1_4.html">1.4. Geopackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../part1/1_5.html">1.5. Introduction to QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../part1/1_6.html">1.6. QGIS interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../part1/1_7.html">1.7. Mangage GeoPackages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../part1/1_8.html">1.8. QGIS visualization for vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../part1/1_7.html">1.7. Mangaging GeoPackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../part1/1_8.html">1.8. QGIS visualization for vectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../part1/1_8.html#single-symbol-style">1.8.1. Single symbol style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../part1/1_8.html#categorized-style">1.8.2. Categorized style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../part1/1_8.html#feature-labels">1.8.3. Feature labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../part1/1_8.html#graduated-style">1.8.4. Graduated style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../part1/1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../part1/1_9.html">1.9. QGIS visualization for rasters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../part1/1_10.html">1.10. Printing maps with QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../part1/1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../part2.html">2. GIS &amp; Analysis tools</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../part2.html">2. Data analysis with QGIS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -111,27 +118,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../2_3.html#id5">2.3.2. Plugins</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../vector/vector.html">2.4. Vector processing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_1.html">2.4.1. Map digitizing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_2.html">2.4.2. Attribute table: selection, editing and field calculator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_3.html">2.4.3. Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_4.html">2.4.4. Dissolve</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_5.html">2.4.5. Field calculator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_6.html">2.4.6. Rasterization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_7.html">2.4.7. Geoprocessing tools – Intersection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vector/2_4_8.html">2.4.8. Geoprocessing tools – Buffer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="raster.html">2.4. Raster processing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="2_5_1.html">2.4.1. Reprojection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_5_2.html">2.4.2. Removing NoData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_5_3.html">2.4.3. Raster calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_5_4.html">2.4.4. Vectorization</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.4.5. Clip raster with a mask, clip raster by extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_5_6.html">2.4.6. Overlay statistics</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="raster.html">2.5. Raster processing</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="2_5_1.html">2.5.1. Reprojection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_5_2.html">2.5.2. Removing NoData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_5_3.html">2.5.3. Raster calculator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_5_4.html">2.5.4. Vectorization</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.5.5. Clip raster with a mask, clip raster by extent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_5_6.html">2.5.6. Overlay statistics</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../2_18.html">2.6. Graphic modeler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_6.html">2.5. Graphic modeler</a></li>
 </ul>
 </li>
 </ul>
@@ -180,11 +176,11 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../part2.html"><span class="section-number">2. </span>GIS &amp; Analysis tools</a> &raquo;</li>
+          <li><a href="../part2.html"><span class="section-number">2. </span>Data analysis with QGIS</a> &raquo;</li>
         
-          <li><a href="raster.html"><span class="section-number">2.5. </span>Raster processing</a> &raquo;</li>
+          <li><a href="raster.html"><span class="section-number">2.4. </span>Raster processing</a> &raquo;</li>
         
-      <li><span class="section-number">2.5.5. </span>Clip raster with a mask, clip raster by extent</li>
+      <li><span class="section-number">2.4.5. </span>Clip raster with a mask, clip raster by extent</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -204,12 +200,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="clip-raster-with-a-mask-clip-raster-by-extent">
-<h1><span class="section-number">2.5.5. </span>Clip raster with a mask, clip raster by extent<a class="headerlink" href="#clip-raster-with-a-mask-clip-raster-by-extent" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.4.5. </span>Clip raster with a mask, clip raster by extent<a class="headerlink" href="#clip-raster-with-a-mask-clip-raster-by-extent" title="Permalink to this headline">¶</a></h1>
 <p>Sometimes raster data cover a wider area than the one under study, thus, data can be much heavy and processing is slowed down. In this case, it is always advisable to reduce the raster extent by clipping out the area that is not under study. There are more ways to do it, in this exercise we will focus on <strong>clipping with a mask</strong> (using another layer as reference) and on <strong>clipping by extent</strong> (taking as reference a manually drawn area).</p>
-<p>Consider the <em>temperatures_distribution</em> layer. Suppose you want to study only the Maggiore lake area: it is possible to clip the <em>temperature_distribution</em> layer by a manually rectangular drawn region that would exclude the other two lakes. Refer to <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 2.5.5.1</span></a> to follow on with the instructions. Go to <strong>Raster</strong> Menu <strong>→Extraction→Clip Raster by Extent…</strong>. It will open a window where to input the layer to be clipped <strong>(1)</strong> (<em>Temperature_distribution</em>) and the <em>clipping extent</em>: click on <strong>…</strong>  button <strong>(2)</strong> and then on <strong>Select Extent on Canvas (3)</strong> to manually draw on your project the clipping area, a red rectangle on Maggiore lake (4). Then, for this exercise, just save as <em>temporary File</em>, <em>Run</em> and the result will be the layer of temperatures cropped just on the Maggiore lake.</p>
+<p>Consider the <em>temperatures_distribution</em> layer. Suppose you want to study only the Maggiore lake area: it is possible to clip the <em>temperature_distribution</em> layer by a manually rectangular drawn region that would exclude the other two lakes. Refer to <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 2.4.5.1</span></a> to follow on with the instructions. Go to <strong>Raster</strong> Menu <strong>→Extraction→Clip Raster by Extent…</strong>. It will open a window where to input the layer to be clipped <strong>(1)</strong> (<em>Temperature_distribution</em>) and the <em>clipping extent</em>: click on <strong>…</strong>  button <strong>(2)</strong> and then on <strong>Select Extent on Canvas (3)</strong> to manually draw on your project the clipping area, a red rectangle on Maggiore lake (4). Then, for this exercise, just save as <em>temporary File</em>, <em>Run</em> and the result will be the layer of temperatures cropped just on the Maggiore lake.</p>
 <div class="figure align-default" id="id2">
 <span id="id1"></span><img alt="../../_images/2.5.5.png" src="../../_images/2.5.5.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5.5.1 </span><span class="caption-text">– Clip Raster by extent, steps and result.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.4.5.1 </span><span class="caption-text">– Clip Raster by extent, steps and result.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Now, on the other hand, let us see how to clip a raster with a mask. Again, apply clipping on the <em>temperatures_distribution</em> layer, and use the <em>TemperaturesLow_notLow</em> polygon layer, resulting from the previous Vectorization. When clipping with a vector mask it is possible also to decide which categories of the polygon vector to be used to mask the raster data. Suppose here we want to mask the <em>temperature_distribution</em> layer for where its temperatures are the lowest, thus where the <em>TemperaturesLow_notLow</em> polygons have value 1. Click on <strong>Select Features by value</strong> and set <em>low_notLow</em> field <em>equal</em> to value <em>1</em>. Once the polygons meaning for the lowest temperatures are selected, it is time to clip by mask. Go to <strong>Raster</strong> Menu <strong>→Extraction→Clip Raster by Mask Layer…</strong>., <em>input layer: Temperature_distribution</em>, to be masked by <em>TemperaturesLow_notLow</em> vector layer, check the <strong>Selected Features only</strong> box (to mask the raster with just the selected polygons of the mask layer) assign 0 as <em>NoData Value</em> and <strong>Save to a temporary File</strong>. In the end, the new added layer should cover with temperature values, only the areas of low water surface temperature.</p>
 </div>
@@ -222,10 +218,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="2_5_6.html" class="btn btn-neutral float-right" title="2.5.6. Overlay statistics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="2_5_6.html" class="btn btn-neutral float-right" title="2.4.6. Overlay statistics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="2_5_4.html" class="btn btn-neutral float-left" title="2.5.4. Vectorization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="2_5_4.html" class="btn btn-neutral float-left" title="2.4.4. Vectorization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

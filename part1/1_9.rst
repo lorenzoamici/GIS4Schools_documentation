@@ -1,3 +1,5 @@
+.. _1.9:
+
 QGIS visualization for rasters
 ==============================
 

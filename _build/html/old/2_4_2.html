@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Attribute table: selection, editing and field calculator &mdash; GIS4Schools  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GIS4Schools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../part1/part1.html">1. Data visualization with QGIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_1.html">1.1. Introduction to GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems, Projections, EPSG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling, Raster data, Vector data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. Geopackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_5.html">1.5. Introduction to QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_6.html">1.6. QGIS interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_7.html">1.7. Mangaging GeoPackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_8.html">1.8. QGIS visualization for vectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#single-symbol-style">1.8.1. Single symbol style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#categorized-style">1.8.2. Categorized style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#feature-labels">1.8.3. Feature labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#graduated-style">1.8.4. Graduated style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_10.html">1.10. Printing maps with QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_11.html">1.11. Atlases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part2/part2.html">2. Data analysis with QGIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wfs">2.2.2. WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wcs">2.2.3. WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_3.html">2.3. Extending QGIS functionalities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id1">2.3.1. Processing toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id5">2.3.2. Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/vector/vector.html">2.4. Vector processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#map-digitizing">2.4.1. Map digitizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#attribute-table-selection-editing-and-field-calculator">2.4.2. Attribute table: selection, editing and field calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#join">2.4.3. Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#geoprocessing-tools-for-vector-data-dissolve">2.4.4. Geoprocessing tools for vector data: dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#geoprocessing-tools-for-vector-data-intersection">2.4.5. Geoprocessing tools for vector data: intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#geoprocessing-tools-for-vector-data-buffer">2.4.6. Geoprocessing tools for vector data: buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#rasterization">2.4.7. Rasterization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/raster/raster.html">2.5. Raster processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_1.html">2.5.1. Reprojection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_2.html">2.5.2. Removing NoData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_3.html">2.5.3. Raster calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_4.html">2.5.4. Vectorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_5.html">2.5.5. Clip raster with a mask, clip raster by extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_6.html">2.5.6. Overlay statistics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_6.html">2.6. Graphic modeler</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GIS4Schools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Attribute table: selection, editing and field calculator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/old/2_4_2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="attribute-table-selection-editing-and-field-calculator">
+<h1>Attribute table: selection, editing and field calculator<a class="headerlink" href="#attribute-table-selection-editing-and-field-calculator" title="Permalink to this headline">¶</a></h1>
+<p>In this section we are going to look at the attribute table of some vector data. We are going to describe how to select the features constituting the vector layer, how to edit them and how to use the field calculator. For this purpose, let us open the shapefiles Municipalitis_OSM.shp and Temperature.shp with the same procedure described in the previous paragraph.
+It is possible to identify a feature belonging to a single layer by selecting that layer in the Table Of Contents and using the tool <strong>Identify Features</strong> in the top menu. In this way, if we click, for instance, on lake Maggiore, a window on the right opens and the attributes of that feature are displayed (<code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.1</span></code>). The information provided are those contained in the attribute table. As shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.1</span></code>, the selected feature is displayed in purple.</p>
+<div class="figure align-default" id="id6">
+<span id="id1"></span><img alt="../_images/2.4.2.1.PNG" src="../_images/2.4.2.1.PNG" />
+<p class="caption"><span class="caption-text">– Feature identification (Lake Maggiore).</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let us now look more in detail at the attribute table of the layer Lakes. To open the attribute table, right-click on the layer and click <strong>Open Attribute Table</strong>. The attribute table is organized in columns and every column corresponds to a field (in this case, the layer has two textual fields, namely “name” and “source”). Every geometric feature (row) is associated with semantic information called attributes. <code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.2</span></code> shows the attribute table of the layer Lakes.</p>
+<div class="figure align-default" id="id7">
+<span id="id2"></span><img alt="../_images/2.4.2.2.PNG" src="../_images/2.4.2.2.PNG" />
+<p class="caption"><span class="caption-text">– Attribute table of the layer Lakes.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Suppose that we want to add a new field that indicates the area covered by every feature. First, we need to start an editing session (right click on the layer Lakes → <strong>Toggle Editing</strong> or, if the layer attribute table is open, directly click on <strong>Toggle Editing</strong> on the top menu of the table). Afterwards, click the tool <strong>New field</strong> in the table top bar and provide the field name and type: in this case, let us call the field “area” and assign the type “decimal number (real)”.
+In order to calculate the area, we have to use the <strong>Field Calculator</strong> that is available in the main menu of the attribute table (look at <code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.3</span></code>). Check the option <strong>Update existing field</strong> and select the field “area”. In the <strong>Expression</strong> tab, expand the section <strong>Geometry</strong> and double click <strong>$area</strong>. Clicking on <strong>OK</strong>, the area (in square meters) of every geometric feature is calculated and reported in the corresponding line of the attribute table under the field “area”. <code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.3</span></code> shows the procedure just described.</p>
+<div class="figure align-default" id="id8">
+<span id="id3"></span><img alt="../_images/2.4.2.3.PNG" src="../_images/2.4.2.3.PNG" />
+<p class="caption"><span class="caption-text">– Computation of polygon features area through the Field Calculator.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>It is also possible to modify a single attribute simply by clicking the cell that has to be updated and typing the new attribute. Furthermore, it is possible to update the attributes of a specific set of features. In this case it is necessary to select these features (clicking the corresponding line number in the attribute table) and use the field calculator, as previously explained: only the attributes of the selected features will be modified.
+Once again, it is necessary to save and stop the editing session with the usual procedure.</p>
+<p>Now we are going to see different ways to select geometric features. In particular, we will describe the following possibilities: selection by geometry, selection by expression and selection by location. For this purpose, it is quite helpful the <strong>Selection Toolbar</strong>, that can be enabled by right-clicking on the grey area of the QGIS main menu. The procedures that are going to be described are synthesized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.4</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.5</span></code>.</p>
+<ul class="simple">
+<li>Selection by geometry (<code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.4</span></code>, red section): the simplest way to select a feature is to select it directly in the map. This type of selection can be performed through the tools <strong>Select Feature</strong> (or <strong>Select Features by Polygon</strong>, <strong>by Freehand</strong> and <strong>by Radius</strong>). In this case, it is necessary to select the layer of interest in the Table of Contents. When the feature is selected, it turns to yellow in the map.</li>
+<li>Selection by expression (<code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.4</span></code>, green section): it is possible to select feature elements with an appropriate expression. All the features that meet the conditions written in such expression are selected. For instance, we can select all the features of the layer Lakes having an area greater than 10<sup>7</sup> m<sup>2</sup>and coming from the Lombardy Geoportal. Similarly, we can select features by value: a guided interface allows us to specify the value of the layer fields. It is also possible to select all the features of this layer (<strong>Select All Features</strong>) and to invert the current selection (<strong>Invert Feature Selection</strong>). Furthermore, it is possible to deselect all features belonging to all layers (<strong>Deselect Features from All Layers</strong>) or to deselect all features belonging to the currently active layer (<strong>Deselect Features from the Current Active Layer</strong>), as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.4</span></code> (blue section).</li>
+</ul>
+<img alt="../_images/2.4.2.4_(a).PNG" src="../_images/2.4.2.4_(a).PNG" />
+<div class="figure align-default" id="id9">
+<span id="id4"></span><img alt="../_images/2.4.2.4_(b).PNG" src="../_images/2.4.2.4_(b).PNG" />
+<p class="caption"><span class="caption-text">– Features selection through the Selection Toolbar.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li>Selection by location (<code class="xref std std-numref docutils literal notranslate"><span class="pre">2.4.2.5</span></code>): this selection possibility allows to select the features that respect certain spatial characteristics. For example, we can select all the municipalities that intersect the lakes. Click <strong>Vector → Research Tools → Select by Location</strong> and specify the following parameters: <strong>select features from</strong> Municipalities_OSM, <strong>where the features</strong> intersect, <strong>by comparing to the features from</strong> Lakes.</li>
+</ul>
+<div class="figure align-default" id="id10">
+<span id="id5"></span><img alt="../_images/2.4.2.5.PNG" src="../_images/2.4.2.5.PNG" />
+<p class="caption"><span class="caption-text">– Selection by location.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>Once the selection has been performed, we can export the selected elements and save them in another layer. For example, let us extract the municipalities that intersect the lakes (i.e. the last selection that we have performed) in another shapefile. It is necessary to right-click on the layer Municipalities_OSM and select <strong>Export → Save Selected Features As</strong>. We have to specify the format ESRI Shapefile, the file name (for example, “Municipalities_on_lakes”) and click <strong>OK</strong>. The new layer will be automatically uploaded in the QGIS project and displayed in the map.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Maria A. Brovelli, Daniele Oxoli, Carlo Biraghi, Gorica Bratic, Chiara Gerosa, Alberto Vavassori
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.5. Raster processing &mdash; GIS4Schools  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.6. Graphic modeler" href="2_6.html" />
+    <link rel="prev" title="2.4. Vector processing" href="2_4.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GIS4Schools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../part1/part1.html">1. Data visualization with QGIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_1.html">1.1. Introduction to GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems, Projections, EPSG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling, Raster data, Vector data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. Geopackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_5.html">1.5. Introduction to QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_6.html">1.6. QGIS interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_7.html">1.7. Mangaging GeoPackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_8.html">1.8. QGIS visualization for vectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#single-symbol-style">1.8.1. Single symbol style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#categorized-style">1.8.2. Categorized style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#feature-labels">1.8.3. Feature labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#graduated-style">1.8.4. Graduated style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_10.html">1.10. Printing maps with QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_11.html">1.11. Atlases</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. Data analysis with QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_2.html#wfs">2.2.2. WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_2.html#wcs">2.2.3. WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2_3.html">2.3. Extending QGIS functionalities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_3.html#id1">2.3.1. Processing toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_3.html#id5">2.3.2. Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2_4.html">2.4. Vector processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_4.html#map-digitizing">2.4.1. Map digitizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_4.html#attribute-table-selection-editing-and-field-calculator">2.4.2. Attribute table: selection, editing and field calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_4.html#join">2.4.3. Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_4.html#geoprocessing-tools-for-vector-data-dissolve">2.4.4. Geoprocessing tools for vector data: dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_4.html#geoprocessing-tools-for-vector-data-intersection">2.4.5. Geoprocessing tools for vector data: intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_4.html#geoprocessing-tools-for-vector-data-buffer">2.4.6. Geoprocessing tools for vector data: buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_4.html#rasterization">2.4.7. Rasterization</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5. Raster processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reprojection">2.5.1. Reprojection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-nodata">2.5.2. Removing NoData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raster-calculator">2.5.3. Raster calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vectorization">2.5.4. Vectorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clip-raster-with-a-mask-clip-raster-by-extent">2.5.5. Clip raster with a mask, clip raster by extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overlay-statistics">2.5.6. Overlay statistics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2_6.html">2.6. Graphic modeler</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GIS4Schools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="part2.html"><span class="section-number">2. </span>Data analysis with QGIS</a> &raquo;</li>
+        
+      <li><span class="section-number">2.5. </span>Raster processing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/part2/2_5.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="raster-processing">
+<h1><span class="section-number">2.5. </span>Raster processing<a class="headerlink" href="#raster-processing" title="Permalink to this headline">¶</a></h1>
+<p>The aim of this exercise is to provide you some skills about raster data analysis and processing, starting by some very basic tools on QGIS that can help in it. During this exercise we will use the following layers that you have already been working with:</p>
+<ul>
+<li><p class="first"><strong>Raster Data:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Land_cover</em></li>
+<li><em>Temperature_distribution</em></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Vector Data</strong>, to be used for the overlay analysis:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Municipalities_OSM</em></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Load them on your QGIS by dragging and dropping them from the GIS4Schools_GeoPackage.gpkg connection to your <strong>Layers panel</strong>. It is advisable to load also the raster data styles that you were given in the exercise folder (see exercise on <em>raster visualization on QGIS</em> <strong>TODO internal link</strong>) in a way to better visualize the data while analysing and processing them.</p>
+<p>This exercise will start from some basic activities and checks that are usually taken before processing (as reprojection and removing noData) to follow then with operations and tools that can be very useful when working with raster data as Raster calculator, vectorization, clip and overlay statistics. All these operations and tools can be used separately, in different order or in different ways, they are just tools to, in the end, get a result, some geospatial information, from your raster data.</p>
+<div class="section" id="reprojection">
+<h2><span class="section-number">2.5.1. </span>Reprojection<a class="headerlink" href="#reprojection" title="Permalink to this headline">¶</a></h2>
+<p>When you load raster data on QGIS, before starting any processing, you should look at their properties, that need to be adequate for the steps you are going to take and for the output you want to create. Here, reprojection tool can be very fundamental. Indeed, raster data, as well as generally your QGIS Project, can refer to a certain <strong>map projection</strong> and, more specifically to a Coordinate Reference System (<strong>CRS</strong>) that links map locations to real places on Earth. It can happen that your raster data are referred to different CRS, and, in that case, you would not be able to compare or combine them without reprojecting them to a common CRS. Also, it can happen that the processing output needs to be referred to a certain CRS so that again reprojection tool must be used.</p>
+<p>A good rule is to check at the beginning raster data <strong>CRS</strong>. It can be checked under CRS voice by going to each layer <strong>Properties→ information</strong>. In this exercise, you can check all data are referred to <em>“CRS: EPSG:32632 - WGS 84 / UTM zone 32N – Projected”</em>. Therefore, we would not need to do any reprojection.</p>
+<p>However, to learn how to reproject data, let us apply reprojection to <em>Land_cover</em>. Look at <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 2.5.1.1</span></a> to follow with numbers in brackets the different steps that here will be mentioned.</p>
+<p>To start, go to <strong>Raster Menu</strong> on QGIS <strong>→Projections (1)→Warp (Reproject) (2)</strong>: it will open the <em>Warp (Reproject)</em> window. There, you need to set the <strong>input layer</strong> (<em>Land_Cover</em>) <strong>(3)</strong>, with its <strong>input CRS</strong> (<em>Project CRS: EPSG:32632 - WGS 84 / UTM zone 32N</em>) <strong>(4)</strong> and the final desired CRS, the <strong>target CRS</strong> (here choose <em>EPSG: 2056-CH1903+/LV95</em>) <strong>(5)</strong>. Leave the rest as it is and click on <strong>Run</strong> to reproject the raster in a new CRS. To choose the target CRS, by clicking on the icon <strong>(5)</strong>, after having unchecked <strong>No CRS box (6)</strong> in the new window, you can search for the wanted target CRS <strong>(7)</strong>: as in <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 2.5.1.1</span></a> <strong>(7)</strong> search for <em>EPSG: 2056</em> and then select the option for the <em>swiss Obl. Mercator projected CS</em> <strong>(8)</strong>.</p>
+<div class="figure align-default" id="id8">
+<span id="id1"></span><img alt="../_images/2.5.1.png" src="../_images/2.5.1.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5.1.1 </span><span class="caption-text">– Raster data Reprojection steps.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>The new added raster, called <strong>reprojected</strong> is a temporary File, you can save it if you prefer it. This reprojected File still perfectly overlaps with the original one, even though the two layers have different CRS. This is because QGIS_3 automatically applies “on the fly” CRS transformation for both raster and vector data. This means that, for visualization, layers with different CRS are transformed into the project’s CRS (here the <em>EPSG:32632 - WGS 84 / UTM zone 32N</em>) provided that the input layers CRS is stored in their metadata and that it is correct. Thus, to see the CRS change you can go to <em>reprojected</em> layer <strong>Properties→Source</strong> and change its <em>source CRS</em>: in this way, you won’t see anymore the reprojected File together with the original one, and, to visualize it, you will have to <em>Zoom to its extent</em>. That is because now QGIS has no more reprojected it ‘on the fly’ and you can see therefore the effects of referring to a different CRS.</p>
+</div>
+<div class="section" id="removing-nodata">
+<h2><span class="section-number">2.5.2. </span>Removing NoData<a class="headerlink" href="#removing-nodata" title="Permalink to this headline">¶</a></h2>
+<p>Turn back to the original <em>Land_Cover</em> layer on which you have applied the <em>Land_Cover_style</em>, provided to you in the exercise folder. As already noticed during the <em>Raster visualization on QGIS</em> <strong>TODO internal link</strong> exercise, this style contains more classes and values than the ones really present in this area, because it was created for the whole <em>Corine Land Cover map</em> that is much wider than this portion we are referring to. Particularly, the <em>Land_Cover_style</em> 999-NODATA class, corresponding to value 48, is not present in our area under study, you can check it by visualizing the raster with <em>Singleband-grey</em> render type, to see it contains no pixels with value 48. Therefore, you can remove this class visualization from <em>Land_Cover_style</em>, by clicking on <strong>minus</strong> icon (see <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.5.2.1</span></a> <strong>(2)</strong>) and you can re-save the style.</p>
+<p>There is another huge difference when visualizing this raster with <em>Singleband-grey</em> render type: the <em>Land_Cover</em> layer contains pixels with 0 value that are no more visible when loading again the <em>Land_Cover_style</em>. See <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.5.2.1</span></a> to follow the steps to visualize them also with the <em>Land_Cover_style</em>: use the <strong>+</strong> button <strong>(3)</strong> in the <strong>Properties→Simbology</strong> window, to add a new class to be visualized: by assigning to it value 0, <em>NoData</em> label and an evident color as black <strong>(4)</strong>, you will see again, on borders, black pixels with 0 value that will appear also with this <em>Land_Cover_style</em>.</p>
+<div class="figure align-default" id="id9">
+<span id="id2"></span><img alt="../_images/2.5.2.1.png" src="../_images/2.5.2.1.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5.2.1 </span><span class="caption-text">– Visualize NoData pixels on the Land_Cover_style.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>These black pixels are due to a previous conversion from Coordinate Reference System to a projection, during which they have remained empty. It is preferable to change their 0 value with <strong>null</strong> value, in a way to exclude them from following calculations. See on <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 2.5.2.2</span></a> the operations to be made. Go to <strong>Processing Toolbox(1)→GRASS→Raster→r.null (2)</strong> and open <strong>r.null</strong> window where it is requested the raster map for which to edit null values <strong>(3)</strong> (<em>Land_Cover [EPSG:32632]</em>), the list of cell values to be set to null <strong>(4)</strong> (here type 0) and finally where to save the new raster file. By clicking on Run, a new raster will be created without the 0 value pixels.</p>
+<div class="figure align-default" id="id10">
+<span id="id3"></span><img alt="../_images/2.5.2.2.png" src="../_images/2.5.2.2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5.2.2 </span><span class="caption-text">– The steps to remove NoData pixels.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="raster-calculator">
+<h2><span class="section-number">2.5.3. </span>Raster calculator<a class="headerlink" href="#raster-calculator" title="Permalink to this headline">¶</a></h2>
+<p>The Raster Calculator tool allows to perform calculations based on the raster pixel values. Calculations are computed on each pixel value and the result is a new raster whose pixel values are the corresponding results from calculations on the corresponding pixels. It is a great tool that can be useful for several applications and for very different operations to apply.</p>
+<p>Let us apply it on <em>Temperature_distribution</em> raster data. Suppose that we want to find out the areas in the lakes with the lowest water surface temperatures. First, look at the distribution of values in the raster: the highest detected temperatures are obviously distributed along the borders of the lakes and are fewer with respect to the lower temperatures in the centre of the lakes. It is possible to look also at the raster data histogram (<strong>Properties→histogram</strong>) to see that the most of values are around 12,5°, thus, to find out where the lowest temperatures are localised, let us consider 12° as temperature of reference.</p>
+<p>Now, apply <strong>Raster Calculator</strong>. See <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.5.3.1</span></a> for the steps. Under <strong>Raster</strong> Menu go to <strong>Raster Calculator</strong>…: it will open a window where to insert the following operation <strong>(1)</strong> to be performed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s2">&quot;Temperature_distribution@1&quot;</span><span class="o">/</span><span class="s2">&quot;Temperature_distribution@1&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">Temperature_distribution</span><span class="o">@</span><span class="mi">1</span><span class="s2">&quot;&lt; 12)  *</span>
+<span class="o">*</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;Temperature_distribution@1&quot;</span> <span class="o">&gt;=</span> <span class="mi">12</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Particularly, with Raster Calculator, it is recommendable to insert the different signs and layers through <em>Operators</em> and <em>Raster Bands</em> buttons.</p>
+<p>Our operation is mostly of a logical type (using &lt; and &gt;=): in QGIS, the results of a logical formula can be 1=True or 0=False: therefore, when we input, for example, (Temperature_distribution&#64;1”&lt; 12)* 1  the result here will be 1 or 0 for each pixel, summed to the result of (“Temperature_distribution&#64;1” &gt;= 12 ) * 2 that will be 0 or 2. Obviously one number cannot be contemporarily &lt; or &gt;= 12 therefore the result of the whole second parenthesis will be 1 or 2. In reality, for this case, QGIS would give also 0 result, because it takes <em>nan</em> pixels values of “Temperature_distribution&#64;1” as neither smaller or higher than 12: it is for this reason that we multiply the result of the logical second parenthesis to the first division, to mask out these 0 results.</p>
+<p>Before running the computation insert in <strong>(2)</strong> where to save the new raster layer: when choosing for the name of the new raster you can use <em>lowest_temperatures</em>.</p>
+<p>After running, a new raster layer will be added to your QGIS project. After changing its render type to <em>Paletted/unique values</em>, you should get a result similar to the one in <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.5.3.1</span></a> with pixels with only 1 and 2 values.</p>
+<div class="figure align-default" id="id11">
+<span id="id4"></span><img alt="../_images/2.5.3.png" src="../_images/2.5.3.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5.3.1 </span><span class="caption-text">– Raster Calculator steps and result.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="vectorization">
+<h2><span class="section-number">2.5.4. </span>Vectorization<a class="headerlink" href="#vectorization" title="Permalink to this headline">¶</a></h2>
+<p>The following exercise will be performed on the <em>lowest_temperatures</em> layer, the raster resulting from the previous Raster Calculator exercise. Vectorization is the operation to convert a raster layer into a vector one, particularly here into a polygon one.</p>
+<p>See <a class="reference internal" href="#id5"><span class="std std-numref">Fig. 2.5.4.1</span></a> to follow with the instructions. Go to <strong>Raster</strong> Menu <strong>→Conversion→Polygonize (Raster to Vector)</strong>.  In <em>Polygonize (Raster to Vector) Window</em> enter the <em>Input layer</em> <strong>(1)</strong> (<em>lowest_temperatures</em>), the name of the attribute field related to the raster values <strong>(2)</strong> (<em>Low-notLow</em>) and finally where to save the vectorized File (here named as <em>TemperaturesLow_notLow</em>) <strong>(3)</strong>. Finally, the result will be a polygon layer. As you have already learnt in the exercise of <em>Vector Visualization</em> <strong>TODO INTERNAL LINK</strong>, change the polygon style into a <em>categorized</em> symbolisation, hide polygon with NoData value (it could be a huge negative value) and the polygon symbol for ‘other values’: you will get the layer visualization that you can see at the end in <a class="reference internal" href="#id5"><span class="std std-numref">Fig. 2.5.4.1</span></a>.</p>
+<div class="figure align-default" id="id12">
+<span id="id5"></span><img alt="../_images/2.5.4.png" src="../_images/2.5.4.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5.4.1 </span><span class="caption-text">– Vectorization steps and result.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="clip-raster-with-a-mask-clip-raster-by-extent">
+<h2><span class="section-number">2.5.5. </span>Clip raster with a mask, clip raster by extent<a class="headerlink" href="#clip-raster-with-a-mask-clip-raster-by-extent" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes raster data cover a wider area than the one under study, thus, data can be much heavy and processing is slowed down. In this case, it is always advisable to reduce the raster extent by clipping out the area that is not under study. There are more ways to do it, in this exercise we will focus on <strong>clipping with a mask</strong> (using another layer as reference) and on <strong>clipping by extent</strong> (taking as reference a manually drawn area).</p>
+<p>Consider the <em>temperatures_distribution</em> layer. Suppose you want to study only the Maggiore lake area: it is possible to clip the <em>temperature_distribution</em> layer by a manually rectangular drawn region that would exclude the other two lakes. Refer to <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 2.5.5.1</span></a> to follow on with the instructions. Go to <strong>Raster</strong> Menu <strong>→Extraction→Clip Raster by Extent…</strong>. It will open a window where to input the layer to be clipped <strong>(1)</strong> (<em>Temperature_distribution</em>) and the <em>clipping extent</em>: click on <strong>…</strong>  button <strong>(2)</strong> and then on <strong>Select Extent on Canvas (3)</strong> to manually draw on your project the clipping area, a red rectangle on Maggiore lake (4). Then, for this exercise, just save as <em>temporary File</em>, <em>Run</em> and the result will be the layer of temperatures cropped just on the Maggiore lake.</p>
+<div class="figure align-default" id="id13">
+<span id="id6"></span><img alt="../_images/2.5.5.png" src="../_images/2.5.5.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5.5.1 </span><span class="caption-text">– Clip Raster by extent, steps and result.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, on the other hand, let us see how to clip a raster with a mask. Again, apply clipping on the <em>temperatures_distribution</em> layer, and use the <em>TemperaturesLow_notLow</em> polygon layer, resulting from the previous Vectorization. When clipping with a vector mask it is possible also to decide which categories of the polygon vector to be used to mask the raster data. Suppose here we want to mask the <em>temperature_distribution</em> layer for where its temperatures are the lowest, thus where the <em>TemperaturesLow_notLow</em> polygons have value 1. Click on <strong>Select Features by value</strong> and set <em>low_notLow</em> field <em>equal</em> to value <em>1</em>. Once the polygons meaning for the lowest temperatures are selected, it is time to clip by mask. Go to <strong>Raster</strong> Menu <strong>→Extraction→Clip Raster by Mask Layer…</strong>., <em>input layer: Temperature_distribution</em>, to be masked by <em>TemperaturesLow_notLow</em> vector layer, check the <strong>Selected Features only</strong> box (to mask the raster with just the selected polygons of the mask layer) assign 0 as <em>NoData Value</em> and <strong>Save to a temporary File</strong>. In the end, the new added layer should cover with temperature values, only the areas of low water surface temperature.</p>
+</div>
+<div class="section" id="overlay-statistics">
+<h2><span class="section-number">2.5.6. </span>Overlay statistics<a class="headerlink" href="#overlay-statistics" title="Permalink to this headline">¶</a></h2>
+<p>Raster data allow to easily compare and combine different data referred to the same territory. In this way, they allow also to easily compute overlay statistics that can be a powerful tool to investigate some areas. <strong>Zonal statistics</strong> algorithm is an example of the overlay statistics that can be computed from the combination of a raster and a vector layer. This tool, from raster data, calculates statistics (e.g. mean, max, min…) for each feature of the overlapping vector layer.</p>
+<p>To better understand it, suppose that we want to know the municipalities with the coldest or hottest surface water temperatures. By overlapping the vector layer <em>Municipalities_OSM</em> to the <em>Temperature_distribution</em> raster, lakes areas are subdivided in smaller portions according to the municipalities they are part of. Therefore, it could be possible to derive some statistics for each of these portions of lakes.</p>
+<p>Go to the <strong>Processing Toolbox→Raster Analysis→Zonal statistics</strong> insert as <strong>input raster</strong> layer the <em>Temperature_distribution</em> layer <strong>(1)</strong> and as <strong>vector layer containing zones</strong> the <em>Municipalities_OSM</em> vector <strong>(2)</strong>. Then name the <strong>Output column prefix</strong> <em>LakeTemp</em> <strong>(3)</strong> and select the <strong>statistics to be calculated</strong> (here <em>mean</em>, <em>max</em> and <em>min</em>), by clicking on <strong>…</strong> button <strong>(4)</strong>. The algorithm will add to <em>Municipalities_OSM</em> attribute table three new columns, each column for each calculated statistics. To check results, click on <em>LakeTempmean</em> column to sort features from the highest to the lowest value: you should find that it is <em>Melide</em> municipality the one with the highest mean lake surface temperature (22°) while <em>Valmadrera</em> is the one with the lowest lake surface temperature (11,7°) on the same day.</p>
+<div class="figure align-default" id="id14">
+<span id="id7"></span><img alt="../_images/2.5.6.png" src="../_images/2.5.6.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5.6.1 </span><span class="caption-text">– Zonal Statistics algorithm, steps and result.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>Try to do it also on the single Maggiore lake temperature distribution layer that you have cut in the previous exercise (clip by extent) to get the municipalities with the highest or lowest mean temperature for just that lake area.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2_6.html" class="btn btn-neutral float-right" title="2.6. Graphic modeler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2_4.html" class="btn btn-neutral float-left" title="2.4. Vector processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Maria A. Brovelli, Daniele Oxoli, Carlo Biraghi, Gorica Bratic, Chiara Gerosa, Alberto Vavassori
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
