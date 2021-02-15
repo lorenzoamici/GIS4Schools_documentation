@@ -1,2 +1,41 @@
 Introduction to GIS
 ===================
+
+`Geography <https://www.nationalgeographic.org/education/what-is-geography>`_ and `cartography <https://www.britannica.com/science/cartographyhttps:/www.britannica.com/science/cartography>`_ has been key to humans since the beginning of civilization. In fact, maps are among the most beautiful and useful documents ever produced and spatial information has still an outstanding impact on our lives. Early evidence of maps production traces back to the Paleolithic period with an increasing availability of examples from the Bronze Age till today (:numref:`1.1.1` and :numref:`1.1.2`). Maps have directly served discovery, planning, cooperation (but also conflicts) for at least the past 3,000 years. 
+
+.. _1.1.1:
+.. figure:: /img/1/1.1.1.png
+   
+   -- The Babylonian map of the world (Imago Mundi) is the most ancient found attempt of depicting the whole Earth using a map. Source: https://en.wikipedia.org
+
+Until the advent of computer technology, maps have been developed by using manual techniques that evolved along centuries according to the progressive improvement in drawing skills and tools available to cartographers. During the last five decades, computer technology has inevitably made the storage, processing, analysis, and display of spatial information faster and more accurate. Nowadays, either printed or digital maps are ubiquitous and help us produce the food we eat, the energy we burn, the clothes we wear, and the diversions we enjoy [1]_. However, it is unknown to most people how map features are encoded, for example, in a computing environment. If we expect computers to assist us in spatial data analysis and representation, the spatial elements of data should be somehow accessible in a digital form. By spending a few minutes thinking on this issue, you would realize that generic data formats, such as tables or spreadsheets, are not up to this task and a more complex data storage mechanism is required.
+
+.. _1.1.2:
+.. figure:: /img/1/1.1.2.png
+   
+   -- The 1569 Mercator map of the world. Source: https://en.wikipedia.org
+
+Because of the importance of spatial information as well as the diffusion of computer technology, tools called Geographic Information Systems (GIS) have been developed to aid geography practitioners, but also many other domain experts as well as citizens, in dealing with geographic knowledge. It is qualificatory to describe GIS with a short sentence but we report here the definition provided by `NASA <https://www.nasa.gov>`_ to briefly outline what it means: “*A GIS is an integrated system of computer hardware, software, and trained personnel linking topographic, demographic, utility, facility, image and other resource data that is geographically referenced*”. What is important to notice is that the core of a GIS is made of different but interdependent components, namely:
+
+- **Data**: Records linking to a specific location through numbers (known as `coordinates <https://encyclopediaofmath.org/index.php?title=Coordinates>`_) that unequivocally encode their relative and absolute position on Earth, generally carrying also other attributes which describe the observed phenomenon (such as measures of an environment variable, time of occurrence of an event, etc.).
+
+- **Methods**: Mathematical models and analytic techniques enabling to manipulate or derive information from data having a geographical or spatial aspect.
+
+- **Software**: Written instructions (`source code <https://en.wikipedia.org/wiki/Source_code>`_) that can be read by computer which implement methods and data handling procedures on spatial data.
+
+- **Hardware**: Equipment to support the activities needed for spatial data collection, storage, processing, analysis, and display. This includes for example workstations to run GIS software, monitors to display maps, web servers for managing online GIS applications, and sensors (GPS devices, drones, satellite cameras, etc.) allowing to collect spatial data.
+
+- **People**: Trained GIS professionals knowledgeable in spatial data collection, analysis and manipulation but also users (business operators, governments, educators, non-profit organizations, scientists, etc.) requesting and consuming GIS products.
+
+- **Network**: Internet is key to modern GIS as it provides connections among all their components. Nowadays, spatial data, methods, and software can be accessed, shared and used through the Web. Communication between hardware devices and people mostly happens through the Web as well. The term `WebGIS <https://en.wikipedia.org/wiki/Web_mapping>`_ has been introduced to identify the ecosystem of online GIS procedures **TODO [link to Section 2.1]** and applications.
+
+The suggested first step to novice users for learning GIS is through desktop GIS applications. Desktop GIS can be defined as software applications, running on workstations and laptops, allowing users to access information using spatial logic and methods, to modify or create from scratch spatial data, and to visualise the results as a map. Desktop GIS provides `graphical user interfaces <https://en.wikipedia.org/wiki/Graphical_user_interface>`_ enabling interaction with data, displayed maps, and spatial analysis functions through icons and dynamic panels which include both textual and graphical explanations or instructions (:numref:`1.1.3`). Desktop GIS facilitates cooperation between users thanks to the adoption of standard formats allowing to exchange spatial data files but also complete mapping projects and analysis procedures. Moreover, support to network connection is provided thus enabling access to online GIS resources, including data and functionality add-ons to extend and customize the capabilities of desktop GIS.
+
+.. _1.1.3:
+.. figure:: /img/1/1.1.3.png
+   
+   -- Graphical user interface of a desktop GIS application
+
+Desktop GIS are available both as proprietary software and free and open source software.  `Proprietary GIS software <https://en.wikipedia.org/wiki/List_of_geographic_information_systems_software#Notable_commercial_or_proprietary_GIS_software>`_ (also known as closed-source or commercial software) is copyrighted and has limits against distribution and modification that are imposed by its owner. Generally, the use of proprietary GIS software is allowed to end-users with payment licenses. `Free and open source GIS software <https://en.wikipedia.org/wiki/List_of_geographic_information_systems_software#Open_source_software>`_ is released under a license in which the copyright holder grants users the rights to use, study, change, and distribute the software to anyone and for any purpose. These rights are guaranteed to any users free of charge. In this course, you will learn how to use one of the most popular and powerful free and open source desktop GIS software which is `QGIS <https://qgis.org>`_.
+
+.. [1] Bolstad, P. (2016). GIS fundamentals: A first text on geographic information systems. Eider (PressMinnesota).
