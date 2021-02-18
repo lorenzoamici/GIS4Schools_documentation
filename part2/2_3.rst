@@ -4,23 +4,14 @@ Extending QGIS functionalities
 `Processing toolbox <https://docs.qgis.org/3.16/en/docs/user_manual/processing/toolbox.html>`_
 ----------------------------------------------------------------------------------------------
 
-Software functionalities can be integrated by activating the Processing Toolbox (from the main menu Processing→Toolbox).
-The toolbox contains all the available algorithms, divided into predefined groups, which are called Providers. It includes also additional user created algorithms, allowing users to define their own workflows and processing tasks. At the top of the list of algorithms are displayed the most recent used tools, in such a way to make easier to reexecute them, if needed (:numref:`2.3.1.1`). In the uppest part of the toolbox dialog, there are functionalities for managing models (:numref:`2.3.1.2`) and python scripts (:numref:`2.3.1.3`). Referring to models, the graphical modeler **link alla lezione di Carlo** will be presented in a next lesson; on the opposite, scripts are not included in this basic training.
+Software functionalities can be integrated by activating the Processing Toolbox (from the main menu **Processing → Toolbox**).
+
+The toolbox contains all the available algorithms, divided into predefined groups, which are called Providers. It includes also additional user created algorithms, allowing users to define their own workflows and processing tasks. At the top of the list of algorithms are displayed the most recent used tools, in such a way to make easier to re-execute them, if needed (:numref:`2.3.1.1`). In the uppest part of the toolbox dialog, there are functionalities for managing models **(1)** and python scripts **(2)**. Referring to models, the graphical modeler **TODO link a lezione di Carlo** will be presented in a next lesson; on the opposite, scripts are not included in this basic training.
 
 .. _2.3.1.1:
 .. figure:: /img/2/2.3.1.1.png
    
-   -- The Processing Toolbox
-
-.. _2.3.1.2:
-.. figure:: /img/2/2.3.1.2.png
-   
-   -- Managing models in the Processing Toolbox
-
-.. _2.3.1.3:
-.. figure:: /img/2/2.3.1.3.png
-   
-   -- Managing scripts in the Processing Toolbox
+   -- The Processing Toolbox, that allows to manage models and scripts as well
 
 `Plugins <https://docs.qgis.org/3.16/en/docs/user_manual/plugins/plugins.html#core-and-external-plugins>`_
 -----------------------------------------------------------------------------------------------------------
@@ -31,9 +22,10 @@ They are subdivided in:
 - external plugins.
 
 The former plugins are maintained by the QGIS Development Team and are automatically part of every QGIS distribution. 
-Most of External Plugins are written in Python and stored either in the `QGIS Repository <https://plugins.qgis.org/plugins/>`_ at or in external repositories and are maintained by the individual authors. 
-For managing plugins (install, uninstall, upgrade), use the Plugins Dialog, clickable in the main menu (:numref:`2.3.2.1`). If you select All, you will see the list of the available plugin. 
-Each plugin has some metadata, which are displayed in the right panel (see an example in :numref:`2.3.2.2`):
+Most of External Plugins are written in Python and stored either in the `QGIS Repository <https://plugins.qgis.org/plugins/>`_ at or in external repositories and are maintained by the individual authors. We will see together two examples of very used plugins: QuickMapServices and QuickOSM.
+
+For managing plugins (install, uninstall, upgrade), use the Plugins Dialog, clickable in the main menu (:numref:`2.3.2.1`). For installing QuickMapServices plugin, select from the main menu **Plugins → Manage and Install Plugins (1)**. If you select **All (2)**, you will see the list of the available plugin. Type QuickMapServices **(3)** and select it **(4)**. Finally, click **Install Plugin (5)**.
+Each plugin has some metadata, which are displayed in the right panel (see an example in :numref:`2.3.2.1`):
 
 - information on whether the plugin is experimental,
 - description,
@@ -43,51 +35,36 @@ Each plugin has some metadata, which are displayed in the right panel (see an ex
 - author(s),
 - version.
 
-If you want you, can also directly install plugins in a zipped format, e.g. plugins downloaded directly from some author’s repository.
+If you want, you can also directly install plugins in a zipped format, e.g. plugins downloaded directly from some author’s repository.
 The better way to know which plugins are available is to browse the list and check by yourself what can be of interest with you.
-Here we will see two examples of very used plugins: QuickMapServices and QuickOSM.
 
 .. _2.3.2.1:
 .. figure:: /img/2/2.3.2.1.png
    
-   -- The Plugins Menu
+   -- Installing QuickMapServices Plugin
 
-`QuickMapServices <https://github.com/nextgis/quickmapservices>`_ allows you to easily add various map services as baselayers. For its installation, select from the Plugins list QuickMapServices and click on Install Plugin (:numref:`2.3.2.2`).
+Once the plugin is installed, you find it under the Web in the Main Menu (:numref:`2.3.2.2`. There are a huge number of possible maps. Let us suppose that we are interested in OSM Standard. **Click Web → QuickMapServices (1) → OSM (2) → OSM Standard (3)**.
+The OSM Standard map is added as a background of our project. This is simply an image and therefore it is not queryable but very often it is useful to give a quick contextualisation to our data.
 
 .. _2.3.2.2:
 .. figure:: /img/2/2.3.2.2.png
    
-   -- Installing QuickMapServices Plugin
+   -- Opening the OSM Standard basemap
 
-Once it is installed, you find it under the Web in the Main Menu. There are a huge number of possible maps. Let us suppose that we are interested in OSM Standard. By selecting it (:numref:`2.3.2.3` and :numref:`2.3.2.4`) the OSM Standard map is added as a background of our project :numref:`2.3.2.5`). This is simply an image and therefore it is not queryable but very often it is useful to give a quick contextualisation to our data.
+If you want to be sure to connect to the whole dataset of contributed services, from the QuickMapServices menu select **Settings → More Services → Get contributed pack**.
 
-.. _2.3.2.3:
-.. figure:: /img/2/2.3.2.3.png
-   
-   -- The list of the available services
+A second interesting plugin helps us download selected data from the OpenStreetMap (OSM) database. OSM is an editable vector map of the whole world built by volunteers. It is the largest, most diverse, most complete and most up-to-date geospatial database. OSM is open data, licensed under the Open Data Commons Open  Database  License  (ODbL)  by  the  OpenStreetMap  Foundation (OSMF).
 
-.. _2.3.2.4:
-.. figure:: /img/2/2.3.2.4.png
-   
-   -- The list of the available OSM services
+You are free to copy, distribute, transmit and adapt OSM data, as long as you credit OpenStreetMap and its contributors (using the credit: “© OpenStreetMap contributors”). If you alter or build upon OSM data, you may distribute the result only under the same licence.
 
-.. _2.3.2.5:
-.. figure:: /img/2/2.3.2.5.png
-   
-   -- OSM Standard as the background of our project
-
-If you want to be sure to connect to the whole dataset of contributed services, from the QuickMapServices menu select Settings→More Services→Get contributed pack.
-
-A second interesting plugin helps us download selected data from the OpenStreetMap (OSM) database. OSM is an editable vector map of the whole world built by volunteers. It is the largest, most diverse, most complete and most up-to-date geospatial database. OSM is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). 
-You are free to copy, distribute, transmit and adapt OSM data, as long as you credit OpenStreetMap and its contributors (using the credit: “© OpenStreetMap contributors”). If you alter or build upon OSM data, you may distribute the result only under the same licence. 
-In OSM, a geographic feature (object) is represented by its geometry (node, way, or relation) and tags that describe the attributes of the feature. 
-There are three `geometries <https://wiki.openstreetmap.org/wiki/Element>`_:
+In OSM a geographic feature (object) is represented by its geometry (node, way, or relation) and tags that describe the attributes of the feature. here are three  `geometries <https://wiki.openstreetmap.org/wiki/Element>`_:
 
 - node, which represents a point in space,
 - way, which defines a linear feature (polyline→initial and final nodes don’t coincide) or an area boundary (polygon→first and final nodes coincide),
 - relation, which is an ordered list of nodes, ways, and other relations.
 
 `Tags <https://wiki.openstreetmap.org/wiki/Tags>`_ are the object attributes that are composed of a key and a value (key=value). An object must have at least one tag, and it can have any number of tags.
+
 Map Features are agreed tags within the OSM Communities and a `list <https://wiki.openstreetmap.org/wiki/Map_features>`_ where they are grouped by key meaning is available.
 
 Examples:
@@ -95,26 +72,21 @@ Examples:
 - building = yes is the tag used for a building when it is not possible to determine a more specific value.
 - building = school is the tag used for any generic school buildings. But, amenity=school is used for the perimeter of the school grounds.
 
-With the `QuickOSM <https://github.com/3liz/QuickOSM>`_ plugin, we can download the features we are interested in. After installing it, we find it under the Vector Menu or as an icon (see :numref:`2.3.2.6`). In the following we will download generic buildings in the area covered by the GIS4Schools geopackage. For doing so, we have to zoom to that layer and then to select the key building and the value yes in the Quick query dialog (:numref:`2.3.2.7`) . As we have already zoomed to the interested area, we choose the canvas extent as the area where to extract the buildings.
+With the `QuickOSM <https://github.com/3liz/QuickOSM>`_ plugin, we can download the features we are interested in (:numref:`2.3.2.3`). After installing it, we find it under the Vector Menu or as an icon **(1)**. In the following we will download generic buildings in the area covered by the GIS4Schools geopackage. For doing so, we have to zoom to that layer and then to select the **Key** *building* **(2)** and the *Vvalue** *yes* **(3)** in the Quick query dialog. As we have already zoomed to the interested area, we choose the **Canvas extent (4)** as the area where to extract the buildings. Then, click **Run query (5)**.
 
-.. _2.3.2.6:
-.. figure:: /img/2/2.3.2.6.png
+.. _2.3.2.3:
+.. figure:: /img/2/2.3.2.3.png
    
    -- The QuickOSM plugin interface
 
-.. _2.3.2.7:
-.. figure:: /img/2/2.3.2.7.png
-   
-   -- The Quick query dialog window
+The global result is shown in :numref:`2.3.2.4` while in :numref:`2.3.2.5` we can see a small detail.
 
-The global result is shown in :numref:`2.3.2.8` while in :numref:`2.3.2.9` we can see a small detail.
-
-.. _2.3.2.8:
-.. figure:: /img/2/2.3.2.8.png
+.. _2.3.2.4:
+.. figure:: /img/2/2.3.2.4.png
    
    -- Global result of the QuickOSM
 
-.. _2.3.2.9:
-.. figure:: /img/2/2.3.2.9.png
+.. _2.3.2.5:
+.. figure:: /img/2/2.3.2.5.png
    
    -- Detail of the result of the QuickOSM

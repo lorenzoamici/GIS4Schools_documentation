@@ -86,8 +86,16 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../part1/part1.html">1. Data visualization with QGIS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_1.html">1.1. Introduction to GIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems, Projections, EPSG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling, Raster data, Vector data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_2.html#projections">1.2.1. Projections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_2.html#epsg">1.2.2. EPSG</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_3.html#raster-data">1.3.1. Raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_3.html#vector-data">1.3.2. Vector data</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. Geopackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_5.html">1.5. Introduction to QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_6.html">1.6. QGIS interface</a></li>
@@ -100,12 +108,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#singleband-gray">1.9.1. Singleband gray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#singleband-pseudocolor">1.9.2. Singleband-pseudocolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#paletted-unique-values">1.9.3. Paletted/unique values</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_10.html">1.10. Printing maps with QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. Data analysis with QGIS</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. GIS and Analysis Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -115,7 +128,7 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.3. Extending QGIS functionalities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">2.3.2. Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.3.2. Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="2_4.html">2.4. Vector processing</a><ul>
@@ -186,7 +199,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="part2.html"><span class="section-number">2. </span>Data analysis with QGIS</a> &raquo;</li>
+          <li><a href="part2.html"><span class="section-number">2. </span>GIS and Analysis Tools</a> &raquo;</li>
         
       <li><span class="section-number">2.3. </span>Extending QGIS functionalities</li>
     
@@ -211,32 +224,24 @@
 <h1><span class="section-number">2.3. </span>Extending QGIS functionalities<a class="headerlink" href="#extending-qgis-functionalities" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2><span class="section-number">2.3.1. </span><a class="reference external" href="https://docs.qgis.org/3.16/en/docs/user_manual/processing/toolbox.html" rel="noopener noreferrer" target="_blank">Processing toolbox</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Software functionalities can be integrated by activating the Processing Toolbox (from the main menu Processing→Toolbox).
-The toolbox contains all the available algorithms, divided into predefined groups, which are called Providers. It includes also additional user created algorithms, allowing users to define their own workflows and processing tasks. At the top of the list of algorithms are displayed the most recent used tools, in such a way to make easier to reexecute them, if needed (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.3.1.1</span></a>). In the uppest part of the toolbox dialog, there are functionalities for managing models (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 2.3.1.2</span></a>) and python scripts (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.3.1.3</span></a>). Referring to models, the graphical modeler <strong>link alla lezione di Carlo</strong> will be presented in a next lesson; on the opposite, scripts are not included in this basic training.</p>
-<div class="figure align-default" id="id15">
+<p>Software functionalities can be integrated by activating the Processing Toolbox (from the main menu <strong>Processing → Toolbox</strong>).</p>
+<p>The toolbox contains all the available algorithms, divided into predefined groups, which are called Providers. It includes also additional user created algorithms, allowing users to define their own workflows and processing tasks. At the top of the list of algorithms are displayed the most recent used tools, in such a way to make easier to re-execute them, if needed (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.3.1.1</span></a>). In the uppest part of the toolbox dialog, there are functionalities for managing models <strong>(1)</strong> and python scripts <strong>(2)</strong>. Referring to models, the graphical modeler <strong>TODO link a lezione di Carlo</strong> will be presented in a next lesson; on the opposite, scripts are not included in this basic training.</p>
+<div class="figure align-default" id="id9">
 <span id="id2"></span><img alt="../_images/2.3.1.1.png" src="../_images/2.3.1.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.1.1 </span><span class="caption-text">– The Processing Toolbox</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id16">
-<span id="id3"></span><img alt="../_images/2.3.1.2.png" src="../_images/2.3.1.2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.1.2 </span><span class="caption-text">– Managing models in the Processing Toolbox</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id17">
-<span id="id4"></span><img alt="../_images/2.3.1.3.png" src="../_images/2.3.1.3.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.1.3 </span><span class="caption-text">– Managing scripts in the Processing Toolbox</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3.1.1 </span><span class="caption-text">– The Processing Toolbox, that allows to manage models and scripts as well</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="id5">
-<h2><span class="section-number">2.3.2. </span><a class="reference external" href="https://docs.qgis.org/3.16/en/docs/user_manual/plugins/plugins.html#core-and-external-plugins" rel="noopener noreferrer" target="_blank">Plugins</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2><span class="section-number">2.3.2. </span><a class="reference external" href="https://docs.qgis.org/3.16/en/docs/user_manual/plugins/plugins.html#core-and-external-plugins" rel="noopener noreferrer" target="_blank">Plugins</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>They are subdivided in:</p>
 <ul class="simple">
 <li>core plugins,</li>
 <li>external plugins.</li>
 </ul>
 <p>The former plugins are maintained by the QGIS Development Team and are automatically part of every QGIS distribution.
-Most of External Plugins are written in Python and stored either in the <a class="reference external" href="https://plugins.qgis.org/plugins/" rel="noopener noreferrer" target="_blank">QGIS Repository</a> at or in external repositories and are maintained by the individual authors.
-For managing plugins (install, uninstall, upgrade), use the Plugins Dialog, clickable in the main menu (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 2.3.2.1</span></a>). If you select All, you will see the list of the available plugin.
-Each plugin has some metadata, which are displayed in the right panel (see an example in <a class="reference internal" href="#id7"><span class="std std-numref">Fig. 2.3.2.2</span></a>):</p>
+Most of External Plugins are written in Python and stored either in the <a class="reference external" href="https://plugins.qgis.org/plugins/" rel="noopener noreferrer" target="_blank">QGIS Repository</a> at or in external repositories and are maintained by the individual authors. We will see together two examples of very used plugins: QuickMapServices and QuickOSM.</p>
+<p>For managing plugins (install, uninstall, upgrade), use the Plugins Dialog, clickable in the main menu (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.3.2.1</span></a>). For installing QuickMapServices plugin, select from the main menu <strong>Plugins → Manage and Install Plugins (1)</strong>. If you select <strong>All (2)</strong>, you will see the list of the available plugin. Type QuickMapServices <strong>(3)</strong> and select it <strong>(4)</strong>. Finally, click <strong>Install Plugin (5)</strong>.
+Each plugin has some metadata, which are displayed in the right panel (see an example in <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.3.2.1</span></a>):</p>
 <ul class="simple">
 <li>information on whether the plugin is experimental,</li>
 <li>description,</li>
@@ -246,65 +251,47 @@ Each plugin has some metadata, which are displayed in the right panel (see an ex
 <li>author(s),</li>
 <li>version.</li>
 </ul>
-<p>If you want you, can also directly install plugins in a zipped format, e.g. plugins downloaded directly from some author’s repository.
-The better way to know which plugins are available is to browse the list and check by yourself what can be of interest with you.
-Here we will see two examples of very used plugins: QuickMapServices and QuickOSM.</p>
-<div class="figure align-default" id="id18">
-<span id="id6"></span><img alt="../_images/2.3.2.1.png" src="../_images/2.3.2.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.1 </span><span class="caption-text">– The Plugins Menu</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p>If you want, you can also directly install plugins in a zipped format, e.g. plugins downloaded directly from some author’s repository.
+The better way to know which plugins are available is to browse the list and check by yourself what can be of interest with you.</p>
+<div class="figure align-default" id="id10">
+<span id="id4"></span><img alt="../_images/2.3.2.1.png" src="../_images/2.3.2.1.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3.2.1 </span><span class="caption-text">– Installing QuickMapServices Plugin</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference external" href="https://github.com/nextgis/quickmapservices" rel="noopener noreferrer" target="_blank">QuickMapServices</a> allows you to easily add various map services as baselayers. For its installation, select from the Plugins list QuickMapServices and click on Install Plugin (<a class="reference internal" href="#id7"><span class="std std-numref">Fig. 2.3.2.2</span></a>).</p>
-<div class="figure align-default" id="id19">
-<span id="id7"></span><img alt="../_images/2.3.2.2.png" src="../_images/2.3.2.2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.2 </span><span class="caption-text">– Installing QuickMapServices Plugin</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p>Once the plugin is installed, you find it under the Web in the Main Menu (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 2.3.2.2</span></a>. There are a huge number of possible maps. Let us suppose that we are interested in OSM Standard. <strong>Click Web → QuickMapServices (1) → OSM (2) → OSM Standard (3)</strong>.
+The OSM Standard map is added as a background of our project. This is simply an image and therefore it is not queryable but very often it is useful to give a quick contextualisation to our data.</p>
+<div class="figure align-default" id="id11">
+<span id="id5"></span><img alt="../_images/2.3.2.2.png" src="../_images/2.3.2.2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3.2.2 </span><span class="caption-text">– Opening the OSM Standard basemap</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
-<p>Once it is installed, you find it under the Web in the Main Menu. There are a huge number of possible maps. Let us suppose that we are interested in OSM Standard. By selecting it (<a class="reference internal" href="#id8"><span class="std std-numref">Fig. 2.3.2.3</span></a> and <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 2.3.2.4</span></a>) the OSM Standard map is added as a background of our project <a class="reference internal" href="#id10"><span class="std std-numref">Fig. 2.3.2.5</span></a>). This is simply an image and therefore it is not queryable but very often it is useful to give a quick contextualisation to our data.</p>
-<div class="figure align-default" id="id20">
-<span id="id8"></span><img alt="../_images/2.3.2.3.png" src="../_images/2.3.2.3.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.3 </span><span class="caption-text">– The list of the available services</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id21">
-<span id="id9"></span><img alt="../_images/2.3.2.4.png" src="../_images/2.3.2.4.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.4 </span><span class="caption-text">– The list of the available OSM services</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id22">
-<span id="id10"></span><img alt="../_images/2.3.2.5.png" src="../_images/2.3.2.5.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.5 </span><span class="caption-text">– OSM Standard as the background of our project</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
-</div>
-<p>If you want to be sure to connect to the whole dataset of contributed services, from the QuickMapServices menu select Settings→More Services→Get contributed pack.</p>
-<p>A second interesting plugin helps us download selected data from the OpenStreetMap (OSM) database. OSM is an editable vector map of the whole world built by volunteers. It is the largest, most diverse, most complete and most up-to-date geospatial database. OSM is open data, licensed under the Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).
-You are free to copy, distribute, transmit and adapt OSM data, as long as you credit OpenStreetMap and its contributors (using the credit: “© OpenStreetMap contributors”). If you alter or build upon OSM data, you may distribute the result only under the same licence.
-In OSM, a geographic feature (object) is represented by its geometry (node, way, or relation) and tags that describe the attributes of the feature.
-There are three <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Element" rel="noopener noreferrer" target="_blank">geometries</a>:</p>
+<p>If you want to be sure to connect to the whole dataset of contributed services, from the QuickMapServices menu select <strong>Settings → More Services → Get contributed pack</strong>.</p>
+<p>A second interesting plugin helps us download selected data from the OpenStreetMap (OSM) database. OSM is an editable vector map of the whole world built by volunteers. It is the largest, most diverse, most complete and most up-to-date geospatial database. OSM is open data, licensed under the Open Data Commons Open  Database  License  (ODbL)  by  the  OpenStreetMap  Foundation (OSMF).</p>
+<p>You are free to copy, distribute, transmit and adapt OSM data, as long as you credit OpenStreetMap and its contributors (using the credit: “© OpenStreetMap contributors”). If you alter or build upon OSM data, you may distribute the result only under the same licence.</p>
+<p>In OSM a geographic feature (object) is represented by its geometry (node, way, or relation) and tags that describe the attributes of the feature. here are three  <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Element" rel="noopener noreferrer" target="_blank">geometries</a>:</p>
 <ul class="simple">
 <li>node, which represents a point in space,</li>
 <li>way, which defines a linear feature (polyline→initial and final nodes don’t coincide) or an area boundary (polygon→first and final nodes coincide),</li>
 <li>relation, which is an ordered list of nodes, ways, and other relations.</li>
 </ul>
-<p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tags" rel="noopener noreferrer" target="_blank">Tags</a> are the object attributes that are composed of a key and a value (key=value). An object must have at least one tag, and it can have any number of tags.
-Map Features are agreed tags within the OSM Communities and a <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Map_features" rel="noopener noreferrer" target="_blank">list</a> where they are grouped by key meaning is available.</p>
+<p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tags" rel="noopener noreferrer" target="_blank">Tags</a> are the object attributes that are composed of a key and a value (key=value). An object must have at least one tag, and it can have any number of tags.</p>
+<p>Map Features are agreed tags within the OSM Communities and a <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Map_features" rel="noopener noreferrer" target="_blank">list</a> where they are grouped by key meaning is available.</p>
 <p>Examples:</p>
 <ul class="simple">
 <li>building = yes is the tag used for a building when it is not possible to determine a more specific value.</li>
 <li>building = school is the tag used for any generic school buildings. But, amenity=school is used for the perimeter of the school grounds.</li>
 </ul>
-<p>With the <a class="reference external" href="https://github.com/3liz/QuickOSM" rel="noopener noreferrer" target="_blank">QuickOSM</a> plugin, we can download the features we are interested in. After installing it, we find it under the Vector Menu or as an icon (see <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 2.3.2.6</span></a>). In the following we will download generic buildings in the area covered by the GIS4Schools geopackage. For doing so, we have to zoom to that layer and then to select the key building and the value yes in the Quick query dialog (<a class="reference internal" href="#id12"><span class="std std-numref">Fig. 2.3.2.7</span></a>) . As we have already zoomed to the interested area, we choose the canvas extent as the area where to extract the buildings.</p>
-<div class="figure align-default" id="id23">
-<span id="id11"></span><img alt="../_images/2.3.2.6.png" src="../_images/2.3.2.6.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.6 </span><span class="caption-text">– The QuickOSM plugin interface</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p>With the <a class="reference external" href="https://github.com/3liz/QuickOSM" rel="noopener noreferrer" target="_blank">QuickOSM</a> plugin, we can download the features we are interested in (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 2.3.2.3</span></a>). After installing it, we find it under the Vector Menu or as an icon <strong>(1)</strong>. In the following we will download generic buildings in the area covered by the GIS4Schools geopackage. For doing so, we have to zoom to that layer and then to select the <strong>Key</strong> <em>building</em> <strong>(2)</strong> and the <em>Vvalue*</em> <em>yes</em> <strong>(3)</strong> in the Quick query dialog. As we have already zoomed to the interested area, we choose the <strong>Canvas extent (4)</strong> as the area where to extract the buildings. Then, click <strong>Run query (5)</strong>.</p>
+<div class="figure align-default" id="id12">
+<span id="id6"></span><img alt="../_images/2.3.2.3.png" src="../_images/2.3.2.3.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3.2.3 </span><span class="caption-text">– The QuickOSM plugin interface</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id24">
-<span id="id12"></span><img alt="../_images/2.3.2.7.png" src="../_images/2.3.2.7.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.7 </span><span class="caption-text">– The Quick query dialog window</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<p>The global result is shown in <a class="reference internal" href="#id7"><span class="std std-numref">Fig. 2.3.2.4</span></a> while in <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 2.3.2.5</span></a> we can see a small detail.</p>
+<div class="figure align-default" id="id13">
+<span id="id7"></span><img alt="../_images/2.3.2.4.png" src="../_images/2.3.2.4.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3.2.4 </span><span class="caption-text">– Global result of the QuickOSM</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
-<p>The global result is shown in <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 2.3.2.8</span></a> while in <a class="reference internal" href="#id14"><span class="std std-numref">Fig. 2.3.2.9</span></a> we can see a small detail.</p>
-<div class="figure align-default" id="id25">
-<span id="id13"></span><img alt="../_images/2.3.2.8.png" src="../_images/2.3.2.8.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.8 </span><span class="caption-text">– Global result of the QuickOSM</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id26">
-<span id="id14"></span><img alt="../_images/2.3.2.9.png" src="../_images/2.3.2.9.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3.2.9 </span><span class="caption-text">– Detail of the result of the QuickOSM</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="id14">
+<span id="id8"></span><img alt="../_images/2.3.2.5.png" src="../_images/2.3.2.5.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3.2.5 </span><span class="caption-text">– Detail of the result of the QuickOSM</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>

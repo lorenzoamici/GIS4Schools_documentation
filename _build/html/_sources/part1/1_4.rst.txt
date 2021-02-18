@@ -1,2 +1,6 @@
-Geopackage
+GeoPackage
 ==========
+
+Traditionally, a GIS data file can contain only a single type of geographic entities representations such as points, lines, or polygons for vector data, and bands for raster data. This kind of collection is often referred to as a `layer <https://www.caliper.com/glossary/what-is-a-map-layer.htm>`_ in GIS. Nevertheless, some special GIS file formats allow storing also groups of heterogeneous layers, either vector or raster, into a single file. The `GeoPackage <https://www.geopackage.org>`_ data format (file name extension :kbd:`.gpkg`) is the current most popular and innovative solution allowing the storage of layers groups into a single and compact computer file.
+
+The GeoPackage is an `open and platform-independent data format standard <https://opensource.com/resources/what-are-open-standards>`_ promoted and adopted by the `Open Geospatial Consortium <https://www.ogc.org>`_ (OGC). The GeoPackage functions as a container of multiple spatial layers which can be read, modified and shared across different GIS applications **TODO [link to Section 1.7]**. A GeoPackage can fit all data needed for a complex mapping project and it is structured like a `relational database file <https://www.w3computing.com/systemsanalysis/files-relational-databases/>`_, containing both spatial data (coordinates, attributes, CRS) and `metadata <https://en.wikipedia.org/wiki/Metadata>`_ (ancillary information on the data resources, creators, quality, visualization styles, etc.). 

@@ -1,7 +1,7 @@
 Introduction to GIS
 ===================
 
-`Geography <https://www.nationalgeographic.org/education/what-is-geography>`_ and `cartography <https://www.britannica.com/science/cartographyhttps:/www.britannica.com/science/cartography>`_ has been key to humans since the beginning of civilization. In fact, maps are among the most beautiful and useful documents ever produced and spatial information has still an outstanding impact on our lives. Early evidence of maps production traces back to the Paleolithic period with an increasing availability of examples from the Bronze Age till today (:numref:`1.1.1` and :numref:`1.1.2`). Maps have directly served discovery, planning, cooperation (but also conflicts) for at least the past 3,000 years. 
+`Geography <https://www.nationalgeographic.org/education/what-is-geography>`_ and `cartography <https://www.britannica.com/science/cartographyhttps:/www.britannica.com/science/cartography>`_ have been key to humans since the beginning of civilization. In fact, maps are among the most beautiful and useful documents ever produced and spatial information has still an outstanding impact on our lives. Early evidence of maps production traces back to the Paleolithic period with an increasing availability of examples from the Bronze Age till today (:numref:`1.1.1` and :numref:`1.1.2`). Maps have directly served discovery, planning, cooperation (but also conflicts) for at least the past 3,000 years. 
 
 .. _1.1.1:
 .. figure:: /img/1/1.1.1.png
@@ -21,7 +21,7 @@ Because of the importance of spatial information as well as the diffusion of com
 
 - **Methods**: Mathematical models and analytic techniques enabling to manipulate or derive information from data having a geographical or spatial aspect.
 
-- **Software**: Written instructions (`source code <https://en.wikipedia.org/wiki/Source_code>`_) that can be read by computer which implement methods and data handling procedures on spatial data.
+- **Software**: Written instructions (`source code <https://en.wikipedia.org/wiki/Source_code>`_) that can be read by computers which implement methods and data handling procedures on spatial data.
 
 - **Hardware**: Equipment to support the activities needed for spatial data collection, storage, processing, analysis, and display. This includes for example workstations to run GIS software, monitors to display maps, web servers for managing online GIS applications, and sensors (GPS devices, drones, satellite cameras, etc.) allowing to collect spatial data.
 

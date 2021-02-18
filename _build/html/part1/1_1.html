@@ -96,7 +96,7 @@
 <li class="toctree-l3"><a class="reference internal" href="1_3.html#vector-data">1.3.2. Vector data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="1_4.html">1.4. Geopackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_4.html">1.4. GeoPackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_5.html">1.5. Introduction to QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_6.html">1.6. QGIS interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_7.html">1.7. Mangaging GeoPackages</a></li>
@@ -108,12 +108,17 @@
 <li class="toctree-l3"><a class="reference internal" href="1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="1_9.html">1.9. QGIS visualization for rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_9.html">1.9. QGIS visualization for rasters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#singleband-gray">1.9.1. Singleband gray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#singleband-pseudocolor">1.9.2. Singleband-pseudocolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#paletted-unique-values">1.9.3. Paletted/unique values</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="1_10.html">1.10. Printing maps with QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../part2/part2.html">2. Data analysis with QGIS</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../part2/part2.html">2. GIS and Analysis Tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -123,7 +128,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_3.html">2.3. Extending QGIS functionalities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id5">2.3.2. Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id3">2.3.2. Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_4.html">2.4. Vector processing</a><ul>
@@ -217,7 +222,7 @@
             
   <div class="section" id="introduction-to-gis">
 <h1><span class="section-number">1.1. </span>Introduction to GIS<a class="headerlink" href="#introduction-to-gis" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://www.nationalgeographic.org/education/what-is-geography" rel="noopener noreferrer" target="_blank">Geography</a> and <a class="reference external" href="https://www.britannica.com/science/cartographyhttps:/www.britannica.com/science/cartography" rel="noopener noreferrer" target="_blank">cartography</a> has been key to humans since the beginning of civilization. In fact, maps are among the most beautiful and useful documents ever produced and spatial information has still an outstanding impact on our lives. Early evidence of maps production traces back to the Paleolithic period with an increasing availability of examples from the Bronze Age till today (<a class="reference internal" href="#id1"><span class="std std-numref">Fig. 1.1.1</span></a> and <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.1.2</span></a>). Maps have directly served discovery, planning, cooperation (but also conflicts) for at least the past 3,000 years.</p>
+<p><a class="reference external" href="https://www.nationalgeographic.org/education/what-is-geography" rel="noopener noreferrer" target="_blank">Geography</a> and <a class="reference external" href="https://www.britannica.com/science/cartographyhttps:/www.britannica.com/science/cartography" rel="noopener noreferrer" target="_blank">cartography</a> have been key to humans since the beginning of civilization. In fact, maps are among the most beautiful and useful documents ever produced and spatial information has still an outstanding impact on our lives. Early evidence of maps production traces back to the Paleolithic period with an increasing availability of examples from the Bronze Age till today (<a class="reference internal" href="#id1"><span class="std std-numref">Fig. 1.1.1</span></a> and <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.1.2</span></a>). Maps have directly served discovery, planning, cooperation (but also conflicts) for at least the past 3,000 years.</p>
 <div class="figure align-default" id="id6">
 <span id="id1"></span><img alt="../_images/1.1.1.png" src="../_images/1.1.1.png" />
 <p class="caption"><span class="caption-number">Fig. 1.1.1 </span><span class="caption-text">– The Babylonian map of the world (Imago Mundi) is the most ancient found attempt of depicting the whole Earth using a map. Source: <a class="reference external" href="https://en.wikipedia.org" rel="noopener noreferrer" target="_blank">https://en.wikipedia.org</a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
@@ -231,7 +236,7 @@
 <ul class="simple">
 <li><strong>Data</strong>: Records linking to a specific location through numbers (known as <a class="reference external" href="https://encyclopediaofmath.org/index.php?title=Coordinates" rel="noopener noreferrer" target="_blank">coordinates</a>) that unequivocally encode their relative and absolute position on Earth, generally carrying also other attributes which describe the observed phenomenon (such as measures of an environment variable, time of occurrence of an event, etc.).</li>
 <li><strong>Methods</strong>: Mathematical models and analytic techniques enabling to manipulate or derive information from data having a geographical or spatial aspect.</li>
-<li><strong>Software</strong>: Written instructions (<a class="reference external" href="https://en.wikipedia.org/wiki/Source_code" rel="noopener noreferrer" target="_blank">source code</a>) that can be read by computer which implement methods and data handling procedures on spatial data.</li>
+<li><strong>Software</strong>: Written instructions (<a class="reference external" href="https://en.wikipedia.org/wiki/Source_code" rel="noopener noreferrer" target="_blank">source code</a>) that can be read by computers which implement methods and data handling procedures on spatial data.</li>
 <li><strong>Hardware</strong>: Equipment to support the activities needed for spatial data collection, storage, processing, analysis, and display. This includes for example workstations to run GIS software, monitors to display maps, web servers for managing online GIS applications, and sensors (GPS devices, drones, satellite cameras, etc.) allowing to collect spatial data.</li>
 <li><strong>People</strong>: Trained GIS professionals knowledgeable in spatial data collection, analysis and manipulation but also users (business operators, governments, educators, non-profit organizations, scientists, etc.) requesting and consuming GIS products.</li>
 <li><strong>Network</strong>: Internet is key to modern GIS as it provides connections among all their components. Nowadays, spatial data, methods, and software can be accessed, shared and used through the Web. Communication between hardware devices and people mostly happens through the Web as well. The term <a class="reference external" href="https://en.wikipedia.org/wiki/Web_mapping" rel="noopener noreferrer" target="_blank">WebGIS</a> has been introduced to identify the ecosystem of online GIS procedures <strong>TODO [link to Section 2.1]</strong> and applications.</li>

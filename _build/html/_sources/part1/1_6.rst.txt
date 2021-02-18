@@ -3,7 +3,7 @@
 QGIS interface
 ==============
 
-Typical appearance of QGIS window  (:numref:`1.6.1`) consists of:
+Typical appearance of QGIS main graphical user interface (:numref:`1.6.1`) consists of:
 
 1. **Bar Menu**: main features and functions
 2. **Toolbar**: common features in a single click
@@ -12,27 +12,31 @@ Typical appearance of QGIS window  (:numref:`1.6.1`) consists of:
 5. **Status bar**: current coordinates, scale, rotation, and coordinate system
 
 .. _1.6.1:
-.. figure:: /img/1/1.6.1.jpg
+.. figure:: /img/1/1.6.1.png
    
     -- QGIS interface
 
-Additional panels and toolbars can be activated or deactivated from **View (1) → Panels (2) or View (2) → Toolbars(3)**. Alternatively, we can right-click on an empty space (without icons) (4) in the Toolbars or Menu bar section and we will get a full list of available panels and toolbars (:numref:`1.6.2`).
+Additional panels and toolbars can be activated or deactivated from **View (1) → Panels (2)** or **View (2) → Toolbars(3)**. Alternatively, we can right-click on an empty space (without icons) **(4)** in the Toolbars or Menu bar section and we will get a full list of available panels and toolbars (:numref:`1.6.2`).
 
 .. _1.6.2:
-.. figure:: /img/1/1.6.2.jpg
+.. figure:: /img/1/1.6.2.png
    
     -- Adding Panels and Toolbars to QGIS interface
 
-Moreover, we can choose/modify QGIS project properties. It can be done from menu **Project (1) → Properties (2)**. Here we can modify different points of project properties such as General project properties, metadata, CRS, default style, etc. (:numref:`1.6.3`)
+Moreover, we can choose/modify QGIS project properties. It can be done from menu **Project (1) → Properties (2)**. Here we can modify different points of project properties such as general project properties, metadata, CRS, default style, etc. (:numref:`1.6.3`)
 
 .. _1.6.3:
-.. figure:: /img/1/1.6.3.jpg
+.. figure:: /img/1/1.6.3.png
    
     -- Checking/modifying QGIS project properties - General
 
 Finally, the appearance of QGIS can be affected by the settings of the software itself. From menu **Settings (1)** select **Options (2)** to conﬁgure the ways to use QGIS (:numref:`1.6.4`). For example, we can change the general settings, or settings related to the system, CRS, data sources, etc.
 
 .. _1.6.4:
-.. figure:: /img/1/1.6.4.jpg
+.. figure:: /img/1/1.6.4.png
    
     -- QGIS settings
+
+.. important::
+
+    To continue with the lecture, you are requested to download the data **TODO add link to download the data** that will be used for the following exercises

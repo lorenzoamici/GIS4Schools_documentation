@@ -86,9 +86,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../part1/part1.html">1. Data visualization with QGIS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_1.html">1.1. Introduction to GIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems, Projections, EPSG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling, Raster data, Vector data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. Geopackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_2.html#projections">1.2.1. Projections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_2.html#epsg">1.2.2. EPSG</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_3.html#raster-data">1.3.1. Raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_3.html#vector-data">1.3.2. Vector data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. GeoPackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_5.html">1.5. Introduction to QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_6.html">1.6. QGIS interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_7.html">1.7. Mangaging GeoPackages</a></li>
@@ -100,12 +108,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#singleband-gray">1.9.1. Singleband gray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#singleband-pseudocolor">1.9.2. Singleband-pseudocolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#paletted-unique-values">1.9.3. Paletted/unique values</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_10.html">1.10. Printing maps with QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. Data analysis with QGIS</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. GIS and Analysis Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -115,7 +128,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="2_3.html">2.3. Extending QGIS functionalities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_3.html#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_3.html#id5">2.3.2. Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_3.html#id3">2.3.2. Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="2_4.html">2.4. Vector processing</a><ul>
@@ -186,7 +199,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="part2.html"><span class="section-number">2. </span>Data analysis with QGIS</a> &raquo;</li>
+          <li><a href="part2.html"><span class="section-number">2. </span>GIS and Analysis Tools</a> &raquo;</li>
         
       <li><span class="section-number">2.2. </span>Accessing OGC services with QGIS</li>
     
@@ -209,13 +222,13 @@
             
   <div class="section" id="accessing-ogc-services-with-qgis">
 <h1><span class="section-number">2.2. </span>Accessing OGC services with QGIS<a class="headerlink" href="#accessing-ogc-services-with-qgis" title="Permalink to this headline">¶</a></h1>
-<p>QGIS allows the connection to servers offering geospatial data compliant with the OGC service standards.</p>
-<p>Let us see how to do that. Open QGIS and, in order to have some contextualisation data, upload the geopackage that was used for the previous course, zooming to the extension of the layer <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 2.2.1</span></a>. <strong>Link al corso del giorno precedente</strong></p>
-<div class="figure align-default" id="id40">
+<p>QGIS allows the connection to servers offering geospatial data in compliant with the OGC service standards.</p>
+<p>Open QGIS and, in order to have some contextualisation data, upload the geopackage that was used for the previous course, zooming to the extension of the layer. <strong>TODO Link al corso del giorno precedente</strong></p>
+<div class="figure align-default" id="id20">
 <span id="id1"></span><img alt="../_images/2.2.1.png" src="../_images/2.2.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1 </span><span class="caption-text">– Visualisation of the GIS4Schools Geopackage</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.2.1 </span><span class="caption-text">– Visualisation of the GIS4Schools Geopackage</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
-<p>To import a layer using OGC services, click on menu Layer→Add Layer and then select the specific layer you are interested in.
+<p>To import a layer using OGC services, click on menu <strong>Layer → Add Layer</strong> and then select the specific layer you are interested in.
 The following options are available:</p>
 <ul class="simple">
 <li>Add WMS/WMTS</li>
@@ -225,178 +238,93 @@ The following options are available:</p>
 <p>In the following we will see how to connect to these services.</p>
 <div class="section" id="wms-wmts">
 <h2><span class="section-number">2.2.1. </span>WMS/WMTS<a class="headerlink" href="#wms-wmts" title="Permalink to this headline">¶</a></h2>
-<p>To add an OGC WMS layer, click on menu Layer→Add Layer→Add WMS/WMTS Layer (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.2.1.1</span></a>).</p>
-<div class="figure align-default" id="id41">
-<span id="id2"></span><img alt="../_images/2.2.1.1.png" src="../_images/2.2.1.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.1 </span><span class="caption-text">– Adding a WMS/WMTS Layer</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
-</div>
-<p>A new window appears. Click on the New button for creating a new service connection (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 2.2.1.2</span></a>).</p>
-<div class="figure align-default" id="id42">
-<span id="id3"></span><img alt="../_images/2.2.1.2.png" src="../_images/2.2.1.2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.2 </span><span class="caption-text">– Creating a new service connection</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
-</div>
+<p>To add an OGC WMS layer, click on menu <strong>Layer (1) → Add Layer (2) → Add WMS/WMTS Layer (3)</strong> (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.2.1.1</span></a>). A new window appears. Click on the <strong>New</strong> button <strong>(4)</strong> for creating a new service connection.</p>
 <p>The first two layers we want to add are <a class="reference external" href="https://data.jrc.ec.europa.eu/dataset/3f7c3117-a72e-4e4e-bdec-f802e81e99a7" rel="noopener noreferrer" target="_blank">EFAS landslide susceptibility</a> and <a class="reference external" href="https://data.jrc.ec.europa.eu/dataset/e7db0ff2-e5c9-4006-9e24-30b98fe0f0f1" rel="noopener noreferrer" target="_blank">EFAS observed precipitation</a> available in the Joint Research Centre Data Catalogue.</p>
-<p>The former <a class="footnote-reference" href="#id38" id="id4">[1]</a> presents the spatial likelihood of landslide occurrence in 5 classes as a 1 km raster data set and represents the risk of landslides at a given location, particularly when flash floods are forecasted.</p>
-<p>The latter <a class="footnote-reference" href="#id39" id="id5">[2]</a> shows the accumulated amount of precipitation for the current day [in mm] with a horizontal resolution of 5 km.</p>
-<p>The service, which we will name EFAS, is a WMS-T, a Web Map Service Time, because the available data varies day by day. The access URL is <a class="reference external" href="https://www.efas.eu/api/wms/?request=getcapabilities" rel="noopener noreferrer" target="_blank">https://www.efas.eu/api/wms/?request=getcapabilities</a>.</p>
-<div class="figure align-default" id="id43">
+<p>The former <a class="footnote-reference" href="#id18" id="id2">[1]</a> presents the spatial likelihood of landslide occurrence in 5 classes as a 1 km raster data set and represents the risk of landslides at a given location, particularly when flash floods are forecasted.</p>
+<p>The latter <a class="footnote-reference" href="#id19" id="id3">[2]</a> shows the accumulated amount of precipitation for the current day [in mm] with a horizontal resolution of 5 km.</p>
+<p>The service, which we will name <em>EFAS</em>, is a WMS-T, a Web Map Service Time, because the available data varies day by day. The access URL is <a class="reference external" href="https://www.efas.eu/api/wms/?request=getcapabilities" rel="noopener noreferrer" target="_blank">https://www.efas.eu/api/wms/?request=getcapabilities</a>. Once inserted the <strong>Name (5)</strong> and the <strong>URL (6)</strong>, we can click <strong>OK (7)</strong> to connect to the service and see which data layers are available.</p>
+<div class="figure align-default" id="id21">
+<span id="id4"></span><img alt="../_images/2.2.1.1.png" src="../_images/2.2.1.1.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.1.1 </span><span class="caption-text">– Create a connection to WMS services with QGIS</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>We click the <strong>Connect</strong> button <strong>(1)</strong> and, scrolling the list, we select before the <em>Landslide Susceptibility</em> <strong>(2)</strong> and then the <em>Observed Precipitation</em> <strong>(3)</strong> services; once the service is selected, we click <strong>Add (4)</strong> (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 2.2.1.2</span></a>).</p>
+<div class="figure align-default" id="id22">
+<span id="id5"></span><img alt="../_images/2.2.1.2.png" src="../_images/2.2.1.2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.1.2 </span><span class="caption-text">– Connecting to the WMS services Landslide Susceptibility and Observed Precipitation</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<p>As the last step of the WMS section, let us examine where we find the pieces of information related to the XML file which is replied by the server when the client sends a GetCapability request. For that step, carefully compare the <a class="reference external" href="https://www.efas.eu/api/wms/?request=getcapabilities" rel="noopener noreferrer" target="_blank">EFAS Services GetCapability</a> XML  related to the <em>Susceptibility Map</em> with what you find right clicking on the layer <strong>(1)</strong> and selecting <strong>Properties (2) → Information (3)</strong> (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 2.2.1.3</span></a>).</p>
+<div class="figure align-default" id="id23">
 <span id="id6"></span><img alt="../_images/2.2.1.3.png" src="../_images/2.2.1.3.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.3 </span><span class="caption-text">– Adding a new WMS service</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
-</div>
-<p>Once inserted the Name and the URL, we can connect to the service and see which data layers are available.</p>
-<div class="figure align-default" id="id44">
-<span id="id7"></span><img alt="../_images/2.2.1.4.png" src="../_images/2.2.1.4.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.4 </span><span class="caption-text">– Connecting to the EFAS WMS service</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
-</div>
-<p>Scrolling the list, we select and add before the Landslide Susceptibility (<a class="reference internal" href="#id8"><span class="std std-numref">Fig. 2.2.1.5</span></a>) and then Observed Precipitation (<a class="reference internal" href="#id9"><span class="std std-numref">Fig. 2.2.1.6</span></a>).</p>
-<p>We visualize the two layers in QGIS (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 2.2.1.7</span></a> and <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 2.2.1.8</span></a>).</p>
-<div class="figure align-default" id="id45">
-<span id="id8"></span><img alt="../_images/2.2.1.5.png" src="../_images/2.2.1.5.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.5 </span><span class="caption-text">– Adding the Landslide Susceptibility layer</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id46">
-<span id="id9"></span><img alt="../_images/2.2.1.6.png" src="../_images/2.2.1.6.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.6 </span><span class="caption-text">– Adding the Observed Precipitation layer</span><a class="headerlink" href="#id46" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id47">
-<span id="id10"></span><img alt="../_images/2.2.1.7.png" src="../_images/2.2.1.7.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.7 </span><span class="caption-text">– Visualisation of the EFAS Landslide Susceptibility</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id48">
-<span id="id11"></span><img alt="../_images/2.2.1.8.png" src="../_images/2.2.1.8.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.8 </span><span class="caption-text">– Visualisation of the EFAS Observed Precipitation layer (18/12/2020)</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
-</div>
-<p>As the data of precipitation varies daily, if you access the data on another day, you will see a different map (<a class="reference internal" href="#id12"><span class="std std-numref">Fig. 2.2.1.9</span></a>).</p>
-<div class="figure align-default" id="id49">
-<span id="id12"></span><img alt="../_images/2.2.1.9.png" src="../_images/2.2.1.9.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.9 </span><span class="caption-text">– Visualisation of the EFAS Observed Precipitation layer (21/12/2020)</span><a class="headerlink" href="#id49" title="Permalink to this image">¶</a></p>
-</div>
-<p>As the last step of the WMS section, let us examine where we find the pieces of information related to the XML file which is replied by the server when the client sends a GetCapability request. For that step, carefully compare the <a class="reference external" href="https://www.efas.eu/api/wms/?request=getcapabilities" rel="noopener noreferrer" target="_blank">EFAS Services GetCapability</a> XML related to the Susceptibility Map with what you find right clicking on the layer and selecting Properties (<a class="reference internal" href="#id13"><span class="std std-numref">Fig. 2.2.1.10</span></a>) and Information (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 2.2.1.11</span></a>).</p>
-<div class="figure align-default" id="id50">
-<span id="id13"></span><img alt="../_images/2.2.1.10.png" src="../_images/2.2.1.10.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.10 </span><span class="caption-text">– Analysing the Properties of the Landslide Susceptibility WMS layer</span><a class="headerlink" href="#id50" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id51">
-<span id="id14"></span><img alt="../_images/2.2.1.11.png" src="../_images/2.2.1.11.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.1.11 </span><span class="caption-text">– The Information of the Landslide Susceptibility WMS layer under the Properties menu</span><a class="headerlink" href="#id51" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.2.1.3 </span><span class="caption-text">– Analysing the Properties of the Landslide Susceptibility WMS layer</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="wfs">
 <h2><span class="section-number">2.2.2. </span>WFS<a class="headerlink" href="#wfs" title="Permalink to this headline">¶</a></h2>
-<p>To add an OGC WFS layer, click on menu Layer→Add Layer→Add WFS Layer (<a class="reference internal" href="#id15"><span class="std std-numref">Fig. 2.2.2.1</span></a>).</p>
-<div class="figure align-default" id="id52">
-<span id="id15"></span><img alt="../_images/2.2.2.1.png" src="../_images/2.2.2.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.1 </span><span class="caption-text">– Adding a new WFS service</span><a class="headerlink" href="#id52" title="Permalink to this image">¶</a></p>
-</div>
+<p>To add an OGC WFS layer, click on menu <strong>Layer (1) → Add Layer (2) → Add WFS Layer (3)</strong> (<a class="reference internal" href="#id7"><span class="std std-numref">Fig. 2.2.2.1</span></a>).</p>
 <p>We upload data from the Network Services OGC of the <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/network-services-ogc/" rel="noopener noreferrer" target="_blank">Italian National Geoportal</a>.
-Browsing the Geoportal we find the available <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/wfs-service/" rel="noopener noreferrer" target="_blank">WFS Services</a> and we select Bacini idrografici principali e secondari. The URL of the service is <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map" rel="noopener noreferrer" target="_blank">http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map</a> and we can explore the capabilities of the service (XML file) by clicking on the <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map&amp;service=wfs&amp;request=getCapabilities" rel="noopener noreferrer" target="_blank">Capability link</a>. We name this layer as Watershed (<a class="reference internal" href="#id16"><span class="std std-numref">Fig. 2.2.2.2</span></a>).</p>
-<div class="figure align-default" id="id53">
-<span id="id16"></span><img alt="../_images/2.2.2.2.png" src="../_images/2.2.2.2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.2 </span><span class="caption-text">– Connecting to the Bacini_idrografici WFS service</span><a class="headerlink" href="#id53" title="Permalink to this image">¶</a></p>
+Browsing the Geoportal we find the available <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/wfs-service/" rel="noopener noreferrer" target="_blank">WFS Services</a> and we select <em>Bacini idrografici principali e secondari</em>. The URL of the service is <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map" rel="noopener noreferrer" target="_blank">http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map</a> and then we can explore the capabilities of the service (XML file) by clicking on the <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map&amp;service=wfs&amp;request=getCapabilities" rel="noopener noreferrer" target="_blank">Capability link</a>. In order to add this WFS Service to QGIS, click <strong>New (4)</strong>, name this layer <em>Watershed</em> <strong>(5)</strong> and copy the service <strong>URL (6)</strong>. Click <strong>OK (7)</strong>. Then click <strong>Connect (8)</strong>: the service is providing two layers. We select the <em>Bacini idrografici secondari</em> layer <strong>(9)</strong> and we click <strong>Add (10)</strong>. On the contrary to a WMS layer, a WFS layer is a real vector layer, i.e. we can see (query) all its properties (attribute table) and we can change the visualization style.</p>
+<div class="figure align-default" id="id24">
+<span id="id7"></span><img alt="../_images/2.2.2.1.png" src="../_images/2.2.2.1.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.2.1 </span><span class="caption-text">– Adding a new WFS service (Bacini idrografici secondari layer)</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </div>
-<p>The service is providing two layers. We select the Bacini idrografici secondari layer (<a class="reference internal" href="#id17"><span class="std std-numref">Fig. 2.2.2.3</span></a>). On the contrary to a WMS layer, a WFS layer is a real vector layer, i.e. we can see (query) all its properties (attribute table) and we can change the visualization style.</p>
-<div class="figure align-default" id="id54">
-<span id="id17"></span><img alt="../_images/2.2.2.3.png" src="../_images/2.2.2.3.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.3 </span><span class="caption-text">– Adding the Bacini idrografici secondari layer</span><a class="headerlink" href="#id54" title="Permalink to this image">¶</a></p>
+<p>We can customise the layer, for instance we can change its symbology (<a class="reference internal" href="#id8"><span class="std std-numref">Fig. 2.2.2.2</span></a>), changing the fill <strong>(1)</strong> and opacity <strong>(2)</strong>. The result is visible in <strong>(3)</strong>.</p>
+<div class="figure align-default" id="id25">
+<span id="id8"></span><img alt="../_images/2.2.2.2.png" src="../_images/2.2.2.2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.2.2 </span><span class="caption-text">– Changing symbology to the WFS Bacini idrografici secondari layer</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </div>
-<p>We can customise the layer, for instance we can change its symbology (<a class="reference internal" href="#id18"><span class="std std-numref">Fig. 2.2.2.4</span></a>) and the result is visible in <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 2.2.2.5</span></a>.</p>
-<div class="figure align-default" id="id55">
-<span id="id18"></span><img alt="../_images/2.2.2.4.png" src="../_images/2.2.2.4.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.4 </span><span class="caption-text">– Changing symbology to the WFS Bacini idrografici secondari layer</span><a class="headerlink" href="#id55" title="Permalink to this image">¶</a></p>
+<p>Repeat what we have done, by connecting to the <em>Catalogo frane (Landslide Catalogue)</em> of the WFS Services of the Geoportal and connect to the <em>Frane Poligonali</em> layer. It will take a while for loading because the file is heavy and you can see the progression on a bar. Look at <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 2.2.2.3</span></a>. The result is visible in <a class="reference internal" href="#id10"><span class="std std-numref">Fig. 2.2.2.4</span></a>.</p>
+<div class="figure align-default" id="id26">
+<span id="id9"></span><img alt="../_images/2.2.2.3.png" src="../_images/2.2.2.3.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.2.3 </span><span class="caption-text">– Connecting to the Catalogo_Frane WFS service and adding the Catalogo frane - Frane poligonali layer</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id56">
-<span id="id19"></span><img alt="../_images/2.2.2.5.png" src="../_images/2.2.2.5.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.5 </span><span class="caption-text">– Visualisation of the WFS Bacini idrografici secondari layer</span><a class="headerlink" href="#id56" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="id27">
+<span id="id10"></span><img alt="../_images/2.2.2.4.png" src="../_images/2.2.2.4.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.2.4 </span><span class="caption-text">– Visualization of the Catalogo frane - Frane poligonali layer</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
-<p>Repeat what we have done, by connecting to the Catalogo frane (Landslide Catalogue) of the WFS Services of the Geoportal (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 2.2.2.6</span></a>) and connect to the Frane Poligonali layer (<a class="reference internal" href="#id21"><span class="std std-numref">Fig. 2.2.2.7</span></a>). It will take a while for loading because the file is heavy and you can see the progression on a bar (<a class="reference internal" href="#id22"><span class="std std-numref">Fig. 2.2.2.8</span></a>).</p>
-<div class="figure align-default" id="id57">
-<span id="id20"></span><img alt="../_images/2.2.2.6.png" src="../_images/2.2.2.6.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.6 </span><span class="caption-text">– Connecting to the Catalogo_Frane WFS service</span><a class="headerlink" href="#id57" title="Permalink to this image">¶</a></p>
+<p>Now rename the two layers respectively as <em>Watersheds</em> and <em>Polygonal Landslides</em>, by right-clicking the layer and selecting Rename Layer. Look at <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 2.2.2.5</span></a> <strong>(1)</strong>.
+A WFS layer cannot be edited directly, but it can be saved in a local system as a vector file and then we can create changes on the saved layer.
+Export the WFS Watersheds layer and save it in a local folder of your computer (<a class="reference internal" href="#id11"><span class="std std-numref">Fig. 2.2.2.5</span></a>). Right-click on the layer and select <strong>Export (2) → Save Features As (3)</strong>. Save it as a shapefile <strong>(4)</strong> and give to this layer the name <em>Watersheds_downloaded</em> <strong>(5)</strong>. Finally, click <strong>OK (6)</strong>. You can visualise and analyse the new shapefile, for instance by opening the attribute table (<a class="reference internal" href="#id12"><span class="std std-numref">Fig. 2.2.2.6</span></a>). The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection.The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new most updated one.</p>
+<div class="figure align-default" id="id28">
+<span id="id11"></span><img alt="../_images/2.2.2.5.png" src="../_images/2.2.2.5.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.2.5 </span><span class="caption-text">– Rename a layer and export it as a shapefile</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id58">
-<span id="id21"></span><img alt="../_images/2.2.2.7.png" src="../_images/2.2.2.7.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.7 </span><span class="caption-text">– Adding the Catalogo frane - Frane poligonali layer</span><a class="headerlink" href="#id58" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id59">
-<span id="id22"></span><img alt="../_images/2.2.2.8.png" src="../_images/2.2.2.8.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.8 </span><span class="caption-text">– Loading the Catalogo frane - Frane poligonali layer</span><a class="headerlink" href="#id59" title="Permalink to this image">¶</a></p>
-</div>
-<p>Now rename the two layers respectively as Watersheds and Polygonal Landslides (<a class="reference internal" href="#id23"><span class="std std-numref">Fig. 2.2.2.9</span></a>).</p>
-<div class="figure align-default" id="id60">
-<span id="id23"></span><img alt="../_images/2.2.2.9.png" src="../_images/2.2.2.9.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.9 </span><span class="caption-text">– Renaming the Bacini idrografici secondari layer as Watersheds</span><a class="headerlink" href="#id60" title="Permalink to this image">¶</a></p>
-</div>
-<p>A WFS layer cannot be edited directly, but it can be saved in a local system as a vector file and then we can create changes on the saved layer.
-Export the WFS Watersheds layer and save it in a local folder of your computer (<a class="reference internal" href="#id24"><span class="std std-numref">Fig. 2.2.2.10</span></a> and <a class="reference internal" href="#id25"><span class="std std-numref">Fig. 2.2.2.11</span></a>). Give to this layer the name Watersheds downloaded. Save it as a shape file, which you can visualise (<a class="reference internal" href="#id26"><span class="std std-numref">Fig. 2.2.2.12</span></a>) and analyse, for instance by opening the attribute table (<a class="reference internal" href="#id27"><span class="std std-numref">Fig. 2.2.2.13</span></a>). The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection. The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new more updated one.</p>
-<div class="figure align-default" id="id61">
-<span id="id24"></span><img alt="../_images/2.2.2.10.png" src="../_images/2.2.2.10.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.10 </span><span class="caption-text">– Exporting the Watersheds layer</span><a class="headerlink" href="#id61" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id62">
-<span id="id25"></span><img alt="../_images/2.2.2.11.png" src="../_images/2.2.2.11.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.11 </span><span class="caption-text">– Saving the WFS Watersheds layer in a local directory as Watersheds downloaded shapefile</span><a class="headerlink" href="#id62" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id63">
-<span id="id26"></span><img alt="../_images/2.2.2.12.png" src="../_images/2.2.2.12.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.12 </span><span class="caption-text">– Visualising the Watersheds downloaded shapefile</span><a class="headerlink" href="#id63" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id64">
-<span id="id27"></span><img alt="../_images/2.2.2.13.png" src="../_images/2.2.2.13.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.2.13 </span><span class="caption-text">– The attribute table of the Watersheds downloaded shapefile</span><a class="headerlink" href="#id64" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="id29">
+<span id="id12"></span><img alt="../_images/2.2.2.6.png" src="../_images/2.2.2.6.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.2.6 </span><span class="caption-text">– Visualization of the new shapefile (Watersheds_downloaded.shp), with its attribute table</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="wcs">
 <h2><span class="section-number">2.2.3. </span>WCS<a class="headerlink" href="#wcs" title="Permalink to this headline">¶</a></h2>
-<p>To add an OGC WCS layer, click on menu Layer→Add Layer→Add WCS Layer.</p>
+<p>To add an OGC WCS layer, click on menu <strong>Layer → Add Layer → Add WCS Layer</strong>.</p>
 <p>We upload data from the Network Services OGC of the <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/network-services-ogc/" rel="noopener noreferrer" target="_blank">Italian National Geoportal</a>.
-Browsing the Geoportal we find the available <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/wcs-services/" rel="noopener noreferrer" target="_blank">WCS Services</a> and we select Modello digitale del terreno - 75 metri. The URL of the service is <a class="reference external" href="http://wms.pcn.minambiente.it/wcs/dtm_75m" rel="noopener noreferrer" target="_blank">http://wms.pcn.minambiente.it/wcs/dtm_75m</a> and we can explore the capabilities of the service (XML file) by clicking on the <a class="reference external" href="http://wms.pcn.minambiente.it/wcs/dtm_75m?service=wcs&amp;request=getCapabilities" rel="noopener noreferrer" target="_blank">Capability link</a>.</p>
-<p>We add the service (<a class="reference internal" href="#id29"><span class="std std-numref">Fig. 2.2.3.1</span></a>) and we connect to the layer EL.DTM.75M (<a class="reference internal" href="#id30"><span class="std std-numref">Fig. 2.2.3.2</span></a>), naming it DTM 75 m res (WCS) (<a class="reference internal" href="#id31"><span class="std std-numref">Fig. 2.2.3.3</span></a>).</p>
-<div class="figure align-default" id="id65">
-<span id="id29"></span><img alt="../_images/2.2.3.1.png" src="../_images/2.2.3.1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.1 </span><span class="caption-text">– Connecting to the Modello digitale del terreno - 75 metri WCS service</span><a class="headerlink" href="#id65" title="Permalink to this image">¶</a></p>
+Browsing the Geoportal we find the available <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/wcs-services/" rel="noopener noreferrer" target="_blank">WCS Services</a> and we select <em>Modello digitale del terreno - 75 metri</em>. The URL of the service is <a class="reference external" href="http://wms.pcn.minambiente.it/wcs/dtm_75m" rel="noopener noreferrer" target="_blank">http://wms.pcn.minambiente.it/wcs/dtm_75m</a> and we can explore the capabilities of the service (XML file) by clicking on the <a class="reference external" href="http://wms.pcn.minambiente.it/wcs/dtm_75m?service=wcs&amp;request=getCapabilities" rel="noopener noreferrer" target="_blank">Capability link</a>.</p>
+<p>We add the service <strong>(1)</strong> (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 2.2.3.1</span></a>). We connect to the layer EL.DTM.75M, clicking on <strong>New (2)</strong>. Name it <em>DTM 75 m res</em> <strong>(3)</strong> and copy the URL previously specified <strong>(4)</strong>. Click <strong>OK</strong> and then <strong>Connect (5)</strong>, select the layer EL.DTM.75M <strong>(6)</strong> and click <strong>Add (7)</strong>. The result is visible in <a class="reference internal" href="#id14"><span class="std std-numref">Fig. 2.2.3.1</span></a>.</p>
+<div class="figure align-default" id="id30">
+<span id="id14"></span><img alt="../_images/2.2.3.1.png" src="../_images/2.2.3.1.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.3.1 </span><span class="caption-text">– Connecting to the Modello digitale del terreno - 75 metri WCS service and adding the EL.DTM.75M layer</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id66">
-<span id="id30"></span><img alt="../_images/2.2.3.2.png" src="../_images/2.2.3.2.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.2 </span><span class="caption-text">– Adding the EL.DTM.75M layer</span><a class="headerlink" href="#id66" title="Permalink to this image">¶</a></p>
+<p>We can change the style of the layer, for instance using as rendering type the <em>Hillshade</em> obtaining the visualisation of <a class="reference internal" href="#id15"><span class="std std-numref">Fig. 2.2.3.2</span></a> (upper part). As an alternative, select as render type the <em>Singleband pseudocolor</em> (<a class="reference internal" href="#id15"><span class="std std-numref">Fig. 2.2.3.2</span></a>, lower part). This flexibility is possible because the WCS is providing a raster file and not a simple image of the map as for the case of the WMS.</p>
+<div class="figure align-default" id="id31">
+<span id="id15"></span><img alt="../_images/2.2.3.2.png" src="../_images/2.2.3.2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.3.2 </span><span class="caption-text">– Changing symbology to the DTM 75 m res (WCS) layer: Hillshade (above) and Singleband pseudocolor (below) rendering</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id67">
-<span id="id31"></span><img alt="../_images/2.2.3.3.png" src="../_images/2.2.3.3.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.3 </span><span class="caption-text">– Visualisation of the DTM 75 m res (WCS) layer</span><a class="headerlink" href="#id67" title="Permalink to this image">¶</a></p>
+<p>The raster data can be exported and saved in a local folder of your computer (Fig. 2.2.3.3). Right-click on the raster layer <strong>→ Export (1) → Save As (2)</strong> and specify as file format GeoTIFF <strong>(3)</strong>, assigning the name <em>DTM_75m_res_downloaded</em> <strong>(4)</strong>. Click <strong>OK (5)</strong>. The file is heavy and it requires a while. The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection.The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new most updated one.</p>
+<p>For appreciating the difference between a WCS and a WMS, connect to the <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/view-service-wms/" rel="noopener noreferrer" target="_blank">WMS Network Services OGC</a> of the <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/network-services-ogc/" rel="noopener noreferrer" target="_blank">Italian National Geoportal</a> and select the <em>Modello digitale del terreno - 75 metri</em>. The URL of the service is <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map" rel="noopener noreferrer" target="_blank">http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map</a>   and we can explore the capabilities of the service (XML file) by clicking on the <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map&amp;service=wms&amp;request=getCapabilities&amp;version=1.3.0" rel="noopener noreferrer" target="_blank">Capability link</a>.</p>
+<p>Once you have connected to this service you can for instance compare what is possible in terms of change of symbology and visualisation. You will see that, on the contrary to a WMS layer, a WCS layer is a real raster layer and therefore visualization can be changed and values can be queried. However, its values cannot be edited directly , but it can be saved in a local system as a raster file and edited afterwards. By adjusting the values of extent while saving WCS we can choose which portion of it to save.</p>
+<div class="figure align-default" id="id32">
+<span id="id17"></span><img alt="../_images/2.2.3.3.png" src="../_images/2.2.3.3.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2.3.3 </span><span class="caption-text">– Exporting the DTM 75 m res (WCS) layer in the local directory</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
 </div>
-<p>We can change the style of the layer, for instance using as rendering type the Hillshade (<a class="reference internal" href="#id32"><span class="std std-numref">Fig. 2.2.3.4</span></a>), obtaining the visualisation of <a class="reference internal" href="#id33"><span class="std std-numref">Fig. 2.2.3.5</span></a>. As an alternative, select as render type the Singleband pseudocolor (<a class="reference internal" href="#id34"><span class="std std-numref">Fig. 2.2.3.6</span></a>). This flexibility is possible because the WCS is providing a raster file and not a simple image of the map as for the case of the WMS.</p>
-<div class="figure align-default" id="id68">
-<span id="id32"></span><img alt="../_images/2.2.3.4.png" src="../_images/2.2.3.4.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.4 </span><span class="caption-text">– Changing symbology to the DTM 75 m res (WCS) layer (Hillshade)</span><a class="headerlink" href="#id68" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id69">
-<span id="id33"></span><img alt="../_images/2.2.3.5.png" src="../_images/2.2.3.5.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.5 </span><span class="caption-text">– Visualisation of the DTM 75 m res (WCS) layer (Hillshade)</span><a class="headerlink" href="#id69" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id70">
-<span id="id34"></span><img alt="../_images/2.2.3.6.png" src="../_images/2.2.3.6.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.6 </span><span class="caption-text">– Changing symbology to the DTM 75 m res (WCS) layer (Singleband pseudocolor)</span><a class="headerlink" href="#id70" title="Permalink to this image">¶</a></p>
-</div>
-<p>The raster data can be exported and saved in a local folder of your computer (<a class="reference internal" href="#id36"><span class="std std-numref">Fig. 2.2.3.7</span></a> and <a class="reference internal" href="#id37"><span class="std std-numref">Fig. 2.2.3.8</span></a>). The file is heavy and it requires a while. Give to this layer the name DTM 75 m res downloaded. Save it as a GeoTIFF. The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection. The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new more updated one.</p>
-<p>For appreciating the difference between a WCS and a WMS, connect to the <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/view-service-wms/" rel="noopener noreferrer" target="_blank">WMS Network Services OGC</a> of the <a class="reference external" href="http://www.pcn.minambiente.it/mattm/en/network-services-ogc/" rel="noopener noreferrer" target="_blank">Italian National Geoportal</a> and select the Modello digitale del terreno - 75 metri. The URL of the service is <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map" rel="noopener noreferrer" target="_blank">http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map</a> and we can explore the capabilities of the service (XML file) by clicking on the <a class="reference external" href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map&amp;service=wms&amp;request=getCapabilities&amp;version=1.3.0" rel="noopener noreferrer" target="_blank">Capability link</a>.
-Once you have connected to this service you can for instance compare what is possible in terms of change of symbology and visualisation. You will see that, on the contrary to a WMS layer, a WCS layer is a real raster layer and therefore the visualization can be changed and the values can be queried. However, its values cannot be edited directly , but it can be saved in a local system as a raster file and edited afterwards. By adjusting the values of the extent while saving the WCS, we can choose which portion of it to save.</p>
-<div class="figure align-default" id="id71">
-<span id="id36"></span><img alt="../_images/2.2.3.7.png" src="../_images/2.2.3.7.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.7 </span><span class="caption-text">– Exporting the DTM 75 m res (WCS) layer</span><a class="headerlink" href="#id71" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id72">
-<span id="id37"></span><img alt="../_images/2.2.3.8.png" src="../_images/2.2.3.8.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2.3.8 </span><span class="caption-text">– Saving the WCS DTM 75 m res layer in a local directory as DTM 75 m res downloaded GeoTIFF</span><a class="headerlink" href="#id72" title="Permalink to this image">¶</a></p>
-</div>
-<table class="docutils footnote" frame="void" id="id38" rules="none">
+<table class="docutils footnote" frame="void" id="id18" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[1]</a></td><td>European Commission, Joint Research Centre (2017): EFAS landslide susceptibility. European Commission, Joint Research Centre (JRC) [Dataset] PID: <a class="reference external" href="http://data.europa.eu/89h/3f7c3117-a72e-4e4e-bdec-f802e81e99a7" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/3f7c3117-a72e-4e4e-bdec-f802e81e99a7</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>European Commission, Joint Research Centre (2017): EFAS landslide susceptibility. European Commission, Joint Research Centre (JRC) [Dataset] PID: <a class="reference external" href="http://data.europa.eu/89h/3f7c3117-a72e-4e4e-bdec-f802e81e99a7" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/3f7c3117-a72e-4e4e-bdec-f802e81e99a7</a></td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id39" rules="none">
+<table class="docutils footnote" frame="void" id="id19" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[2]</a></td><td>European Commission, Joint Research Centre (2017): EFAS observed precipitation. European Commission, Joint Research Centre (JRC) [Dataset] PID: <a class="reference external" href="http://data.europa.eu/89h/e7db0ff2-e5c9-4006-9e24-30b98fe0f0f1" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/e7db0ff2-e5c9-4006-9e24-30b98fe0f0f1</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>European Commission, Joint Research Centre (2017): EFAS observed precipitation. European Commission, Joint Research Centre (JRC) [Dataset] PID: <a class="reference external" href="http://data.europa.eu/89h/e7db0ff2-e5c9-4006-9e24-30b98fe0f0f1" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/e7db0ff2-e5c9-4006-9e24-30b98fe0f0f1</a></td></tr>
 </tbody>
 </table>
 </div>

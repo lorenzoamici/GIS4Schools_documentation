@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Data analysis with QGIS &mdash; GIS4Schools  documentation</title>
+  <title>2. GIS and Analysis Tools &mdash; GIS4Schools  documentation</title>
   
 
   
@@ -86,9 +86,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../part1/part1.html">1. Data visualization with QGIS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_1.html">1.1. Introduction to GIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems, Projections, EPSG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling, Raster data, Vector data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. Geopackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_2.html">1.2. Coordinate reference Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_2.html#projections">1.2.1. Projections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_2.html#epsg">1.2.2. EPSG</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_3.html">1.3. GIS data modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_3.html#raster-data">1.3.1. Raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_3.html#vector-data">1.3.2. Vector data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. GeoPackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_5.html">1.5. Introduction to QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_6.html">1.6. QGIS interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_7.html">1.7. Mangaging GeoPackages</a></li>
@@ -100,12 +108,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_9.html">1.9. QGIS visualization for rasters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#singleband-gray">1.9.1. Singleband gray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#singleband-pseudocolor">1.9.2. Singleband-pseudocolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part1/1_9.html#paletted-unique-values">1.9.3. Paletted/unique values</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_10.html">1.10. Printing maps with QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Data analysis with QGIS</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. GIS and Analysis Tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -115,7 +128,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="2_3.html">2.3. Extending QGIS functionalities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_3.html#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_3.html#id5">2.3.2. Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_3.html#id3">2.3.2. Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="2_4.html">2.4. Vector processing</a><ul>
@@ -186,7 +199,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>Data analysis with QGIS</li>
+      <li><span class="section-number">2. </span>GIS and Analysis Tools</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -205,8 +218,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="data-analysis-with-qgis">
-<h1><span class="section-number">2. </span>Data analysis with QGIS<a class="headerlink" href="#data-analysis-with-qgis" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="gis-and-analysis-tools">
+<h1><span class="section-number">2. </span>GIS and Analysis Tools<a class="headerlink" href="#gis-and-analysis-tools" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
@@ -218,7 +231,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="2_3.html">2.3. Extending QGIS functionalities</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="2_3.html#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_3.html#id5">2.3.2. Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_3.html#id3">2.3.2. Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="2_4.html">2.4. Vector processing</a><ul>

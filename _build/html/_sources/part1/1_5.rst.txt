@@ -1,2 +1,17 @@
 Introduction to QGIS
 ====================
+
+Among the available free and open source GIS software, `QGIS <https://docs.qgis.org/3.16/en/docs/index.html>`_ is the most popular and widely used desktop GIS application. The development of QGIS (formerly Quantum GIS) started in early 2002 and it is still ongoing thanks to the collaborative effort of a large community of developers and users, under the advocacy of the `Open Source Geospatial Foundation <https://www.osgeo.org>`_ (OSGeo). The core of QGIS software is written in the `C++ <https://en.wikipedia.org/wiki/C%2B%2B>`_ programming language and runs on Unix, MacOSX, and Microsoft Windows operating systems. The software is periodically updated through regular releases and bug fixes from volunteer developers coordinated by the `QGIS project board <https://www.qgis.org/en/site/getinvolved/governance/governance.html>`_.
+
+QGIS provides a graphical user interface **TODO [link to Section 1.6]** (:numref:`1.5.1`) and it supports a wide variety of data types and formats as well as connection to online GIS resources through OGC services **TODO [link to Section 2.2]**. Many functionalities for map creation and spatial data analysis are integrated into QGIS and can be accessed directly from the software interface. The possibility of accessing the source code allows to extend or customize the software as needed for specific GIS tasks. Furthermore, QGIS integrates with `other free and open source GIS packages <https://docs.qgis.org/3.16/en/docs/user_manual/processing/3rdParty.html>`_ that enable users to extend the capabilities of the software also without any programming skill.
+
+QGIS software can be downloaded from the `official QGIS website <https://qgis.org>`_ by selecting among the available installation packages the one for your operative system. It is always suggested to work with the Long Term Release (LTR) version of the software that is the current stable and best-maintained release of QGIS.
+
+.. important::
+
+    To continue with the lecture, you are requested to `download and install QGIS <https://qgis.org/en/site/forusers/download.html>`_ on your computer (QGIS LTR version is suggested)
+
+.. _1.5.1:
+.. figure:: /img/1/1.5.1.png
+   
+   -- QGIS main graphical user interface with logo

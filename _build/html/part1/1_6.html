@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.7. Mangaging GeoPackages" href="1_7.html" />
+    <link rel="next" title="1.7. Managing GeoPackages" href="1_7.html" />
     <link rel="prev" title="1.5. Introduction to QGIS" href="1_5.html" /> 
 </head>
 
@@ -86,12 +86,20 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="part1.html">1. Data visualization with QGIS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1_1.html">1.1. Introduction to GIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_2.html">1.2. Coordinate reference Systems, Projections, EPSG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_3.html">1.3. GIS data modelling, Raster data, Vector data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_4.html">1.4. Geopackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_2.html">1.2. Coordinate reference Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_2.html#projections">1.2.1. Projections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_2.html#epsg">1.2.2. EPSG</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_3.html">1.3. GIS data modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_3.html#raster-data">1.3.1. Raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_3.html#vector-data">1.3.2. Vector data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_4.html">1.4. GeoPackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_5.html">1.5. Introduction to QGIS</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1.6. QGIS interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1_7.html">1.7. Mangaging GeoPackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_7.html">1.7. Managing GeoPackages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_8.html">1.8. QGIS visualization for vectors</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="1_8.html#single-symbol-style">1.8.1. Single symbol style</a></li>
 <li class="toctree-l3"><a class="reference internal" href="1_8.html#categorized-style">1.8.2. Categorized style</a></li>
@@ -100,12 +108,17 @@
 <li class="toctree-l3"><a class="reference internal" href="1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="1_9.html">1.9. QGIS visualization for rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_9.html">1.9. QGIS visualization for rasters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#singleband-gray">1.9.1. Singleband gray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#singleband-pseudocolor">1.9.2. Singleband-pseudocolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#paletted-unique-values">1.9.3. Paletted/unique values</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="1_10.html">1.10. Printing maps with QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../part2/part2.html">2. Data analysis with QGIS</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../part2/part2.html">2. GIS and Analysis Tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -115,26 +128,26 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_3.html">2.3. Extending QGIS functionalities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id5">2.3.2. Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id3">2.3.2. Plugins</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../part2/vector/vector.html">2.4. Vector processing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#map-digitizing">2.4.1. Map digitizing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#attribute-table-selection-editing-and-field-calculator">2.4.2. Attribute table: selection, editing and field calculator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#join">2.4.3. Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#geoprocessing-tools-for-vector-data-dissolve">2.4.4. Geoprocessing tools for vector data: dissolve</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#geoprocessing-tools-for-vector-data-intersection">2.4.5. Geoprocessing tools for vector data: intersection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#geoprocessing-tools-for-vector-data-buffer">2.4.6. Geoprocessing tools for vector data: buffer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/vector/vector.html#rasterization">2.4.7. Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_4.html">2.4. Vector processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#map-digitizing">2.4.1. Map digitizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#attribute-table-selection-editing-and-field-calculator">2.4.2. Attribute table: selection, editing and field calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#join">2.4.3. Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#geoprocessing-tools-for-vector-data-dissolve">2.4.4. Geoprocessing tools for vector data: dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#geoprocessing-tools-for-vector-data-intersection">2.4.5. Geoprocessing tools for vector data: intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#geoprocessing-tools-for-vector-data-buffer">2.4.6. Geoprocessing tools for vector data: buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#rasterization">2.4.7. Rasterization</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../part2/raster/raster.html">2.5. Raster processing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_1.html">2.5.1. Reprojection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_2.html">2.5.2. Removing NoData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_3.html">2.5.3. Raster calculator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_4.html">2.5.4. Vectorization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_5.html">2.5.5. Clip raster with a mask, clip raster by extent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/raster/2_5_6.html">2.5.6. Overlay statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_5.html">2.5. Raster processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#reprojection">2.5.1. Reprojection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#removing-nodata">2.5.2. Removing NoData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#raster-calculator">2.5.3. Raster calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#vectorization">2.5.4. Vectorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#clip-raster-with-a-mask-clip-raster-by-extent">2.5.5. Clip raster with a mask, clip raster by extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#overlay-statistics">2.5.6. Overlay statistics</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_6.html">2.6. Graphic modeler</a></li>
@@ -209,7 +222,7 @@
             
   <div class="section" id="qgis-interface">
 <span id="id1"></span><h1><span class="section-number">1.6. </span>QGIS interface<a class="headerlink" href="#qgis-interface" title="Permalink to this headline">¶</a></h1>
-<p>Typical appearance of QGIS window  (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.6.1</span></a>) consists of:</p>
+<p>Typical appearance of QGIS main graphical user interface (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.6.1</span></a>) consists of:</p>
 <ol class="arabic simple">
 <li><strong>Bar Menu</strong>: main features and functions</li>
 <li><strong>Toolbar</strong>: common features in a single click</li>
@@ -218,23 +231,27 @@
 <li><strong>Status bar</strong>: current coordinates, scale, rotation, and coordinate system</li>
 </ol>
 <div class="figure align-default" id="id6">
-<span id="id2"></span><img alt="../_images/1.6.1.jpg" src="../_images/1.6.1.jpg" />
+<span id="id2"></span><img alt="../_images/1.6.1.png" src="../_images/1.6.1.png" />
 <p class="caption"><span class="caption-number">Fig. 1.6.1 </span><span class="caption-text">– QGIS interface</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-<p>Additional panels and toolbars can be activated or deactivated from <strong>View (1) → Panels (2) or View (2) → Toolbars(3)</strong>. Alternatively, we can right-click on an empty space (without icons) (4) in the Toolbars or Menu bar section and we will get a full list of available panels and toolbars (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.6.2</span></a>).</p>
+<p>Additional panels and toolbars can be activated or deactivated from <strong>View (1) → Panels (2)</strong> or <strong>View (2) → Toolbars(3)</strong>. Alternatively, we can right-click on an empty space (without icons) <strong>(4)</strong> in the Toolbars or Menu bar section and we will get a full list of available panels and toolbars (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.6.2</span></a>).</p>
 <div class="figure align-default" id="id7">
-<span id="id3"></span><img alt="../_images/1.6.2.jpg" src="../_images/1.6.2.jpg" />
+<span id="id3"></span><img alt="../_images/1.6.2.png" src="../_images/1.6.2.png" />
 <p class="caption"><span class="caption-number">Fig. 1.6.2 </span><span class="caption-text">– Adding Panels and Toolbars to QGIS interface</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
-<p>Moreover, we can choose/modify QGIS project properties. It can be done from menu <strong>Project (1) → Properties (2)</strong>. Here we can modify different points of project properties such as General project properties, metadata, CRS, default style, etc. (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 1.6.3</span></a>)</p>
+<p>Moreover, we can choose/modify QGIS project properties. It can be done from menu <strong>Project (1) → Properties (2)</strong>. Here we can modify different points of project properties such as general project properties, metadata, CRS, default style, etc. (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 1.6.3</span></a>)</p>
 <div class="figure align-default" id="id8">
-<span id="id4"></span><img alt="../_images/1.6.3.jpg" src="../_images/1.6.3.jpg" />
+<span id="id4"></span><img alt="../_images/1.6.3.png" src="../_images/1.6.3.png" />
 <p class="caption"><span class="caption-number">Fig. 1.6.3 </span><span class="caption-text">– Checking/modifying QGIS project properties - General</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <p>Finally, the appearance of QGIS can be affected by the settings of the software itself. From menu <strong>Settings (1)</strong> select <strong>Options (2)</strong> to conﬁgure the ways to use QGIS (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 1.6.4</span></a>). For example, we can change the general settings, or settings related to the system, CRS, data sources, etc.</p>
 <div class="figure align-default" id="id9">
-<span id="id5"></span><img alt="../_images/1.6.4.jpg" src="../_images/1.6.4.jpg" />
+<span id="id5"></span><img alt="../_images/1.6.4.png" src="../_images/1.6.4.png" />
 <p class="caption"><span class="caption-number">Fig. 1.6.4 </span><span class="caption-text">– QGIS settings</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">To continue with the lecture, you are requested to download the data <strong>TODO add link to download the data</strong> that will be used for the following exercises</p>
 </div>
 </div>
 
@@ -246,7 +263,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="1_7.html" class="btn btn-neutral float-right" title="1.7. Mangaging GeoPackages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="1_7.html" class="btn btn-neutral float-right" title="1.7. Managing GeoPackages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="1_5.html" class="btn btn-neutral float-left" title="1.5. Introduction to QGIS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

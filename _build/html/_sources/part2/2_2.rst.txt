@@ -1,16 +1,16 @@
 Accessing OGC services with QGIS
 ================================
 
-QGIS allows the connection to servers offering geospatial data compliant with the OGC service standards.
+QGIS allows the connection to servers offering geospatial data in compliant with the OGC service standards.
 
-Let us see how to do that. Open QGIS and, in order to have some contextualisation data, upload the geopackage that was used for the previous course, zooming to the extension of the layer :numref:`2.2.1`. **Link al corso del giorno precedente**
+Open QGIS and, in order to have some contextualisation data, upload the geopackage that was used for the previous course, zooming to the extension of the layer. **TODO Link al corso del giorno precedente**
 
 .. _2.2.1:
 .. figure:: /img/2/2.2.1.png
    
    -- Visualisation of the GIS4Schools Geopackage
 
-To import a layer using OGC services, click on menu Layer→Add Layer and then select the specific layer you are interested in.
+To import a layer using OGC services, click on menu **Layer → Add Layer** and then select the specific layer you are interested in.
 The following options are available:
 
 - Add WMS/WMTS
@@ -22,224 +22,113 @@ In the following we will see how to connect to these services.
 WMS/WMTS
 --------
 
-To add an OGC WMS layer, click on menu Layer→Add Layer→Add WMS/WMTS Layer (:numref:`2.2.1.1`).
+To add an OGC WMS layer, click on menu **Layer (1) → Add Layer (2) → Add WMS/WMTS Layer (3)** (:numref:`2.2.1.1`). A new window appears. Click on the **New** button **(4)** for creating a new service connection.
 
-.. _2.2.1.1:
-.. figure:: /img/2/2.2.1.1.png
-   
-   -- Adding a WMS/WMTS Layer
-
-A new window appears. Click on the New button for creating a new service connection (:numref:`2.2.1.2`).
-
-.. _2.2.1.2:
-.. figure:: /img/2/2.2.1.2.png
-   
-   -- Creating a new service connection
-
-The first two layers we want to add are `EFAS landslide susceptibility <https://data.jrc.ec.europa.eu/dataset/3f7c3117-a72e-4e4e-bdec-f802e81e99a7>`_ and `EFAS observed precipitation <https://data.jrc.ec.europa.eu/dataset/e7db0ff2-e5c9-4006-9e24-30b98fe0f0f1>`_ available in the Joint Research Centre Data Catalogue. 
+The first two layers we want to add are `EFAS landslide susceptibility <https://data.jrc.ec.europa.eu/dataset/3f7c3117-a72e-4e4e-bdec-f802e81e99a7>`_ and `EFAS observed precipitation <https://data.jrc.ec.europa.eu/dataset/e7db0ff2-e5c9-4006-9e24-30b98fe0f0f1>`_ available in the Joint Research Centre Data Catalogue.
 
 The former [1]_ presents the spatial likelihood of landslide occurrence in 5 classes as a 1 km raster data set and represents the risk of landslides at a given location, particularly when flash floods are forecasted.
 
 The latter [2]_ shows the accumulated amount of precipitation for the current day [in mm] with a horizontal resolution of 5 km.
 
-The service, which we will name EFAS, is a WMS-T, a Web Map Service Time, because the available data varies day by day. The access URL is https://www.efas.eu/api/wms/?request=getcapabilities.
+The service, which we will name *EFAS*, is a WMS-T, a Web Map Service Time, because the available data varies day by day. The access URL is https://www.efas.eu/api/wms/?request=getcapabilities. Once inserted the **Name (5)** and the **URL (6)**, we can click **OK (7)** to connect to the service and see which data layers are available.
+
+.. _2.2.1.1:
+.. figure:: /img/2/2.2.1.1.png
+   
+   -- Create a connection to WMS services with QGIS
+
+We click the **Connect** button **(1)** and, scrolling the list, we select before the *Landslide Susceptibility* **(2)** and then the *Observed Precipitation* **(3)** services; once the service is selected, we click **Add (4)** (:numref:`2.2.1.2`).
+
+.. _2.2.1.2:
+.. figure:: /img/2/2.2.1.2.png
+   
+   -- Connecting to the WMS services Landslide Susceptibility and Observed Precipitation
+
+As the last step of the WMS section, let us examine where we find the pieces of information related to the XML file which is replied by the server when the client sends a GetCapability request. For that step, carefully compare the `EFAS Services GetCapability <https://www.efas.eu/api/wms/?request=getcapabilities>`_ XML  related to the *Susceptibility Map* with what you find right clicking on the layer **(1)** and selecting **Properties (2) → Information (3)** (:numref:`2.2.1.3`).
 
 .. _2.2.1.3:
 .. figure:: /img/2/2.2.1.3.png
    
-   -- Adding a new WMS service
-
-Once inserted the Name and the URL, we can connect to the service and see which data layers are available.
-
-.. _2.2.1.4:
-.. figure:: /img/2/2.2.1.4.png
-   
-   -- Connecting to the EFAS WMS service
-
-Scrolling the list, we select and add before the Landslide Susceptibility (:numref:`2.2.1.5`) and then Observed Precipitation (:numref:`2.2.1.6`).
-
-We visualize the two layers in QGIS (:numref:`2.2.1.7` and :numref:`2.2.1.8`).
-
-.. _2.2.1.5:
-.. figure:: /img/2/2.2.1.5.png
-   
-   -- Adding the Landslide Susceptibility layer
-
-.. _2.2.1.6:
-.. figure:: /img/2/2.2.1.6.png
-   
-   -- Adding the Observed Precipitation layer
-
-.. _2.2.1.7:
-.. figure:: /img/2/2.2.1.7.png
-   
-   -- Visualisation of the EFAS Landslide Susceptibility
-
-.. _2.2.1.8:
-.. figure:: /img/2/2.2.1.8.png
-   
-   -- Visualisation of the EFAS Observed Precipitation layer (18/12/2020)
-
-As the data of precipitation varies daily, if you access the data on another day, you will see a different map (:numref:`2.2.1.9`).
-
-.. _2.2.1.9:
-.. figure:: /img/2/2.2.1.9.png
-   
-   -- Visualisation of the EFAS Observed Precipitation layer (21/12/2020)
-
-As the last step of the WMS section, let us examine where we find the pieces of information related to the XML file which is replied by the server when the client sends a GetCapability request. For that step, carefully compare the `EFAS Services GetCapability <https://www.efas.eu/api/wms/?request=getcapabilities>`_ XML related to the Susceptibility Map with what you find right clicking on the layer and selecting Properties (:numref:`2.2.1.10`) and Information (:numref:`2.2.1.11`).
-
-.. _2.2.1.10:
-.. figure:: /img/2/2.2.1.10.png
-   
    -- Analysing the Properties of the Landslide Susceptibility WMS layer
-
-.. _2.2.1.11:
-.. figure:: /img/2/2.2.1.11.png
-   
-   -- The Information of the Landslide Susceptibility WMS layer under the Properties menu
 
 WFS
 ---
 
-To add an OGC WFS layer, click on menu Layer→Add Layer→Add WFS Layer (:numref:`2.2.2.1`).
+To add an OGC WFS layer, click on menu **Layer (1) → Add Layer (2) → Add WFS Layer (3)** (:numref:`2.2.2.1`).
+
+We upload data from the Network Services OGC of the `Italian National Geoportal <http://www.pcn.minambiente.it/mattm/en/network-services-ogc/>`_. 
+Browsing the Geoportal we find the available `WFS Services <http://www.pcn.minambiente.it/mattm/en/wfs-service/>`_ and we select *Bacini idrografici principali e secondari*. The URL of the service is http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map and then we can explore the capabilities of the service (XML file) by clicking on the `Capability link <http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map&service=wfs&request=getCapabilities>`__. In order to add this WFS Service to QGIS, click **New (4)**, name this layer *Watershed* **(5)** and copy the service **URL (6)**. Click **OK (7)**. Then click **Connect (8)**: the service is providing two layers. We select the *Bacini idrografici secondari* layer **(9)** and we click **Add (10)**. On the contrary to a WMS layer, a WFS layer is a real vector layer, i.e. we can see (query) all its properties (attribute table) and we can change the visualization style.
 
 .. _2.2.2.1:
 .. figure:: /img/2/2.2.2.1.png
    
-   -- Adding a new WFS service
+   -- Adding a new WFS service (Bacini idrografici secondari layer)
 
-We upload data from the Network Services OGC of the `Italian National Geoportal <http://www.pcn.minambiente.it/mattm/en/network-services-ogc/>`_. 
-Browsing the Geoportal we find the available `WFS Services <http://www.pcn.minambiente.it/mattm/en/wfs-service/>`_ and we select Bacini idrografici principali e secondari. The URL of the service is http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map and we can explore the capabilities of the service (XML file) by clicking on the `Capability link <http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/wfs/Bacini_idrografici.map&service=wfs&request=getCapabilities>`__. We name this layer as Watershed (:numref:`2.2.2.2`).
+We can customise the layer, for instance we can change its symbology (:numref:`2.2.2.2`), changing the fill **(1)** and opacity **(2)**. The result is visible in **(3)**.
 
 .. _2.2.2.2:
 .. figure:: /img/2/2.2.2.2.png
    
-   -- Connecting to the Bacini_idrografici WFS service
+   -- Changing symbology to the WFS Bacini idrografici secondari layer
 
-The service is providing two layers. We select the Bacini idrografici secondari layer (:numref:`2.2.2.3`). On the contrary to a WMS layer, a WFS layer is a real vector layer, i.e. we can see (query) all its properties (attribute table) and we can change the visualization style.
+Repeat what we have done, by connecting to the *Catalogo frane (Landslide Catalogue)* of the WFS Services of the Geoportal and connect to the *Frane Poligonali* layer. It will take a while for loading because the file is heavy and you can see the progression on a bar. Look at :numref:`2.2.2.3`. The result is visible in :numref:`2.2.2.4`.
 
 .. _2.2.2.3:
 .. figure:: /img/2/2.2.2.3.png
    
-   -- Adding the Bacini idrografici secondari layer
-
-We can customise the layer, for instance we can change its symbology (:numref:`2.2.2.4`) and the result is visible in :numref:`2.2.2.5`.
+   -- Connecting to the Catalogo_Frane WFS service and adding the Catalogo frane - Frane poligonali layer
 
 .. _2.2.2.4:
 .. figure:: /img/2/2.2.2.4.png
    
-   -- Changing symbology to the WFS Bacini idrografici secondari layer
+   -- Visualization of the Catalogo frane - Frane poligonali layer
+
+Now rename the two layers respectively as *Watersheds* and *Polygonal Landslides*, by right-clicking the layer and selecting Rename Layer. Look at :numref:`2.2.2.5` **(1)**.
+A WFS layer cannot be edited directly, but it can be saved in a local system as a vector file and then we can create changes on the saved layer.
+Export the WFS Watersheds layer and save it in a local folder of your computer (:numref:`2.2.2.5`). Right-click on the layer and select **Export (2) → Save Features As (3)**. Save it as a shapefile **(4)** and give to this layer the name *Watersheds_downloaded* **(5)**. Finally, click **OK (6)**. You can visualise and analyse the new shapefile, for instance by opening the attribute table (:numref:`2.2.2.6`). The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection.The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new most updated one.
 
 .. _2.2.2.5:
 .. figure:: /img/2/2.2.2.5.png
    
-   -- Visualisation of the WFS Bacini idrografici secondari layer
-
-Repeat what we have done, by connecting to the Catalogo frane (Landslide Catalogue) of the WFS Services of the Geoportal (:numref:`2.2.2.6`) and connect to the Frane Poligonali layer (:numref:`2.2.2.7`). It will take a while for loading because the file is heavy and you can see the progression on a bar (:numref:`2.2.2.8`).
+   -- Rename a layer and export it as a shapefile
 
 .. _2.2.2.6:
 .. figure:: /img/2/2.2.2.6.png
    
-   -- Connecting to the Catalogo_Frane WFS service
-
-.. _2.2.2.7:
-.. figure:: /img/2/2.2.2.7.png
-   
-   -- Adding the Catalogo frane - Frane poligonali layer
-
-.. _2.2.2.8:
-.. figure:: /img/2/2.2.2.8.png
-   
-   -- Loading the Catalogo frane - Frane poligonali layer
-
-Now rename the two layers respectively as Watersheds and Polygonal Landslides (:numref:`2.2.2.9`).
-
-.. _2.2.2.9:
-.. figure:: /img/2/2.2.2.9.png
-   
-   -- Renaming the Bacini idrografici secondari layer as Watersheds
-
-A WFS layer cannot be edited directly, but it can be saved in a local system as a vector file and then we can create changes on the saved layer.
-Export the WFS Watersheds layer and save it in a local folder of your computer (:numref:`2.2.2.10` and :numref:`2.2.2.11`). Give to this layer the name Watersheds downloaded. Save it as a shape file, which you can visualise (:numref:`2.2.2.12`) and analyse, for instance by opening the attribute table (:numref:`2.2.2.13`). The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection. The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new more updated one.
-
-.. _2.2.2.10:
-.. figure:: /img/2/2.2.2.10.png
-   
-   -- Exporting the Watersheds layer
-
-.. _2.2.2.11:
-.. figure:: /img/2/2.2.2.11.png
-   
-   -- Saving the WFS Watersheds layer in a local directory as Watersheds downloaded shapefile
-
-.. _2.2.2.12:
-.. figure:: /img/2/2.2.2.12.png
-   
-   -- Visualising the Watersheds downloaded shapefile
-
-.. _2.2.2.13:
-.. figure:: /img/2/2.2.2.13.png
-   
-   -- The attribute table of the Watersheds downloaded shapefile
+   -- Visualization of the new shapefile (Watersheds_downloaded.shp), with its attribute table
 
 WCS
 ---
 
-To add an OGC WCS layer, click on menu Layer→Add Layer→Add WCS Layer. 
+To add an OGC WCS layer, click on menu **Layer → Add Layer → Add WCS Layer**. 
 
 We upload data from the Network Services OGC of the `Italian National Geoportal <http://www.pcn.minambiente.it/mattm/en/network-services-ogc/>`_. 
-Browsing the Geoportal we find the available `WCS Services <http://www.pcn.minambiente.it/mattm/en/wcs-services/>`_ and we select Modello digitale del terreno - 75 metri. The URL of the service is http://wms.pcn.minambiente.it/wcs/dtm_75m and we can explore the capabilities of the service (XML file) by clicking on the `Capability link <http://wms.pcn.minambiente.it/wcs/dtm_75m?service=wcs&request=getCapabilities>`__.
+Browsing the Geoportal we find the available `WCS Services <http://www.pcn.minambiente.it/mattm/en/wcs-services/>`_ and we select *Modello digitale del terreno - 75 metri*. The URL of the service is http://wms.pcn.minambiente.it/wcs/dtm_75m and we can explore the capabilities of the service (XML file) by clicking on the `Capability link <http://wms.pcn.minambiente.it/wcs/dtm_75m?service=wcs&request=getCapabilities>`__.
 
-We add the service (:numref:`2.2.3.1`) and we connect to the layer EL.DTM.75M (:numref:`2.2.3.2`), naming it DTM 75 m res (WCS) (:numref:`2.2.3.3`).
+We add the service **(1)** (:numref:`2.2.3.1`). We connect to the layer EL.DTM.75M, clicking on **New (2)**. Name it *DTM 75 m res* **(3)** and copy the URL previously specified **(4)**. Click **OK** and then **Connect (5)**, select the layer EL.DTM.75M **(6)** and click **Add (7)**. The result is visible in :numref:`2.2.3.1`.
 
 .. _2.2.3.1:
 .. figure:: /img/2/2.2.3.1.png
    
-   -- Connecting to the Modello digitale del terreno - 75 metri WCS service
+   -- Connecting to the Modello digitale del terreno - 75 metri WCS service and adding the EL.DTM.75M layer
+
+We can change the style of the layer, for instance using as rendering type the *Hillshade* obtaining the visualisation of :numref:`2.2.3.2` (upper part). As an alternative, select as render type the *Singleband pseudocolor* (:numref:`2.2.3.2`, lower part). This flexibility is possible because the WCS is providing a raster file and not a simple image of the map as for the case of the WMS.
 
 .. _2.2.3.2:
 .. figure:: /img/2/2.2.3.2.png
    
-   -- Adding the EL.DTM.75M layer
+   -- Changing symbology to the DTM 75 m res (WCS) layer: Hillshade (above) and Singleband pseudocolor (below) rendering
+
+The raster data can be exported and saved in a local folder of your computer (Fig. 2.2.3.3). Right-click on the raster layer **→ Export (1) → Save As (2)** and specify as file format GeoTIFF **(3)**, assigning the name *DTM_75m_res_downloaded* **(4)**. Click **OK (5)**. The file is heavy and it requires a while. The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection.The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new most updated one.
+
+For appreciating the difference between a WCS and a WMS, connect to the `WMS Network Services OGC <http://www.pcn.minambiente.it/mattm/en/view-service-wms/>`_ of the `Italian National Geoportal <http://www.pcn.minambiente.it/mattm/en/network-services-ogc/>`_ and select the *Modello digitale del terreno - 75 metri*. The URL of the service is http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map   and we can explore the capabilities of the service (XML file) by clicking on the `Capability link <http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map&service=wms&request=getCapabilities&version=1.3.0>`_.
+
+Once you have connected to this service you can for instance compare what is possible in terms of change of symbology and visualisation. You will see that, on the contrary to a WMS layer, a WCS layer is a real raster layer and therefore visualization can be changed and values can be queried. However, its values cannot be edited directly , but it can be saved in a local system as a raster file and edited afterwards. By adjusting the values of extent while saving WCS we can choose which portion of it to save.
 
 .. _2.2.3.3:
 .. figure:: /img/2/2.2.3.3.png
    
-   -- Visualisation of the DTM 75 m res (WCS) layer
-
-We can change the style of the layer, for instance using as rendering type the Hillshade (:numref:`2.2.3.4`), obtaining the visualisation of :numref:`2.2.3.5`. As an alternative, select as render type the Singleband pseudocolor (:numref:`2.2.3.6`). This flexibility is possible because the WCS is providing a raster file and not a simple image of the map as for the case of the WMS.
-
-.. _2.2.3.4:
-.. figure:: /img/2/2.2.3.4.png
-   
-   -- Changing symbology to the DTM 75 m res (WCS) layer (Hillshade)
-
-.. _2.2.3.5:
-.. figure:: /img/2/2.2.3.5.png
-   
-   -- Visualisation of the DTM 75 m res (WCS) layer (Hillshade)
-
-.. _2.2.3.6:
-.. figure:: /img/2/2.2.3.6.png
-   
-   -- Changing symbology to the DTM 75 m res (WCS) layer (Singleband pseudocolor)
-
-The raster data can be exported and saved in a local folder of your computer (:numref:`2.2.3.7` and :numref:`2.2.3.8`). The file is heavy and it requires a while. Give to this layer the name DTM 75 m res downloaded. Save it as a GeoTIFF. The advantage of having it in your local folder is that it will be always available, even if the server of the National Geoportal was not working or you had not the internet connection. The disadvantage is that you won’t have the updated layer if the service provider substitutes the layer with a new more updated one.
-
-For appreciating the difference between a WCS and a WMS, connect to the `WMS Network Services OGC <http://www.pcn.minambiente.it/mattm/en/view-service-wms/>`_ of the `Italian National Geoportal <http://www.pcn.minambiente.it/mattm/en/network-services-ogc/>`_ and select the Modello digitale del terreno - 75 metri. The URL of the service is http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map and we can explore the capabilities of the service (XML file) by clicking on the `Capability link <http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/DTM_75M.map&service=wms&request=getCapabilities&version=1.3.0>`__. 
-Once you have connected to this service you can for instance compare what is possible in terms of change of symbology and visualisation. You will see that, on the contrary to a WMS layer, a WCS layer is a real raster layer and therefore the visualization can be changed and the values can be queried. However, its values cannot be edited directly , but it can be saved in a local system as a raster file and edited afterwards. By adjusting the values of the extent while saving the WCS, we can choose which portion of it to save.
-
-.. _2.2.3.7:
-.. figure:: /img/2/2.2.3.7.png
-   
-   -- Exporting the DTM 75 m res (WCS) layer
-
-.. _2.2.3.8:
-.. figure:: /img/2/2.2.3.8.png
-   
-   -- Saving the WCS DTM 75 m res layer in a local directory as DTM 75 m res downloaded GeoTIFF
-
+   -- Exporting the DTM 75 m res (WCS) layer in the local directory
 
 .. [1] European Commission, Joint Research Centre (2017): EFAS landslide susceptibility. European Commission, Joint Research Centre (JRC) [Dataset] PID: http://data.europa.eu/89h/3f7c3117-a72e-4e4e-bdec-f802e81e99a7
 
