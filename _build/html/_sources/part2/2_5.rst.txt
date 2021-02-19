@@ -66,8 +66,7 @@ Now, apply **Raster Calculator**. See :numref:`2.5.3.1` for the steps. Under **R
 
 ::
 
-    ("Temperature_distribution@1"/"Temperature_distribution@1") * ((Temperature_distribution@1"< 12)  *
-    * 1 + ("Temperature_distribution@1" >= 12) * 2 )
+   (“Temperature_distribution@1"< 12 )  * 1 + ("Temperature_distribution@1" >= 12 ) * 2 
 
 Particularly, with Raster Calculator, it is recommendable to insert the different signs and layers through *Operators* and *Raster Bands* buttons.
 

@@ -96,10 +96,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../part1/1_3.html#vector-data">1.3.2. Vector data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. Geopackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_4.html">1.4. GeoPackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_5.html">1.5. Introduction to QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_6.html">1.6. QGIS interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../part1/1_7.html">1.7. Mangaging GeoPackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/1_7.html">1.7. Managing GeoPackages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_8.html">1.8. QGIS visualization for vectors</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#single-symbol-style">1.8.1. Single symbol style</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../part1/1_8.html#categorized-style">1.8.2. Categorized style</a></li>
@@ -118,7 +118,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../part1/1_11.html">1.11. Atlases</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. Data analysis with QGIS</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="part2.html">2. GIS and Analysis Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
@@ -128,7 +128,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="2_3.html">2.3. Extending QGIS functionalities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="2_3.html#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2_3.html#id5">2.3.2. Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_3.html#id3">2.3.2. Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="2_4.html">2.4. Vector processing</a><ul>
@@ -199,7 +199,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="part2.html"><span class="section-number">2. </span>Data analysis with QGIS</a> &raquo;</li>
+          <li><a href="part2.html"><span class="section-number">2. </span>GIS and Analysis Tools</a> &raquo;</li>
         
       <li><span class="section-number">2.5. </span>Raster processing</li>
     
@@ -274,8 +274,7 @@
 <p>Let us apply it on <em>Temperature_distribution</em> raster data.  Before, <strong>remove NoData</strong> from this layer by applying <strong>r.null</strong> on it, setting to null its <em>nan</em> values (stored in the pixels among the lakes).</p>
 <p>Suppose that we want to find out the areas in the lakes with the lowest water surface temperatures. First, look at the distribution of values in the raster: the highest detected temperatures are obviously distributed along the borders of the lakes and are fewer with respect to the lower temperatures in the centre of the lakes. It is possible to look also at the raster data histogram (<strong>Properties → histogram</strong>) to see that the most of values are around 12,5°, thus, to find out where the lowest temperatures are localised, let us consider 12° as temperature of reference.</p>
 <p>Now, apply <strong>Raster Calculator</strong>. See <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 2.5.3.1</span></a> for the steps. Under <strong>Raster</strong> Menu go to <strong>Raster Calculator…</strong>: it will open a window where to insert the following operation <strong>(1)</strong> to be performed:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s2">&quot;Temperature_distribution@1&quot;</span><span class="o">/</span><span class="s2">&quot;Temperature_distribution@1&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">Temperature_distribution</span><span class="o">@</span><span class="mi">1</span><span class="s2">&quot;&lt; 12)  *</span>
-<span class="o">*</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;Temperature_distribution@1&quot;</span> <span class="o">&gt;=</span> <span class="mi">12</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(“Temperature_distribution@1&quot;&lt; 12 )  * 1 + (&quot;Temperature_distribution@1&quot; &gt;= 12 ) * 2
 </pre></div>
 </div>
 <p>Particularly, with Raster Calculator, it is recommendable to insert the different signs and layers through <em>Operators</em> and <em>Raster Bands</em> buttons.</p>
