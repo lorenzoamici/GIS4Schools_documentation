@@ -1,9 +1,11 @@
+.. _2.2:
+
 Accessing OGC services with QGIS
 ================================
 
 QGIS allows the connection to servers offering geospatial data in compliant with the OGC service standards.
 
-Open QGIS and, in order to have some contextualisation data, upload the geopackage that was used for the previous course, zooming to the extension of the layer. **TODO Link al corso del giorno precedente**
+Open QGIS and, in order to have some contextualisation data, upload the geopackage that was used for the previous course, zooming to the extension of the layer (:ref:`Part 1 <part1>`).
 
 .. _2.2.1:
 .. figure:: /img/2/2.2.1.png

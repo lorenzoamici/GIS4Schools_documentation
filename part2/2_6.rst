@@ -1,3 +1,5 @@
+.. _2.6:
+
 Graphic modeler
 ===============
 
@@ -5,7 +7,7 @@ Visual programming is a programming language that uses illustrations instead of 
 
 The Graphical modeler is the visual programming interface of QGIS and allows to create models, even very complex ones, that chain a series of operations on some inputs in order to produce some outputs. This is particularly useful because most of the analysis usually performed in a GIS environment involves many different operations in series. Creating a model that resumes all these operations allows to run the whole analysis as a single process, saving time and even reducing the risk of distraction errors. The Graphical modeler algorithms can be seen as a visual representation of workflows.
 
-In this lecture we will create a model reproducing some of the operations performed in the Vector Processing part (2.4) **TODO INTERNAL LINK**. In this way, it will be possible to compare the two alternative ways of proceeding focusing on the graphical modeler dynamics, spending only a few words on the description of the operations as we already met them. We are going to use the following vector files:
+In this lecture we will create a model reproducing some of the operations performed in the :ref:`Vector Processing part <2.4>`. In this way, it will be possible to compare the two alternative ways of proceeding focusing on the graphical modeler dynamics, spending only a few words on the description of the operations as we already met them. We are going to use the following vector files:
 
 - Lakes.shp (polygons representing the main lakes of the area of interest);
 
@@ -40,7 +42,7 @@ Typing “field”, a set of functions with the word field in their name appear,
    
     -- Algorithm search and Field Calculator, example of single input operation
 
-In chapter 2.4 **TODO INTERNAL LINK** we first selected by location the *Municipalities* intersecting the *Lakes layer* and then exported them. Here (:numref:`2.6.4`) we make it with a single operation called **Extract by location (1)**. In the homonym window **(2)** we see that two inputs are required: the *Municipalities* and the *Lakes* layers. As we previously modified the *Cities* input adding one field, we can no more use the original input but rather refer to the result of the last operation performed. So, we **Extract features from** the *“Calculated from the algorithm Field Calculator”* **(3)**, a temporary implicit output of the previous step, **By comparing to the features from** *“Lakes”* **(4)**, leaving intersection as default geometric predicate. Click **OK (5)** and the corresponding white box appears on the canvas **(6)** with two wires entering the In dot.
+In chapter :ref:`2.4 <2.4>` we first selected by location the *Municipalities* intersecting the *Lakes layer* and then exported them. Here (:numref:`2.6.4`) we make it with a single operation called **Extract by location (1)**. In the homonym window **(2)** we see that two inputs are required: the *Municipalities* and the *Lakes* layers. As we previously modified the *Cities* input adding one field, we can no more use the original input but rather refer to the result of the last operation performed. So, we **Extract features from** the *“Calculated from the algorithm Field Calculator”* **(3)**, a temporary implicit output of the previous step, **By comparing to the features from** *“Lakes”* **(4)**, leaving intersection as default geometric predicate. Click **OK (5)** and the corresponding white box appears on the canvas **(6)** with two wires entering the In dot.
 
 .. _2.6.4:
 .. figure:: /img/2/2.6.4.jpg

@@ -221,7 +221,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="qgis-visualization-for-vectors">
-<h1><span class="section-number">1.8. </span>QGIS visualization for vectors<a class="headerlink" href="#qgis-visualization-for-vectors" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">1.8. </span>QGIS visualization for vectors<a class="headerlink" href="#qgis-visualization-for-vectors" title="Permalink to this headline">¶</a></h1>
 <p>Visualization is probably one of the simplest tasks in GIS, nevertheless, it is important to make geographic data visually informative. This  can be achieved by changing visual properties (i.e. styling) geographic data. In this exercise, we will see some basic styling on different types and vector data. Vector styling will be shown on the example of vectors:</p>
 <ul>
 <li><p class="first"><em>Municipalities_OSM</em>: vector of polygons representing municipalities. It has 3 attributes:</p>
@@ -251,22 +251,22 @@
 </div></blockquote>
 </li>
 </ul>
-<p>For maximum visibility of layers it is recommended to keep point features at the top of the Layers list, then line features, and at the end to have polygons features as this is the order the layers are displayed in the <strong>Map</strong> panel (<a class="reference internal" href="#id1"><span class="std std-numref">Fig. 1.8.1</span></a>). We can easily rearrange the order of layers by selecting one of them and dragging and dropping it to the preferred position.</p>
-<div class="figure align-default" id="id18">
-<span id="id1"></span><img alt="../_images/1.8.1.png" src="../_images/1.8.1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.1 </span><span class="caption-text">– Rearrange layers order</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
-</div>
-<p>The style for a layer can be set/changed from the layer properties (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.8.2</span></a>). It is necessary to right-click on the layer <strong>(1)</strong> and click on <strong>Properties (2)</strong>. Then on the <strong>Symbology tab (3)</strong> we can access different styling options.</p>
+<p>For maximum visibility of layers it is recommended to keep point features at the top of the Layers list, then line features, and at the end to have polygons features as this is the order the layers are displayed in the <strong>Map</strong> panel (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.8.1</span></a>). We can easily rearrange the order of layers by selecting one of them and dragging and dropping it to the preferred position.</p>
 <div class="figure align-default" id="id19">
-<span id="id2"></span><img alt="../_images/1.8.2.png" src="../_images/1.8.2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.2 </span><span class="caption-text">– How to modify visualization from layer properties</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<span id="id2"></span><img alt="../_images/1.8.1.png" src="../_images/1.8.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.1 </span><span class="caption-text">– Rearrange layers order</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
-<p>Alternatively, it is possible to activate <em>Layer Styling Panel</em> (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.8.3</span></a>). It is done from the <strong>View</strong> menu <strong>(1) → Panels (2)</strong> by ticking the box next to <strong>Layer Styling Panel (3)</strong>.</p>
+<p>The style for a layer can be set/changed from the layer properties (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.8.2</span></a>). It is necessary to right-click on the layer <strong>(1)</strong> and click on <strong>Properties (2)</strong>. Then on the <strong>Symbology tab (3)</strong> we can access different styling options.</p>
 <div class="figure align-default" id="id20">
-<span id="id3"></span><img alt="../_images/1.8.3.png" src="../_images/1.8.3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.3 </span><span class="caption-text">– How to modify visualization from  Layer Styling Panel</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<span id="id3"></span><img alt="../_images/1.8.2.png" src="../_images/1.8.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.2 </span><span class="caption-text">– How to modify visualization from layer properties</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
-<p>Before we start setting our style for features, let us cover some styling basics. The first thing to be defined in the <strong>Symbology</strong> tab <strong>(1)</strong> when styling is concerned is the symbol type. It is done from the drop-down menu <strong>(2)</strong> (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 1.8.4</span></a>). Some types of symbols are common for every type of feature - points, lines, and polygons, such as:</p>
+<p>Alternatively, it is possible to activate <em>Layer Styling Panel</em> (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 1.8.3</span></a>). It is done from the <strong>View</strong> menu <strong>(1) → Panels (2)</strong> by ticking the box next to <strong>Layer Styling Panel (3)</strong>.</p>
+<div class="figure align-default" id="id21">
+<span id="id4"></span><img alt="../_images/1.8.3.png" src="../_images/1.8.3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.3 </span><span class="caption-text">– How to modify visualization from  Layer Styling Panel</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>Before we start setting our style for features, let us cover some styling basics. The first thing to be defined in the <strong>Symbology</strong> tab <strong>(1)</strong> when styling is concerned is the symbol type. It is done from the drop-down menu <strong>(2)</strong> (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 1.8.4</span></a>). Some types of symbols are common for every type of feature - points, lines, and polygons, such as:</p>
 <ul class="simple">
 <li><strong>Single Symbol</strong> – single symbology for all the features of the vector</li>
 <li><strong>Categorized</strong> – splits features into categories according to an attribute</li>
@@ -274,89 +274,89 @@
 <li><strong>Rule-based</strong> – splits features according to the speciﬁc rules</li>
 </ul>
 <p>However, some types of feature have particular symbols (e.g. <strong>Inverted Polygons</strong> and <strong>2.5D</strong> for polygon features).</p>
-<div class="figure align-default" id="id21">
-<span id="id4"></span><img alt="../_images/1.8.4.png" src="../_images/1.8.4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.4 </span><span class="caption-text">– Vector symbols</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="id22">
+<span id="id5"></span><img alt="../_images/1.8.4.png" src="../_images/1.8.4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.4 </span><span class="caption-text">– Vector symbols</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="single-symbol-style">
 <h2><span class="section-number">1.8.1. </span>Single symbol style<a class="headerlink" href="#single-symbol-style" title="Permalink to this headline">¶</a></h2>
-<p>In this exercise, regarding the polygons, we are going to set a simple style (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 1.8.1.1</span></a>). We can set a <strong>Single symbol (1)</strong> with dark yellow color as ﬁll and black dash-line stroke. To do so select sub-level of <strong>Fill (2)</strong>, and then <strong>Simple ﬁll (3)</strong> for symbol type. Select dark yellow for <strong>Fill color (4)</strong>, black color for <strong>Stroke color (5)</strong>, and dash line for <strong>Stroke style (6)</strong>. Click on <strong>OK</strong> or <strong>Apply</strong> to apply the style <strong>(7)</strong>.</p>
-<div class="figure align-default" id="id22">
-<span id="id5"></span><img alt="../_images/1.8.1.1.png" src="../_images/1.8.1.1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.1.1 </span><span class="caption-text">– Apply simple style based on a single symbol on polygons</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
-</div>
-<p>To be able to properly see the style applied to the vector of polygons deactivate other layers in the <em>Layers</em> panel <strong>(1)</strong> as shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 1.8.1.2</span></a>.</p>
+<p>In this exercise, regarding the polygons, we are going to set a simple style (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 1.8.1.1</span></a>). We can set a <strong>Single symbol (1)</strong> with dark yellow color as ﬁll and black dash-line stroke. To do so select sub-level of <strong>Fill (2)</strong>, and then <strong>Simple ﬁll (3)</strong> for symbol type. Select dark yellow for <strong>Fill color (4)</strong>, black color for <strong>Stroke color (5)</strong>, and dash line for <strong>Stroke style (6)</strong>. Click on <strong>OK</strong> or <strong>Apply</strong> to apply the style <strong>(7)</strong>.</p>
 <div class="figure align-default" id="id23">
-<span id="id6"></span><img alt="../_images/1.8.1.2.png" src="../_images/1.8.1.2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.1.2 </span><span class="caption-text">– The outcome of polygon styling with single symbol simple style</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<span id="id6"></span><img alt="../_images/1.8.1.1.png" src="../_images/1.8.1.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.1.1 </span><span class="caption-text">– Apply simple style based on a single symbol on polygons</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p>To be able to properly see the style applied to the vector of polygons deactivate other layers in the <em>Layers</em> panel <strong>(1)</strong> as shown in <a class="reference internal" href="#id7"><span class="std std-numref">Fig. 1.8.1.2</span></a>.</p>
+<div class="figure align-default" id="id24">
+<span id="id7"></span><img alt="../_images/1.8.1.2.png" src="../_images/1.8.1.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.1.2 </span><span class="caption-text">– The outcome of polygon styling with single symbol simple style</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="categorized-style">
 <h2><span class="section-number">1.8.2. </span>Categorized style<a class="headerlink" href="#categorized-style" title="Permalink to this headline">¶</a></h2>
-<p>Moving forward, we will set a style for visualizing <em>River_network</em> which is a line feature (<a class="reference internal" href="#id7"><span class="std std-numref">Fig. 1.8.2.1</span></a>). As for the polygons, style is set from the layer <em>Properties</em> on the <em>Symbology</em> tab. In this case, we will see how to group features into categories by using Categorized symbol types. <strong>Categorized (1)</strong> symbol type is used when there is an attribute whose values can be grouped/categorized. In the case of <em>River_network</em>, there is the attribute <em>source</em> which contains information about the data provider. Select <em>source</em> attribute for the <strong>Value</strong> field <strong>(2)</strong> and select a <strong>Color ramp (3)</strong> (e.g. <em>Viridis</em>) Finally, click on <strong>Classify (4)</strong> to make the classification. Categories will be previewed in the central part of the window <strong>(5)</strong>. Click on <strong>OK</strong> or <strong>Apply (6)</strong> for changes to take place.</p>
-<div class="figure align-default" id="id24">
-<span id="id7"></span><img alt="../_images/1.8.2.1.png" src="../_images/1.8.2.1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.2.1 </span><span class="caption-text">– Apply Categorized style on lines</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
-</div>
-<p>In <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 1.8.2.2</span></a> we can see the effect of the style applied to lines. Also, we can see categories in the <em>Layers</em> panel if we expand the layer tree.</p>
+<p>Moving forward, we will set a style for visualizing <em>River_network</em> which is a line feature (<a class="reference internal" href="#id8"><span class="std std-numref">Fig. 1.8.2.1</span></a>). As for the polygons, style is set from the layer <em>Properties</em> on the <em>Symbology</em> tab. In this case, we will see how to group features into categories by using Categorized symbol types. <strong>Categorized (1)</strong> symbol type is used when there is an attribute whose values can be grouped/categorized. In the case of <em>River_network</em>, there is the attribute <em>source</em> which contains information about the data provider. Select <em>source</em> attribute for the <strong>Value</strong> field <strong>(2)</strong> and select a <strong>Color ramp (3)</strong> (e.g. <em>Viridis</em>) Finally, click on <strong>Classify (4)</strong> to make the classification. Categories will be previewed in the central part of the window <strong>(5)</strong>. Click on <strong>OK</strong> or <strong>Apply (6)</strong> for changes to take place.</p>
 <div class="figure align-default" id="id25">
-<span id="id8"></span><img alt="../_images/1.8.2.2.png" src="../_images/1.8.2.2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.2.2 </span><span class="caption-text">– The outcome of line styling with categorized style</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<span id="id8"></span><img alt="../_images/1.8.2.1.png" src="../_images/1.8.2.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.2.1 </span><span class="caption-text">– Apply Categorized style on lines</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+<p>In <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 1.8.2.2</span></a> we can see the effect of the style applied to lines. Also, we can see categories in the <em>Layers</em> panel if we expand the layer tree.</p>
+<div class="figure align-default" id="id26">
+<span id="id9"></span><img alt="../_images/1.8.2.2.png" src="../_images/1.8.2.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.2.2 </span><span class="caption-text">– The outcome of line styling with categorized style</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="feature-labels">
 <h2><span class="section-number">1.8.3. </span>Feature labels<a class="headerlink" href="#feature-labels" title="Permalink to this headline">¶</a></h2>
-<p>Another important aspect of vector styling is the possibility of adding labels to the features. It is done from the layer <em>Properties</em> on the tab <strong>Labels (1)</strong> (<a class="reference internal" href="#id9"><span class="std std-numref">Fig. 1.8.3.1</span></a>). There are different methods for labeling <strong>(2)</strong>. In this exercise, we will focus on single labels. In case of single labels there is one label for each of the features. Labels can be stored as an attribute in the attribute table or they can be defined through an expression. We can display this attribute name as a label by selecting this field for the <strong>Value field (3)</strong>. There are different options for formatting and configuring interaction with labels. We can modify them by selecting the appropriate tab <strong>(4)</strong>. In this example, we only set the <strong>Buffer (6)</strong> to be drawn <strong>(7)</strong> because it enhances label visibility. Other options were kept as a default. In the <strong>Text Sample (4)</strong> field we can see the preview of the text formatting.</p>
-<div class="figure align-default" id="id26">
-<span id="id9"></span><img alt="../_images/1.8.3.1.png" src="../_images/1.8.3.1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.3.1 </span><span class="caption-text">– Adding labels to the line features</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
-</div>
-<p>As a result, we have names of some rivers displayed (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 1.8.3.2</span></a>). We can see that labels have a white buffer around letters.</p>
+<p>Another important aspect of vector styling is the possibility of adding labels to the features. It is done from the layer <em>Properties</em> on the tab <strong>Labels (1)</strong> (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 1.8.3.1</span></a>). There are different methods for labeling <strong>(2)</strong>. In this exercise, we will focus on single labels. In case of single labels there is one label for each of the features. Labels can be stored as an attribute in the attribute table or they can be defined through an expression. We can display this attribute name as a label by selecting this field for the <strong>Value field (3)</strong>. There are different options for formatting and configuring interaction with labels. We can modify them by selecting the appropriate tab <strong>(4)</strong>. In this example, we only set the <strong>Buffer (6)</strong> to be drawn <strong>(7)</strong> because it enhances label visibility. Other options were kept as a default. In the <strong>Text Sample (4)</strong> field we can see the preview of the text formatting.</p>
 <div class="figure align-default" id="id27">
-<span id="id10"></span><img alt="../_images/1.8.3.2.png" src="../_images/1.8.3.2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.3.2 </span><span class="caption-text">– The outcome of line feature labeling</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<span id="id10"></span><img alt="../_images/1.8.3.1.png" src="../_images/1.8.3.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.3.1 </span><span class="caption-text">– Adding labels to the line features</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+<p>As a result, we have names of some rivers displayed (<a class="reference internal" href="#id11"><span class="std std-numref">Fig. 1.8.3.2</span></a>). We can see that labels have a white buffer around letters.</p>
+<div class="figure align-default" id="id28">
+<span id="id11"></span><img alt="../_images/1.8.3.2.png" src="../_images/1.8.3.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.3.2 </span><span class="caption-text">– The outcome of line feature labeling</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="graduated-style">
 <h2><span class="section-number">1.8.4. </span>Graduated style<a class="headerlink" href="#graduated-style" title="Permalink to this headline">¶</a></h2>
-<p>Finally, we are going to set a style for the points layer <em>Temperature</em> ( <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 1.8.4.1</span></a>.). Since there are many temperature records and there are numerical values it is convenient to split them into a certain number of intervals. To do so, the first thing is to set symbol type <strong>Graduated (1)</strong> which allows making intervals out of the full range of numerical records. Afterward, we select the attribute which contains numerical values (e.g. <em>value</em>) <strong>(2)</strong>. Select <strong>Color ramp</strong> according to the preferences <strong>(3)</strong>. In this example <em>RdYlBu</em> color ramp is selected (red to blue), so we will <strong>Invert Color Ramp (4)</strong> to have typical temperature representation – blue to red. Select the mode <strong>Equal interval (5)</strong> to split values into equal size classes. Then specify number of <strong>Classes (6)</strong> (e.g. 5) and click on <strong>Classify (7)</strong>. The resulting intervals will be displayed in the preview <strong>(8)</strong>. Click on <strong>OK</strong> or <strong>Apply (9)</strong>.</p>
-<div class="figure align-default" id="id28">
-<span id="id11"></span><img alt="../_images/1.8.4.1.png" src="../_images/1.8.4.1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.4.1 </span><span class="caption-text">– Apply Graduated style to the points</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
-</div>
-<p>To better observe outcomes of the <em>Temperature</em> styling, we will zoom to the extent of the <em>Temperature</em> layer (<a class="reference internal" href="#id12"><span class="std std-numref">Fig. 1.8.4.2</span></a>) by right-clicking on the layer and selecting <strong>Zoom to layer (1)</strong>.</p>
+<p>Finally, we are going to set a style for the points layer <em>Temperature</em> ( <a class="reference internal" href="#id12"><span class="std std-numref">Fig. 1.8.4.1</span></a>.). Since there are many temperature records and there are numerical values it is convenient to split them into a certain number of intervals. To do so, the first thing is to set symbol type <strong>Graduated (1)</strong> which allows making intervals out of the full range of numerical records. Afterward, we select the attribute which contains numerical values (e.g. <em>value</em>) <strong>(2)</strong>. Select <strong>Color ramp</strong> according to the preferences <strong>(3)</strong>. In this example <em>RdYlBu</em> color ramp is selected (red to blue), so we will <strong>Invert Color Ramp (4)</strong> to have typical temperature representation – blue to red. Select the mode <strong>Equal interval (5)</strong> to split values into equal size classes. Then specify number of <strong>Classes (6)</strong> (e.g. 5) and click on <strong>Classify (7)</strong>. The resulting intervals will be displayed in the preview <strong>(8)</strong>. Click on <strong>OK</strong> or <strong>Apply (9)</strong>.</p>
 <div class="figure align-default" id="id29">
-<span id="id12"></span><img alt="../_images/1.8.4.2.png" src="../_images/1.8.4.2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.4.2 </span><span class="caption-text">– The outcome of point styling with Graduated style</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+<span id="id12"></span><img alt="../_images/1.8.4.1.png" src="../_images/1.8.4.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.4.1 </span><span class="caption-text">– Apply Graduated style to the points</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+<p>To better observe outcomes of the <em>Temperature</em> styling, we will zoom to the extent of the <em>Temperature</em> layer (<a class="reference internal" href="#id13"><span class="std std-numref">Fig. 1.8.4.2</span></a>) by right-clicking on the layer and selecting <strong>Zoom to layer (1)</strong>.</p>
+<div class="figure align-default" id="id30">
+<span id="id13"></span><img alt="../_images/1.8.4.2.png" src="../_images/1.8.4.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.4.2 </span><span class="caption-text">– The outcome of point styling with Graduated style</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="saving-and-loading-style">
 <h2><span class="section-number">1.8.5. </span>Saving and loading style<a class="headerlink" href="#saving-and-loading-style" title="Permalink to this headline">¶</a></h2>
-<p>Style can be saved from the <em>Symbology</em> tab of the layer <em>Properties</em>. Click on <strong>Style</strong> menu <strong>(1) → Select Save style (2)</strong>. Select one of the three <strong>Save styles (3)</strong> available (<a class="reference internal" href="#id13"><span class="std std-numref">Fig. 1.8.5.1</span></a>):</p>
+<p>Style can be saved from the <em>Symbology</em> tab of the layer <em>Properties</em>. Click on <strong>Style</strong> menu <strong>(1) → Select Save style (2)</strong>. Select one of the three <strong>Save styles (3)</strong> available (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 1.8.5.1</span></a>):</p>
 <ul class="simple">
 <li><strong>QGIS QML style file</strong></li>
 <li><strong>SLD style ﬁle</strong></li>
 <li><strong>Database (GeoPackage)</strong></li>
 </ul>
 <p>Let us ﬁrst check options of the <strong>Database (GeoPackage) (3)</strong> save the style. Insert a <strong>Style name (4)</strong> and click on <strong>OK (5)</strong>. The style is automatically saved in the GeoPackage together with a layer and it will be displayed next time <em>River_network</em> is loaded.</p>
-<div class="figure align-default" id="id30">
-<span id="id13"></span><img alt="../_images/1.8.5.1.png" src="../_images/1.8.5.1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.5.1 </span><span class="caption-text">– Save vector style in the database (GeoPackage)</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
-</div>
-<p>The other two <strong>Save style</strong> options - <em>QML</em> and <em>SLD</em> - create a separate style ﬁles (<a class="reference internal" href="#id15"><span class="std std-numref">Fig. 1.8.5.2</span></a>). <strong>QML (1)</strong> is an <a class="reference external" href="https://en.wikipedia.org/wiki/XML" rel="noopener noreferrer" target="_blank">XML</a> format suited to store styles that QGIS can support. To save a style in this format it is necessary to specify the <strong>File</strong> path and name <strong>(2)</strong>. It is the only style that allows selecting speciﬁc <strong>Categories</strong> of style to be saved <strong>(3)</strong>. <strong>SLD (4)</strong> (Styled Layer Descriptor) is an <a class="reference external" href="https://en.wikipedia.org/wiki/XML" rel="noopener noreferrer" target="_blank">XML</a> schema for the styling map layers. It is not suited only for QGIS, but also for other GIS softwares. To save style as <em>SLD</em> file, specify <strong>File</strong> path and name <strong>(5)</strong>.</p>
 <div class="figure align-default" id="id31">
-<span id="id15"></span><img alt="../_images/1.8.5.2.png" src="../_images/1.8.5.2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.5.2 </span><span class="caption-text">– Save vector style as QML file (left) or SLD file (right)</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+<span id="id14"></span><img alt="../_images/1.8.5.1.png" src="../_images/1.8.5.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.5.1 </span><span class="caption-text">– Save vector style in the database (GeoPackage)</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </div>
-<p>In a similar manner to the style saving, an already saved style can be loaded (<a class="reference internal" href="#id16"><span class="std std-numref">Fig. 1.8.5.3</span></a>). Style is loaded from <strong>Style</strong> menu <strong>(1)</strong> on a <em>Symbology</em> tab of layer <em>Properties</em>. To load a style saved in a GeoPackage (or other database formats) select <strong>Load style (2) → From database (GeoPackage) (3)</strong>. To load a style from a <em>QML</em> or <em>SLD</em> file select <strong>Load style (2) → from ﬁle (4)</strong>. When the style is loaded from GeoPackage we can select some of the styles that were previously saved for this specific layer <strong>(5)</strong> or some of the previously saved styles of other layers saved in the same GeoPackage <strong>(6)</strong>. Furthermore, we can select style <strong>Categories</strong> to be loaded <strong>(7)</strong>. To load styles from file, specify the path to the <em>QML</em> or <em>SLD</em> file <strong>(8)</strong>. With <em>QML</em> file we can also select which style <strong>Categories</strong> to load <strong>(9)</strong>.</p>
+<p>The other two <strong>Save style</strong> options - <em>QML</em> and <em>SLD</em> - create a separate style ﬁles (<a class="reference internal" href="#id16"><span class="std std-numref">Fig. 1.8.5.2</span></a>). <strong>QML (1)</strong> is an <a class="reference external" href="https://en.wikipedia.org/wiki/XML" rel="noopener noreferrer" target="_blank">XML</a> format suited to store styles that QGIS can support. To save a style in this format it is necessary to specify the <strong>File</strong> path and name <strong>(2)</strong>. It is the only style that allows selecting speciﬁc <strong>Categories</strong> of style to be saved <strong>(3)</strong>. <strong>SLD (4)</strong> (Styled Layer Descriptor) is an <a class="reference external" href="https://en.wikipedia.org/wiki/XML" rel="noopener noreferrer" target="_blank">XML</a> schema for the styling map layers. It is not suited only for QGIS, but also for other GIS softwares. To save style as <em>SLD</em> file, specify <strong>File</strong> path and name <strong>(5)</strong>.</p>
 <div class="figure align-default" id="id32">
-<span id="id16"></span><img alt="../_images/1.8.5.3.png" src="../_images/1.8.5.3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.5.3 </span><span class="caption-text">– Load a style from database (GeoPackage) or from a file</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+<span id="id16"></span><img alt="../_images/1.8.5.2.png" src="../_images/1.8.5.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.5.2 </span><span class="caption-text">– Save vector style as QML file (left) or SLD file (right)</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
 </div>
-<p>Besides saving a style independently, we can save a QGIS project (<a class="reference internal" href="#id17"><span class="std std-numref">Fig. 1.8.5.4</span></a>) which saves currently loaded layers, their styles, map extents, and settings. QGIS project can be saved by selecting menu <strong>Project (1) → Save (2)</strong>. Similarly, we can resume work on a saved project by selecting <strong>Project (1) → Open (3)</strong>.</p>
+<p>In a similar manner to the style saving, an already saved style can be loaded (<a class="reference internal" href="#id17"><span class="std std-numref">Fig. 1.8.5.3</span></a>). Style is loaded from <strong>Style</strong> menu <strong>(1)</strong> on a <em>Symbology</em> tab of layer <em>Properties</em>. To load a style saved in a GeoPackage (or other database formats) select <strong>Load style (2) → From database (GeoPackage) (3)</strong>. To load a style from a <em>QML</em> or <em>SLD</em> file select <strong>Load style (2) → from ﬁle (4)</strong>. When the style is loaded from GeoPackage we can select some of the styles that were previously saved for this specific layer <strong>(5)</strong> or some of the previously saved styles of other layers saved in the same GeoPackage <strong>(6)</strong>. Furthermore, we can select style <strong>Categories</strong> to be loaded <strong>(7)</strong>. To load styles from file, specify the path to the <em>QML</em> or <em>SLD</em> file <strong>(8)</strong>. With <em>QML</em> file we can also select which style <strong>Categories</strong> to load <strong>(9)</strong>.</p>
 <div class="figure align-default" id="id33">
-<span id="id17"></span><img alt="../_images/1.8.5.4.png" src="../_images/1.8.5.4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8.5.4 </span><span class="caption-text">– Save QGIS project</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+<span id="id17"></span><img alt="../_images/1.8.5.3.png" src="../_images/1.8.5.3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.5.3 </span><span class="caption-text">– Load a style from database (GeoPackage) or from a file</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</div>
+<p>Besides saving a style independently, we can save a QGIS project (<a class="reference internal" href="#id18"><span class="std std-numref">Fig. 1.8.5.4</span></a>) which saves currently loaded layers, their styles, map extents, and settings. QGIS project can be saved by selecting menu <strong>Project (1) → Save (2)</strong>. Similarly, we can resume work on a saved project by selecting <strong>Project (1) → Open (3)</strong>.</p>
+<div class="figure align-default" id="id34">
+<span id="id18"></span><img alt="../_images/1.8.5.4.png" src="../_images/1.8.5.4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.8.5.4 </span><span class="caption-text">– Save QGIS project</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
 </div>
 <p>In this exercise, we have seen different ways of visualizing vector layers. Keep in mind that even if a style in these examples was applied on one type of data (e.g. vector points) it can be applied to other types of data (e.g. lines and polygons). It is also important to mention that the visualization style highly depends on the information we want to expose, but to some extent, it is also a matter of creativity so do not be afraid to experiment with it.</p>
 </div>

@@ -1,5 +1,7 @@
 .. include:: ../html_lat.txt
 
+.. _1.8:
+
 QGIS visualization for vectors
 ==============================
 

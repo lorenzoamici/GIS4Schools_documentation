@@ -1,9 +1,11 @@
 .. include:: ../html_lat.txt
 
+.. _1.7:
+
 Managing GeoPackages
 ====================
 
-In this section we will see how to load the layers from GeoPackage **TODO link to 1.4** and shapefiles and how to remove the loaded layers from QGIS. Besides, we will see how we can add new layers to an existing GeoPackage and how to remove them from GeoPackage. There are multiple ways to load layers from GeoPackage, but the most effective way is to create a connection with GeoPackage (:numref:`1.7.1`). To do so we ﬁrst need to activate the Browser panel as shown in section 1.6 :ref:`1.6` - :numref:`1.6.2`. Afterward, in the **Browser** panel right-click on **GeoPackage (1) → New Connection (2)**. Navigate to the folder where GeoPackage is saved and open it.
+In this section we will see how to load the layers from :ref:`GeoPackage <1.4>` and shapefiles and how to remove the loaded layers from QGIS. Besides, we will see how we can add new layers to an existing GeoPackage and how to remove them from GeoPackage. There are multiple ways to load layers from GeoPackage, but the most effective way is to create a connection with GeoPackage (:numref:`1.7.1`). To do so we ﬁrst need to activate the Browser panel as shown in section :ref:`1.6 <1.6>` - :numref:`1.6.2`. Afterward, in the **Browser** panel right-click on **GeoPackage (1) → New Connection (2)**. Navigate to the folder where GeoPackage is saved and open it.
 
 .. _1.7.1:
 .. figure:: /img/1/1.7.1.png

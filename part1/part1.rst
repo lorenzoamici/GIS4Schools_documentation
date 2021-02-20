@@ -1,3 +1,5 @@
+.. _part1:
+
 Data visualization with QGIS
 ============================
 

@@ -1,3 +1,5 @@
+.. _2.5:
+
 Raster processing
 =================
 
@@ -12,14 +14,14 @@ The aim of this exercise is to provide you some skills about raster data analysi
 
    - *Municipalities_OSM*
 
-Add them to QGIS from the Geopackage you were provided to your **Layers panel**. It is advisable to load also the raster data styles that you were given in the exercise folder (see exercise on *raster visualization on QGIS* **TODO internal link to 1.9**) in a way to better visualize the data while analysing and processing them.
+Add them to QGIS from the Geopackage you were provided to your **Layers panel**. It is advisable to load also the raster data styles that you were given in the exercise folder (see exercise on :ref:`raster visualization on QGIS <1.9>`) in a way to better visualize the data while analysing and processing them.
 
 This exercise will start from some basic activities and checks that are usually taken before processing (as reprojection and removing noData) to follow then with operations and tools that can be very useful when working with raster data as Raster calculator, Vectorization, Clip and Overlay statistics. All these operations and tools can be used separately, in different order or in different ways to obtain some geospatial information from your raster data.
 
 Reprojection
 ------------
 
-When you load raster data on QGIS, before starting any processing, you should look at their properties, that need to be adequate for the steps you are going to take and for the output you want to create. Here, reprojection tool can be fundamental. Indeed, raster data, as well as a whole QGIS Project, can refer to a certain **map projection** and, more specifically to a Coordinate Reference System (**CRS** **TODO linkj to 1.2**) that links map locations to real places on Earth. It can happen that your raster data are referred to different CRS, and, in that case, you would not be able to compare or combine them without reprojecting them to a common CRS. Also, it can happen that the processing output needs to be referred to a CRS and so reprojection tool must be used.
+When you load raster data on QGIS, before starting any processing, you should look at their properties, that need to be adequate for the steps you are going to take and for the output you want to create. Here, reprojection tool can be fundamental. Indeed, raster data, as well as a whole QGIS Project, can refer to a certain **map projection** and, more specifically to a Coordinate Reference System (:ref:`CRS <1.2>`) that links map locations to real places on Earth. It can happen that your raster data are referred to different CRS, and, in that case, you would not be able to compare or combine them without reprojecting them to a common CRS. Also, it can happen that the processing output needs to be referred to a CRS and so reprojection tool must be used.
 
 A good rule is to check at the beginning the raster data CRS. It can be checked under **CRS** voice by going to each layer **Properties→ information**. In this exercise, you can check that all data are referred to “*CRS: EPSG:32632 - WGS 84 / UTM zone 32N – Projected*”. Therefore, we would not need to do any reprojection.
 
@@ -37,7 +39,7 @@ The new added raster, called *reprojected* is a temporary File. This reprojected
 Removing NoData
 ---------------
 
-Go back to the original *Land_Cover* layer on which you have applied the *Land_Cover_style*, provided to you in the exercise folder. As already noticed during the *Raster visualization on QGIS* **TODO internal link to 1.8** exercise, this style contains more classes and values than the ones really present in this area, because it was created for the whole *Corine Land Cover map* that is much wider than this portion we are referring to. Particularly, the *Land_Cover_style* 999-NODATA class, corresponding to value 48, is not present in our area under study, you can check it by visualizing the raster with *Singleband-grey* render type, to see it contains no pixels with value 48. Therefore, you can remove this class visualization from *Land_Cover_style*, by clicking on **minus** icon (:numref:`2.5.2.1`, **(2)**) and you can re-save the style.
+Go back to the original *Land_Cover* layer on which you have applied the *Land_Cover_style*, provided to you in the exercise folder. As already noticed during the :ref:`Raster visualization on QGIS <1.9>` exercise, this style contains more classes and values than the ones really present in this area, because it was created for the whole *Corine Land Cover map* that is much wider than this portion we are referring to. Particularly, the *Land_Cover_style* 999-NODATA class, corresponding to value 48, is not present in our area under study, you can check it by visualizing the raster with *Singleband-grey* render type, to see it contains no pixels with value 48. Therefore, you can remove this class visualization from *Land_Cover_style*, by clicking on **minus** icon (:numref:`2.5.2.1`, **(2)**) and you can re-save the style.
 
 There is another huge difference when visualizing this raster with *Singleband-grey* render type: the *Land_Cover* layer contains pixels with 0 value that are no more visible when loading again the *Land_Cover_style*. See :numref:`2.5.2.1` to follow the steps to visualize them also with the *Land_Cover_style*: use the **+** button **(3)** in the **Properties → Simbology** window, to add a new class to be visualized: by assigning to it value 0, *NoData* label and an evident color as black **(4)**, you will see again, on borders, black pixels with 0 value that will appear also with this *Land_Cover_style*.
 
@@ -84,7 +86,7 @@ Vectorization
 
 The following exercise will be performed on the *lowest_temperatures* layer, the raster resulting from the previous Raster Calculator exercise. Vectorization is the operation to convert a raster layer into a vector one, particularly here into a polygon one.
 
-See :numref:`2.5.4.1` to follow with the instructions. Go to **Raster** Menu **→ Conversion → Polygonize (Raster to Vector)**.  In *Polygonize (Raster to Vector)* Window enter the **Input layer (1)** (*lowest_temperatures*),the **name of the attribute field to create** related to the raster values **(2)** (*Low-notLow*) and finally where to save the vectorized File (here named as *TemperaturesLow_notLow*) **(3)**. Finally, the result will be a polygon layer. As you have already learnt in the exercise of *Vector Visualization* **TODO INTERNAL LINK to 1.8**, change the polygon style into a *categorized* symbolisation, hide polygon with NoData value (it could be a huge negative value, depending by your machine precision, e.g. -2147483648) and the polygon symbol for ‘other values’: you will get the layer visualization that you can see at the end in :numref:`2.5.4.1`.
+See :numref:`2.5.4.1` to follow with the instructions. Go to **Raster** Menu **→ Conversion → Polygonize (Raster to Vector)**.  In *Polygonize (Raster to Vector)* Window enter the **Input layer (1)** (*lowest_temperatures*),the **name of the attribute field to create** related to the raster values **(2)** (*Low-notLow*) and finally where to save the vectorized File (here named as *TemperaturesLow_notLow*) **(3)**. Finally, the result will be a polygon layer. As you have already learnt in the exercise of :ref:`Vector Visualization <1.8>`, change the polygon style into a *categorized* symbolisation, hide polygon with NoData value (it could be a huge negative value, depending by your machine precision, e.g. -2147483648) and the polygon symbol for ‘other values’: you will get the layer visualization that you can see at the end in :numref:`2.5.4.1`.
 
 .. _2.5.4.1:
 .. figure:: /img/2/2.5.4.1.png

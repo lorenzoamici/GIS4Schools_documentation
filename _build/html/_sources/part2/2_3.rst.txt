@@ -6,7 +6,7 @@ Extending QGIS functionalities
 
 Software functionalities can be integrated by activating the Processing Toolbox (from the main menu **Processing → Toolbox**).
 
-The toolbox contains all the available algorithms, divided into predefined groups, which are called Providers. It includes also additional user created algorithms, allowing users to define their own workflows and processing tasks. At the top of the list of algorithms are displayed the most recent used tools, in such a way to make easier to re-execute them, if needed (:numref:`2.3.1.1`). In the uppest part of the toolbox dialog, there are functionalities for managing models **(1)** and python scripts **(2)**. Referring to models, the graphical modeler **TODO link a lezione di Carlo** will be presented in a next lesson; on the opposite, scripts are not included in this basic training.
+The toolbox contains all the available algorithms, divided into predefined groups, which are called Providers. It includes also additional user created algorithms, allowing users to define their own workflows and processing tasks. At the top of the list of algorithms are displayed the most recent used tools, in such a way to make easier to re-execute them, if needed (:numref:`2.3.1.1`). In the uppest part of the toolbox dialog, there are functionalities for managing models **(1)** and python scripts **(2)**. Referring to models, the :ref:`graphical modeler <2.6>` will be presented in a next lesson; on the opposite, scripts are not included in this basic training.
 
 .. _2.3.1.1:
 .. figure:: /img/2/2.3.1.1.png
