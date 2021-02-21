@@ -17,9 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
+from docutils.nodes import Element
+from docutils import nodes
+from sphinx.writers.html import HTMLTranslator
 project = 'GIS4Schools'
-copyright = '2020, Maria A. Brovelli, Daniele Oxoli, Carlo Biraghi, Gorica Bratic, Chiara Gerosa, Alberto Vavassori'
-author = 'Maria A. Brovelli, Daniele Oxoli, Carlo Biraghi, Gorica Bratic, Chiara Gerosa, Alberto Vavassori'
+copyright = '2020, GIS GEOLab team'
+author = 'GIS GEOLab team'
 
 
 # -- General configuration ---------------------------------------------------
@@ -79,9 +82,7 @@ html_theme_options = {
 html_static_path = ['_static']
 
 # code for making links open in a new tab
-from sphinx.writers.html import HTMLTranslator
-from docutils import nodes
-from docutils.nodes import Element
+
 
 class PatchedHTMLTranslator(HTMLTranslator):
 
@@ -113,10 +114,11 @@ class PatchedHTMLTranslator(HTMLTranslator):
         if 'target' in node:
             atts['target'] = node['target']
         self.body.append(self.starttag(node, 'a', '', **atts))
- 
+
         if node.get('secnumber'):
             self.body.append(('%s' + self.secnumber_suffix) %
                              '.'.join(map(str, node['secnumber'])))
+
 
 def setup(app):
     app.set_translator('html', PatchedHTMLTranslator)
