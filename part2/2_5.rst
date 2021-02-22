@@ -23,7 +23,7 @@ Reprojection
 
 When you load raster data on QGIS, before starting any processing, you should look at their properties, that need to be adequate for the steps you are going to take and for the output you want to create. Here, reprojection tool can be fundamental. Indeed, raster data, as well as a whole QGIS Project, can refer to a certain **map projection** and, more specifically to a Coordinate Reference System (:ref:`CRS <1.2>`) that links map locations to real places on Earth. It can happen that your raster data are referred to different CRS, and, in that case, you would not be able to compare or combine them without reprojecting them to a common CRS. Also, it can happen that the processing output needs to be referred to a CRS and so reprojection tool must be used.
 
-A good rule is to check at the beginning the raster data CRS. It can be checked under **CRS** voice by going to each layer **Properties→ information**. In this exercise, you can check that all data are referred to “*CRS: EPSG:32632 - WGS 84 / UTM zone 32N – Projected*”. Therefore, we would not need to do any reprojection.
+A good rule is to check at the beginning the raster data CRS. It can be checked under **CRS** voice by going to each layer **Properties → information**. In this exercise, you can check that all data are referred to “*CRS: EPSG:32632 - WGS 84 / UTM zone 32N – Projected*”. Therefore, we would not need to do any reprojection.
 
 However, to learn how to reproject data, let us apply reprojection to *Land_cover*. Look at :numref:`2.5.1.1` to follow with numbers in brackets the different steps that here will be mentioned.
 

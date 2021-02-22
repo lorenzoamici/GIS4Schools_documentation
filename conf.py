@@ -61,6 +61,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'template*', 'old']
 
 # -- Options for HTML output -------------------------------------------------
 
+html_title = 'GIS4Schools'
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
@@ -75,6 +77,7 @@ html_theme_options = {
     'style_external_links': True,
     'collapse_navigation': False
 }
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

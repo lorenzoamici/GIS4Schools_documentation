@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.5. Raster processing &mdash; GIS4Schools  documentation</title>
+  <title>2.5. Raster processing &mdash; GIS4Schools</title>
   
 
   
@@ -245,7 +245,7 @@
 <div class="section" id="reprojection">
 <h2><span class="section-number">2.5.1. </span>Reprojection<a class="headerlink" href="#reprojection" title="Permalink to this headline">¶</a></h2>
 <p>When you load raster data on QGIS, before starting any processing, you should look at their properties, that need to be adequate for the steps you are going to take and for the output you want to create. Here, reprojection tool can be fundamental. Indeed, raster data, as well as a whole QGIS Project, can refer to a certain <strong>map projection</strong> and, more specifically to a Coordinate Reference System (<a class="reference internal" href="../part1/1_2.html#id1"><span class="std std-ref">CRS</span></a>) that links map locations to real places on Earth. It can happen that your raster data are referred to different CRS, and, in that case, you would not be able to compare or combine them without reprojecting them to a common CRS. Also, it can happen that the processing output needs to be referred to a CRS and so reprojection tool must be used.</p>
-<p>A good rule is to check at the beginning the raster data CRS. It can be checked under <strong>CRS</strong> voice by going to each layer <strong>Properties→ information</strong>. In this exercise, you can check that all data are referred to “<em>CRS: EPSG:32632 - WGS 84 / UTM zone 32N – Projected</em>”. Therefore, we would not need to do any reprojection.</p>
+<p>A good rule is to check at the beginning the raster data CRS. It can be checked under <strong>CRS</strong> voice by going to each layer <strong>Properties → information</strong>. In this exercise, you can check that all data are referred to “<em>CRS: EPSG:32632 - WGS 84 / UTM zone 32N – Projected</em>”. Therefore, we would not need to do any reprojection.</p>
 <p>However, to learn how to reproject data, let us apply reprojection to <em>Land_cover</em>. Look at <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.5.1.1</span></a> to follow with numbers in brackets the different steps that here will be mentioned.</p>
 <p>To start, go to <strong>Raster Menu</strong> on QGIS <strong>→ Projections (1) → Warp (Reproject) (2)</strong>: it will open the <em>Warp (Reproject)</em> window. There, you need to set the <strong>input layer</strong> (<em>Land_Cover</em>) <strong>(3)</strong>, with its <strong>input CRS</strong> (<em>Project CRS: EPSG:32632 - WGS 84 / UTM zone 32N</em>) <strong>(4)</strong> and the final desired CRS, the <strong>target CRS</strong> (here choose <em>EPSG: 2056-CH1903+/LV95</em>) <strong>(5)</strong>. Leave the rest as it is and click on <strong>Run</strong> to reproject the raster in a new CRS. To choose the target CRS, by clicking on the icon <strong>(5)</strong>, after having unchecked <strong>No CRS box (6)</strong> in the new window, you can search for the wanted target CRS <strong>(7)</strong>: as in <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 2.5.1.1</span></a> <strong>(7)</strong> search for <em>EPSG: 2056</em> and then select the option for the <em>swiss Obl. Mercator projected CS</em> <strong>(8)</strong>.</p>
 <div class="figure align-default" id="id9">

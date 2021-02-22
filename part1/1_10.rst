@@ -16,7 +16,7 @@ The map to be composed, representing the water surface temperature distribution 
 
 These listed layers need to be present and activated (ticked) in your Layers Panel before to start. Be careful also to respect this order of listing to see *Temperature_distribution* layer on the top of the other ones.
 
-To create a map layout follow the steps on :numref:`1.10.1`: go to **Project menu→New Print Layout (1)** or press :kbd:`Ctrl+P` on your keyboard. It will open a tab where you can type the title of the print layout you want to create **(2)**, then by clicking on **OK (3)**, a map layout project will be opened: you can simply work there to compose your map with all the needed items.
+To create a map layout follow the steps on :numref:`1.10.1`: go to **Project menu → New Print Layout (1)** or press :kbd:`Ctrl+P` on your keyboard. It will open a tab where you can type the title of the print layout you want to create **(2)**, then by clicking on **OK (3)**, a map layout project will be opened: you can simply work there to compose your map with all the needed items.
 
 Looking at :numref:`1.10.2`, representing the New Print Layout Window, it is possible to see there are different icons on the very left of the window: we will use some of them to add the different basic map elements: the map itself, the legend, the map title, the north arrow and the scalebar.
 

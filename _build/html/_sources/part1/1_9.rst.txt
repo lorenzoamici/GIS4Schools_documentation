@@ -18,7 +18,7 @@ To start, let’s add to QGIS the two raster layers from the Geopackage you were
    
     -- The first visualization of Temperature_distribution and Land_Cover raster data, when loaded on QGIS.
 
-As you see by the screen, these layers need some styling to be better understood. With styling, here, we simply refer to a change in their visual properties. This can be done, separately, for both raster data (:numref:`1.9.2`), by right-clicking on them, in the* Layers Panel*, and selecting **Properties**, as it was done for vector data. There, from **Symbology** tab (as in Figure) you can select the **Render Type (1)** (*Multiband colour*, *paletted/unique values*, *singleband gray*, *singleband pseudocolor*, *hillshade*) with its settings (as it is here the *color gradient* and *contrast enhancement*). You can also eventually define the **Colour Rendering** as well as the **Resampling options**.
+As you see by the screen, these layers need some styling to be better understood. With styling, here, we simply refer to a change in their visual properties. This can be done, separately, for both raster data (:numref:`1.9.2`), by right-clicking on them, in the *Layers Panel*, and selecting **Properties**, as it was done for vector data. There, from **Symbology** tab (as in Figure) you can select the **Render Type (1)** (*Multiband colour*, *paletted/unique values*, *singleband gray*, *singleband pseudocolor*, *hillshade*) with its settings (as it is here the *color gradient* and *contrast enhancement*). You can also eventually define the **Colour Rendering** as well as the **Resampling options**.
 
 .. _1.9.2:
 .. figure:: /img/1/1.9.2.png
