@@ -39,4 +39,7 @@ Finally, the appearance of QGIS can be affected by the settings of the software 
 
 .. important::
 
-    To continue with the lecture, you are requested to download the data **TODO add link to download the data** that will be used for the following exercises
+    To continue with the lecture, you are requested to download the data |data| that will be used for the following exercises
+
+.. |data| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4556987.svg
+    :target: https://doi.org/10.5281/zenodo.4556987
