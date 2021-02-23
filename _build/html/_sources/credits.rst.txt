@@ -14,11 +14,11 @@ Professor of GIS and Copernicus Uptake at the Politecnico di Milano (PoliMI), me
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. image:: img/bios/Daniele.png
+.. image:: img/bios/Daniele1.png
     :width: 250px
     :align: left
 
-Daniele Oxoli was born in Como, Italy, in 1990. He received the B.Sc. and M.Sc. degrees in Environmental Engineering in 2013 and 2015 from the Politecnico di Milano. In 2019, he obtained the PhD degree with honours in Geomatics Engineering from the Politecnico di Milano. He is currently a post-doc researcher at the Geomatics and Earth Observation laboratory (GEOlab) of Politecnico di Milano and he is involved in a number of research projects connected to the use and development of Free and Open Source GIS software and the statistical analysis of spatial data. |br| |br| |br| |br| |br| |br|
+Daniele Oxoli was born in Como, Italy, in 1990. He received the B.Sc. and M.Sc. degrees in Environmental Engineering in 2013 and 2015 from the Politecnico di Milano. In 2019, he obtained the PhD degree with honours in Geomatics Engineering from the Politecnico di Milano. He is currently a post-doc researcher at the Geomatics and Earth Observation laboratory (GEOlab) of Politecnico di Milano and he is involved in a number of research projects connected to the use and development of Free and Open Source GIS software and the statistical analysis of spatial data. |br| |br| |br|
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
