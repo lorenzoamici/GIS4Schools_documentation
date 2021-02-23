@@ -1,2 +1,0 @@
-Accessing OGC services with QGIS
-================================
