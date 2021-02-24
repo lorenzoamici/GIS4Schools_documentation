@@ -10,7 +10,7 @@ Content of the course
     :width: 250px
     :align: left
 
-Professor of GIS and Copernicus Uptake at the Politecnico di Milano (PoliMI), member of the School of Doctoral Studies in Data Science at “Roma La Sapienza” University.  She was the Head of the Geomatics Laboratory of PoliMI (1997- 2011) and the Vice-Rector of PoliMI for the Como Campus (2011-2016). She is the chair of ISPRS WG IV/4 “Collaborative crowdsourced cloud mapping (C3M)”; member of ESA ACEO (Advisory Committee of Earth Observation); co-chair of the United Nations Open GIS Initiative, Chair of the UN-GGIM (Global Geospatial Information Management) Academic Network, mentor of the PoliMI Chapter of YouthMappers (PoliMappers).
+Professor of GIS and Copernicus Uptake at the Politecnico di Milano (PoliMI), member of the School of Doctoral Studies in Data Science at “Roma La Sapienza” University. She was the Head of the Geomatics Laboratory of PoliMI (1997- 2011) and the Vice-Rector of PoliMI for the Como Campus (2011-2016). She is the chair of ISPRS WG IV/4 “Collaborative crowdsourced cloud mapping (C3M)”; member of ESA ACEO (Advisory Committee of Earth Observation); co-chair of the United Nations Open GIS Initiative, Chair of the UN-GGIM (Global Geospatial Information Management) Academic Network, mentor of the PoliMI Chapter of YouthMappers (PoliMappers).
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ Daniele Oxoli was born in Como, Italy, in 1990. He received the B.Sc. and M.Sc. 
     :width: 250px
     :align: left
 
-Ludovico Giorgio Aldo Biagi. From 2015, Associate Professor at Politecnico di Milano. From 2017, Chair of the International Master of Science in Geoinformatics Engineering. Professor of Positioning and Location Based Services. From 2018, member of the  Academic Board of the PhD in Infrastructures and Transport dell’Università degli studi di Roma La Sapienza. From 2017, habilitated for the position of Full Professor in Geomatics. From 2011 to 2013 scientific responsible for the Geomatics Laboratory of the Politecnico di Milano. Author or coauthor of more than 100 national and international scientific research publications and 4 Italian research or academic books.
+Ludovico Giorgio Aldo Biagi. From 2015, Associate Professor at Politecnico di Milano. From 2017, Chair of the International Master of Science in Geoinformatics Engineering. Professor of Positioning and Location Based Services. From 2018, member of the  Academic Board of the Ph.D. in Infrastructures and Transport dell’Università degli studi di Roma La Sapienza. From 2017, habilitated for the position of Full Professor in Geomatics. From 2011 to 2013 scientific responsible for the Geomatics Laboratory of the Politecnico di Milano. Author or coauthor of more than 100 national and international scientific research publications and 4 Italian research or academic books.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ Ludovico Giorgio Aldo Biagi. From 2015, Associate Professor at Politecnico di Mi
     :width: 250px
     :align: left
     
-Carlo Andrea Biraghi was born in Milan, Italy, in 1989. He received the B.Sc. and M.Sc. degree in architecture in 2011 and 2014 from the Politecnico di Milano. Since 2014 he works as freelance architect, artist and computational designer while teaching in several courses related to urban morphology and mathematics. In 2019, he obtained his Ph.D. degree with honours from the Architecture, Built Environment and Construction Engineering Department of Politecnico di Milano. He is currently a post-doc research fellow at the Geomatics and Earth Observation laboratory (GEOlab) of Politecnico di Milano where is responsible for Citizen Science aspects of SIMILE project.
+Carlo Andrea Biraghi was born in Milan, Italy, in 1989. He received the B.Sc. and M.Sc. degree in architecture in 2011 and 2014 from the Politecnico di Milano. Since 2014 he works as freelance architect, artist and computational designer while teaching in several courses related to urban morphology and mathematics. In 2019, he obtained his PhD degree with honours from the Architecture, Built Environment and Construction Engineering Department of Politecnico di Milano. He is currently a post-doc research fellow at the Geomatics and Earth Observation laboratory (GEOlab) of Politecnico di Milano where is responsible for Citizen Science aspects of SIMILE project.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -62,3 +62,9 @@ Alberto Vavassori was born in Sarnico (Bergamo), Italy, in 1995. He received the
 
 Web book creation
 -----------------
+
+.. image:: img/bios/Lorenzo.png
+    :width: 250px
+    :align: left
+
+Lorenzo Amici was born in Rome, Italy, in 1995. He received a B.sc. degree in Environmental Engineering at Roma La Sapienza university, and he currently is a student of the Master of Science in Geoinformatics Engineering at Politecnico di Milano. He recently started to collaborate with the GEOLab of Politecnico di Milano in the creation of online and offline documentation material.
