@@ -5,3 +5,14 @@
 .wy-side-nav-search input[type=text] {
     border-color: #55a1c9 !important;
 }
+
+div.leftside {
+    width: 160px;
+    padding: 0px 0px 0px 0px;
+    float: left;
+}
+
+div.rightside {
+    margin-left: 170px;
+    line-height: 24px;
+}
