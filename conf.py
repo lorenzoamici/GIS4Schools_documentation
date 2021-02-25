@@ -20,7 +20,7 @@ from docutils.nodes import Element
 
 
 def setup(app):
-    app.add_css_file('css/my_theme.css')
+    app.add_css_file('/my_theme.css')
 
 
 # -- Project information -----------------------------------------------------
@@ -91,7 +91,7 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_css_files = ['css/my_theme.css']
+html_css_files = ['my_theme.css']
 
 # code for making links open in a new tab
 
