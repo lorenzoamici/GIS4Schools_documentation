@@ -6,42 +6,27 @@ Credits
 Content of the course
 ---------------------
 
-.. container:: twocol
+.. image:: img/bios/Maria1.jpg
+    :width: 160px
+    :align: left
 
-   .. container:: leftside
-
-        .. image:: img/bios/Maria1.jpg
-            :width: 160px
-
-   .. container:: rightside
-
-        Professor of GIS and Copernicus Uptake at the Politecnico di Milano (PoliMI), member of the School of Doctoral Studies in Data Science at “Roma La Sapienza” University. She was the Head of the Geomatics Laboratory of PoliMI (1997- 2011) and the Vice-Rector of PoliMI for the Como Campus (2011-2016). She is the chair of ISPRS WG IV/4 “Collaborative crowdsourced cloud mapping (C3M)”; member of ESA ACEO (Advisory Committee of Earth Observation); co-chair of the United Nations Open GIS Initiative, Chair of the UN-GGIM (Global Geospatial Information Management) Academic Network, mentor of the PoliMI Chapter of YouthMappers (PoliMappers).
+Professor of GIS and Copernicus Uptake at the Politecnico di Milano (PoliMI), member of the School of Doctoral Studies in Data Science at “Roma La Sapienza” University. She was the Head of the Geomatics Laboratory of PoliMI (1997- 2011) and the Vice-Rector of PoliMI for the Como Campus (2011-2016). She is the chair of ISPRS WG IV/4 “Collaborative crowdsourced cloud mapping (C3M)”; member of ESA ACEO (Advisory Committee of Earth Observation); co-chair of the United Nations Open GIS Initiative, Chair of the UN-GGIM (Global Geospatial Information Management) Academic Network, mentor of the PoliMI Chapter of YouthMappers (PoliMappers).
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. container:: twocol
+.. image:: img/bios/Daniele2.png
+    :width: 160px
+    :align: left
 
-   .. container:: leftside
-
-        .. image:: img/bios/Daniele2.png
-            :width: 160px
-
-   .. container:: rightside
-
-        Daniele Oxoli was born in Como, Italy, in 1990. He received the B.Sc. and M.Sc. degrees in Environmental Engineering in 2013 and 2015 from the Politecnico di Milano. In 2019, he obtained the PhD degree with honours in Geomatics Engineering from the Politecnico di Milano. He is currently a post-doc researcher at the Geomatics and Earth Observation laboratory (GEOlab) of Politecnico di Milano and he is involved in a number of research projects connected to the use and development of Free and Open Source GIS software and the statistical analysis of spatial data. |br| |br| |br|
+Daniele Oxoli was born in Como, Italy, in 1990. He received the B.Sc. and M.Sc. degrees in Environmental Engineering in 2013 and 2015 from the Politecnico di Milano. In 2019, he obtained the PhD degree with honours in Geomatics Engineering from the Politecnico di Milano. He is currently a post-doc researcher at the Geomatics and Earth Observation laboratory (GEOlab) of Politecnico di Milano and he is involved in a number of research projects connected to the use and development of Free and Open Source GIS software and the statistical analysis of spatial data. |br| |br| |br|
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-.. container:: twocol
+.. image:: img/bios/Ludovico1.jpg
+    :width: 160px
+    :align: left
 
-   .. container:: leftside
-
-        .. image:: img/bios/Ludovico1.jpg
-            :width: 160px
-
-   .. container:: rightside
-
-        Ludovico Giorgio Aldo Biagi. From 2015, Associate Professor at Politecnico di Milano. From 2017, Chair of the International Master of Science in Geoinformatics Engineering. Professor of Positioning and Location Based Services. From 2018, member of the  Academic Board of the Ph.D. in Infrastructures and Transport dell’Università degli studi di Roma La Sapienza. From 2017, habilitated for the position of Full Professor in Geomatics. From 2011 to 2013 scientific responsible for the Geomatics Laboratory of the Politecnico di Milano. Author or coauthor of more than 100 national and international scientific research publications and 4 Italian research or academic books.
+Ludovico Giorgio Aldo Biagi. From 2015, Associate Professor at Politecnico di Milano. From 2017, Chair of the International Master of Science in Geoinformatics Engineering. Professor of Positioning and Location Based Services. From 2018, member of the  Academic Board of the Ph.D. in Infrastructures and Transport dell’Università degli studi di Roma La Sapienza. From 2017, habilitated for the position of Full Professor in Geomatics. From 2011 to 2013 scientific responsible for the Geomatics Laboratory of the Politecnico di Milano. Author or coauthor of more than 100 national and international scientific research publications and 4 Italian research or academic books.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
