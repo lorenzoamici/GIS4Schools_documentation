@@ -41,8 +41,11 @@ master_doc = 'index'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx_rtd_theme"
+    "sphinx_rtd_theme",
+    "rst2pdf.pdfbuilder"
 ]
+
+pdf_documents = [('index', u'rst2pdf', u'GIS4Schools', u'GIS GEOLab team'), ]
 
 numfig = True
 
