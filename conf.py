@@ -19,10 +19,6 @@ from docutils import nodes
 from docutils.nodes import Element
 
 
-def setup(app):
-    app.add_css_file('my_theme.css')
-
-
 # -- Project information -----------------------------------------------------
 
 project = 'GIS4Schools'
@@ -94,6 +90,10 @@ html_static_path = ['_static']
 # html_css_files = ['my_theme.css']
 
 # code for making links open in a new tab
+
+
+def setup(app):
+    app.add_css_file('my_theme.css')
 
 
 class PatchedHTMLTranslator(HTMLTranslator):
