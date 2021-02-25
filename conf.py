@@ -14,12 +14,17 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+from sphinx.writers.html import HTMLTranslator
+from docutils import nodes
+from docutils.nodes import Element
+
+
+def setup(app):
+    app.add_css_file('css/my_theme.css')
+
 
 # -- Project information -----------------------------------------------------
 
-from docutils.nodes import Element
-from docutils import nodes
-from sphinx.writers.html import HTMLTranslator
 project = 'GIS4Schools'
 copyright = '2020, GIS GEOLab team'
 author = 'GIS GEOLab team'
