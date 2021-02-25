@@ -20,7 +20,7 @@ from docutils.nodes import Element
 
 
 def setup(app):
-    app.add_css_file('/my_theme.css')
+    app.add_css_file('my_theme.css')
 
 
 # -- Project information -----------------------------------------------------
