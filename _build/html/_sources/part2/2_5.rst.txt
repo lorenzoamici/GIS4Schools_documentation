@@ -60,7 +60,7 @@ Raster calculator
 
 The Raster Calculator tool allows to perform calculations based on the raster pixel values. Calculations are computed on each pixel value and the result is a new raster whose pixel values are the corresponding results from calculations on the corresponding pixels. It is a great tool that can be useful for several applications and for very different operations to apply.
 
-Let us apply it on *Temperature_distribution* raster data.  Before, **remove NoData** from this layer by applying **r.null** on it, setting to null its *nan* values (stored in the pixels among the lakes). 
+Let us apply it on *Temperature_distribution* raster data.  Before, **remove NoData** from this layer by applying **r.null** on it, setting to null its *nan* values (stored in the pixels among the lakes). Save this layer as *Temperature_distribution_null*.
 
 Suppose that we want to find out the areas in the lakes with the lowest water surface temperatures. First, look at the distribution of values in the raster: the highest detected temperatures are obviously distributed along the borders of the lakes and are fewer with respect to the lower temperatures in the centre of the lakes. It is possible to look also at the raster data histogram (**Properties → histogram**) to see that the most of values are around 12,5°, thus, to find out where the lowest temperatures are localised, let us consider 12° as temperature of reference.
 
@@ -68,11 +68,11 @@ Now, apply **Raster Calculator**. See :numref:`2.5.3.1` for the steps. Under **R
 
 ::
 
-   (“Temperature_distribution@1"< 12 )  * 1 + ("Temperature_distribution@1" >= 12 ) * 2 
+   ("Temperature_distribution_null@1"< 12 )  * 1 + ("Temperature_distribution_null@1" >= 12 ) * 2 
 
 Particularly, with Raster Calculator, it is recommendable to insert the different signs and layers through *Operators* and *Raster Bands* buttons.
 
-Our operation is mostly of a logical type (using < and >=): in QGIS, the results of a logical formula can be 1=True or 0=False: therefore, when we input, for example, (Temperature_distribution@1"< 12)* 1  the result here will be 1 or 0 for each pixel, summed to the result of ("Temperature_distribution@1" >= 12 ) * 2 that will be 0 or 2. Obviously one number cannot be contemporarily < or >= 12 therefore the whole result will be 1 or 2. Before running the computation insert in **(2)** where to save the new raster layer: when choosing for the name of the new raster you can use *lowest_temperatures*.
+Our operation is mostly of a logical type (using < and >=): in QGIS, the results of a logical formula can be 1=True or 0=False: therefore, when we input, for example, (Temperature_distribution_null@1"< 12)* 1  the result here will be 1 or 0 for each pixel, summed to the result of ("Temperature_distribution_null@1" >= 12 ) * 2 that will be 0 or 2. Obviously one number cannot be contemporarily < or >= 12 therefore the whole result will be 1 or 2. Before running the computation insert in **(2)** where to save the new raster layer: when choosing for the name of the new raster you can use *lowest_temperatures*.
 
 After running, a new raster layer will be added to your QGIS project. After changing its render type to *Paletted/unique values*, you should get a result similar to the one in :numref:`2.5.3.1` with pixels with only 1 and 2 values.
 
@@ -86,7 +86,7 @@ Vectorization
 
 The following exercise will be performed on the *lowest_temperatures* layer, the raster resulting from the previous Raster Calculator exercise. Vectorization is the operation to convert a raster layer into a vector one, particularly here into a polygon one.
 
-See :numref:`2.5.4.1` to follow with the instructions. Go to **Raster** Menu **→ Conversion → Polygonize (Raster to Vector)**.  In *Polygonize (Raster to Vector)* Window enter the **Input layer (1)** (*lowest_temperatures*),the **name of the attribute field to create** related to the raster values **(2)** (*Low-notLow*) and finally where to save the vectorized File (here named as *TemperaturesLow_notLow*) **(3)**. Finally, the result will be a polygon layer. As you have already learnt in the exercise of :ref:`Vector Visualization <1.8>`, change the polygon style into a *categorized* symbolisation, hide polygon with NoData value (it could be a huge negative value, depending by your machine precision, e.g. -2147483648) and the polygon symbol for ‘other values’: you will get the layer visualization that you can see at the end in :numref:`2.5.4.1`.
+See :numref:`2.5.4.1` to follow with the instructions. Go to **Raster** Menu **→ Conversion → Polygonize (Raster to Vector)**.  In *Polygonize (Raster to Vector)* Window enter the **Input layer (1)** (*lowest_temperatures*),the **name of the attribute field to create** related to the raster values **(2)** (*Low-notLow*) and finally where to save the vectorized File (here named as *TemperaturesLow_notLow*) **(3)**. Finally, the result will be a polygon layer. As you have already learnt in the exercise of :ref:`Vector Visualization <1.8>`, change the polygon style into a *categorized* symbolisation, hide polygon symbol for 'other values': you will get the layer visualization that you can see at the end in :numref:`2.5.4.1`.
 
 .. _2.5.4.1:
 .. figure:: /img/2/2.5.4.1.png
@@ -98,7 +98,7 @@ Clip raster with a mask, clip raster by extent
 
 Sometimes raster data cover a wider area than the one under study, thus, data can be much heavy and processing slowed down. In this case, it is always advisable to reduce the raster extent by clipping out the area that is not under study. There are more ways to do it, in this exercise we will focus on **clipping with a mask** (using another layer as reference) and on **clipping by extent** (taking as reference a manually drawn area).
 
-Consider the *temperatures_distribution* layer. Suppose you want to study only the Maggiore lake area: it is possible to clip the *temperature_distribution* layer by a manually rectangular drawn region that would exclude the other two lakes. Refer to :numref:`2.5.5.1` to follow on with the instructions. Go to **Raster** Menu **→ Extraction → Clip Raster by Extent…**. It will open a window where to input the layer to be clipped **(1)** (*Temperature_distribution*) and the *clipping extent*: click on **…**  button **(2)** and then on **Select Extent on Canvas (3)** to manually draw on your project the clipping area, a red rectangle on Maggiore lake **(4)**. Then, for this exercise, just save it as *temporary File*, **Run** and the result will be the layer of temperatures cropped just on the Maggiore lake.
+Consider the *temperatures_distribution* layer. Suppose you want to study only the Maggiore lake area: it is possible to clip the *temperature_distribution* layer by a manually rectangular drawn region that would exclude the other two lakes. Refer to :numref:`2.5.5.1` to follow on with the instructions. Go to **Raster** Menu **→ Extraction → Clip Raster by Extent…**. It will open a window where to input the layer to be clipped **(1)** (*Temperature_distribution*) and the *clipping extent*: click on **…**  button **(2)** and then on **Draw on Canvas (3)** to manually draw on your project the clipping area, a grey rectangle on Maggiore lake **(4)**. Then, for this exercise, just save it as *temporary File*, **Run** and the result will be the layer of temperatures cropped just on the Maggiore lake.
 
 .. _2.5.5.1:
 .. figure:: /img/2/2.5.5.1.png
@@ -115,7 +115,7 @@ Raster data allow to easily compare and combine different data referred to the s
 
 To better understand it, suppose that we want to know the municipalities with the coldest or hottest surface water temperatures. By overlapping the vector layer *Municipalities_OSM* to the *Temperature_distribution* raster, lakes areas are subdivided in smaller portions according to the municipalities they are part of. Therefore, it could be possible to derive some statistics for each of these portions of lakes.
 
-See :numref:`2.5.6.1`. Go to the **Processing Toolbox → Raster Analysis → Zonal statistics** insert as **input raster**  the *Temperature_distribution* layer **(1)** and as **vector layer containing zones** the *Municipalities_OSM* vector **(2)**. Then name the **Output column prefix** *LakeTemp* **(3)** and select the **statistics to be calculated** (here **mean**, **max** and **min**), by clicking on the “**…**” button **(4)**. The algorithm will add to *Municipalities_OSM* attribute table three new columns, one for each calculated statistic. To check the results, click on *LakeTempmean* column to sort features from the highest to the lowest value: you should find that it is *Melide* municipality the one with the highest mean lake surface temperature (22°) while *Valmadrera* is the one with the lowest lake surface temperature (11,7°) on the same day.
+See :numref:`2.5.6.1`. Go to the **Processing Toolbox → Raster Analysis → Zonal statistics** insert as **input layer**  the *Municipalities_OSM* vector **(1)** and as **raster layer** the *Temperature_distribution* raster **(2)**. Then name the **Output column prefix** *LakeTemp* **(3)** and select the **statistics to calculate** (here **mean**, **max** and **min**), by clicking on the “**…**” button **(4)**. By saving to a temporary File, the algorithm will add to QGIS a new vector layer, similar to the *Municipalities_OSM*, containing in its Attribute Table three new columns (fields), one for each calculated statistic. To check the results, click on *LakeTempmean* column to sort features from the highest to the lowest value: you should find that it is *Melide* municipality the one with the highest mean lake surface temperature (22°) while *Valmadrera* is the one with the lowest lake surface temperature (11,7°) on the same day.
 
 .. _2.5.6.1:
 .. figure:: /img/2/2.5.6.1.png

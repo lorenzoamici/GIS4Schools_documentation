@@ -1,2 +1,4 @@
 {
+    "restructuredtext.confPath": "${workspaceFolder}",
+    "restructuredtext.linter.disabled": true
 }
